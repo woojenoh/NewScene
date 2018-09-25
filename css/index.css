@@ -1,0 +1,20 @@
+@import "./reset.css";
+@import "./nav.css";
+@import "./map.css";
+@import "./feed.css";
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300");
+
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main.main {
+  background-color: #f9f9f9;
+  padding-top: 70px;
+}

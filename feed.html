@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Feed</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=HbMpD5qPZ0x4VdtWJgqT&submodules=geocoder"></script>
+  <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="nav__cols">
+      <div class="nav__col">
+        <a href="" class="nav__logo">
+          신신
+          <img src="" alt="">
+        </a>
+      </div>
+      <div class="nav__col">
+        <div class="nav__search">
+          <input type="text" placeholder="검색">
+        </div>
+      </div>
+      <div class="nav__col">
+        <a href="" class="nav__menu">
+          <ion-icon name="notifications"></ion-icon>
+        </a>
+        <a href="" class="nav__menu">
+          <ion-icon name="person"></ion-icon>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <section class="map">
+      <div id="map"></div>
+      <div class="map__sidebar">
+        <div class="map__sidebar-title">
+          <img src="https://scontent-atl3-1.cdninstagram.com/vp/0003d77e52953e2c2307292ef7bdeafe/5C070B9D/t51.2885-15/e35/38902071_2013550242271582_3036992235657756672_n.jpg"
+            alt="">
+          <div>
+            <span>대전광역시</span>
+            <span>Daejeon</span>
+          </div>
+        </div>
+        <ul class="map__movies">
+          <li class="map__movie-list">영화 목록</li>
+          <li class="map__movie">
+            <img src="https://y.gtimg.cn/music/photo_new/T002R300x300M000002os3q01lUUkA.jpg?max_age=2592000" alt="">
+            <div>
+              <span>도둑들</span>
+              <span>대전 동구 대학로 62</span>
+            </div>
+          </li>
+          <li class="map__movie">
+            <img src="https://y.gtimg.cn/music/photo_new/T002R300x300M000002os3q01lUUkA.jpg?max_age=2592000" alt="">
+            <div>
+              <span>도둑들</span>
+              <span>대전 동구 대학로 62</span>
+            </div>
+          </li>
+          <li class="map__movie">
+            <img src="https://y.gtimg.cn/music/photo_new/T002R300x300M000002os3q01lUUkA.jpg?max_age=2592000" alt="">
+            <div>
+              <span>도둑들</span>
+              <span>대전 동구 대학로 62</span>
+            </div>
+          </li>
+          <li class="map__movie">
+            <img src="https://y.gtimg.cn/music/photo_new/T002R300x300M000002os3q01lUUkA.jpg?max_age=2592000" alt="">
+            <div>
+              <span>도둑들</span>
+              <span>대전 동구 대학로 62</span>
+            </div>
+          </li>
+          <li class="map__movie">
+            <img src="https://y.gtimg.cn/music/photo_new/T002R300x300M000002os3q01lUUkA.jpg?max_age=2592000" alt="">
+            <div>
+              <span>도둑들</span>
+              <span>대전 동구 대학로 62</span>
+            </div>
+          </li>
+          <li class="map__movie">
+            <img src="https://y.gtimg.cn/music/photo_new/T002R300x300M000002os3q01lUUkA.jpg?max_age=2592000" alt="">
+            <div>
+              <span>도둑들</span>
+              <span>대전 동구 대학로 62</span>
+            </div>
+          </li>
+          <li class="map__movie">
+            <img src="https://y.gtimg.cn/music/photo_new/T002R300x300M000002os3q01lUUkA.jpg?max_age=2592000" alt="">
+            <div>
+              <span>도둑들</span>
+              <span>대전 동구 대학로 62</span>
+            </div>
+          </li>
+        </ul>
+        <div class="map__add">영화 추가 요청하기</div>
+      </div>
+    </section>
+
+    <section class="feed">
+      <div class="feed__sort">
+        <span class="selected">최신순</span>
+        <span>인기순</span>
+      </div>
+      <div class="feed__cards">
+        <div class="feed__card">
+          <div class="card__header">
+            <img src="http://cfile6.uf.tistory.com/image/996BA4405A81454F297BF5" alt="" class="card__header-img">
+            <span class="card__header-name">wjnoh</span>
+          </div>
+          <img src="https://scontent-atl3-1.cdninstagram.com/vp/fc550259ae8484d90feddd6ee019f2cd/5BC5968E/t51.2885-15/e35/17881542_723982161114288_5150746053783322624_n.jpg"
+            alt="" class="card__img">
+          <div class="card__footer">
+            <div class="footer__rating">
+              <div class="rating__up selected">
+                <ion-icon name="thumbs-up"></ion-icon>
+                <span>1</span>
+              </div>
+              <div class="rating__down">
+                <ion-icon name="thumbs-down"></ion-icon>
+                <span>0</span>
+              </div>
+            </div>
+            <div class="footer__movie">
+              <span>도둑들(대전 동구 대학로 62)</span>
+            </div>
+            <div class="footer__message">
+              <span>멋진 건물이에요!</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="feed__card">
+          <div class="card__header">
+            <img src="http://issue.chosun.com/poll//data/image/solve/solve_30_20170728191124.jpg" alt="" class="card__header-img">
+            <span class="card__header-name">lynn</span>
+          </div>
+          <img src="http://www.itdaily.kr/news/photo/201503/61286_67165_3835.jpg" alt="" class="card__img">
+          <div class="card__footer">
+            <div class="footer__rating">
+              <div class="rating__up selected">
+                <ion-icon name="thumbs-up"></ion-icon>
+                <span>5</span>
+              </div>
+              <div class="rating__down">
+                <ion-icon name="thumbs-down"></ion-icon>
+                <span>1</span>
+              </div>
+            </div>
+            <div class="footer__movie">
+              <span>더 킹(대전광역시 유성구 대학로 99)</span>
+            </div>
+            <div class="footer__message">
+              <span>지금은 공사중이에요 ㅜㅜ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    $(document).ready(function () {
+      var bodyOffset = $('body').offset();
+      $(window).scroll(function () {
+        if ($(document).scrollTop() > bodyOffset.top) {
+          $('.nav__cols').addClass('scroll');
+        } else {
+          $('.nav__cols').removeClass('scroll');
+        }
+      });
+    });
+  </script>
+
+  <script>
+    var map = new naver.maps.Map('map', {
+      zoom: 7
+    });
+    var myaddress = '대전';// 도로명 주소나 지번 주소만 가능 (건물명 불가!!!!)
+    naver.maps.Service.geocode({ address: myaddress }, function (status, response) {
+      if (status !== naver.maps.Service.Status.OK) {
+        return alert(myaddress + '의 검색 결과가 없거나 기타 네트워크 에러');
+      }
+      var result = response.result;
+      // 검색 결과 갯수: result.total
+      // 첫번째 결과 결과 주소: result.items[0].address
+      // 첫번째 검색 결과 좌표: result.items[0].point.y, result.items[0].point.x
+      var myaddr = new naver.maps.Point(result.items[0].point.x, result.items[0].point.y);
+      map.setCenter(myaddr); // 검색된 좌표로 지도 이동
+      // 마커 표시
+      var marker = new naver.maps.Marker({
+        position: myaddr,
+        map: map
+      });
+      // 마커 클릭 이벤트 처리
+      naver.maps.Event.addListener(marker, "click", function (e) {
+        if (infowindow.getMap()) {
+          infowindow.close();
+        } else {
+          infowindow.open(map, marker);
+        }
+      });
+      // 마크 클릭시 인포윈도우 오픈
+      var infowindow = new naver.maps.InfoWindow({
+        content: '<h4> [네이버 개발자센터]</h4><a href="https://developers.naver.com" target="_blank"><img src="https://developers.naver.com/inc/devcenter/images/nd_img.png"></a>'
+      });
+    });
+  </script>
+
+</body>
+
+</html>
