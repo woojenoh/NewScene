@@ -1,0 +1,141 @@
+section.feed {
+  max-width: 930px;
+  margin: 0 auto;
+  padding: 50px 0px;
+}
+
+.feed__sort {
+  margin-bottom: 25px;
+}
+
+.feed__sort span {
+  font-size: 18px;
+  padding: 0 10px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.feed__sort span:first-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 0px;
+}
+
+.feed__sort span.selected {
+  color: black;
+}
+
+.feed__card {
+  max-width: 600px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+  border-radius: 5px;
+  background-color: white;
+  position: relative;
+}
+
+@media (max-width: 1000px) {
+  .feed__card {
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .feed__sort {
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 640px) {
+  section.feed {
+    padding-top: 0;
+  }
+  .feed__card {
+    border: none;
+    background-color: #f9f9f9;
+    margin-bottom: 0;
+  }
+  .feed__sort {
+    display: none;
+  }
+  .card__img {
+    border: none;
+  }
+}
+
+.card__header {
+  height: 60px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.card__header-img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card__img {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card__footer {
+  min-height: 110px;
+  padding: 10px 15px;
+}
+
+.footer__rating {
+  display: flex;
+  align-items: center;
+}
+
+.footer__rating ion-icon {
+  font-size: 25px;
+}
+
+.footer__rating span {
+  font-size: 17px;
+  padding: 0px 5px;
+}
+
+.rating__up {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.rating__up.selected {
+  color: black;
+}
+
+.rating__up ion-icon {
+  margin-bottom: 3px;
+}
+
+.rating__down {
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.rating__down.selected {
+  color: black;
+}
+
+.rating__down ion-icon {
+  margin-top: 3px;
+}
+
+.footer__movie {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
