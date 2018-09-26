@@ -70,3 +70,16 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+@media (max-width: 640px) {
+  .thumbnail-wrapper {
+    width: 49%;
+    margin-right: 2%;
+  }
+  .thumbnail-wrapper:nth-child(3n) {
+    margin-right: 2%;
+  }
+  .thumbnail-wrapper:nth-child(2n) {
+    margin-right: 0;
+  }
+}
