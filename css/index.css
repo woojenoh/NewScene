@@ -2,6 +2,8 @@
 @import "./nav.css";
 @import "./map.css";
 @import "./feed.css";
+@import "./profile.css";
+@import "./profile-post.css";
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300");
 
 * {

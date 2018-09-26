@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=HbMpD5qPZ0x4VdtWJgqT&submodules=geocoder"></script>
+  <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="nav__cols">
+      <div class="nav__col">
+        <a href="" class="nav__logo">
+          신신
+          <img src="" alt="">
+        </a>
+      </div>
+      <div class="nav__col">
+        <div class="nav__search">
+          <input type="text" placeholder="검색">
+        </div>
+      </div>
+      <div class="nav__col">
+        <a href="" class="nav__menu">
+          <ion-icon name="notifications"></ion-icon>
+        </a>
+        <a href="" class="nav__menu">
+          <ion-icon name="person"></ion-icon>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <section class="profile">
+      <div class="profile__columns">
+        <div class="profile__column">
+          <img src="http://cfile6.uf.tistory.com/image/996BA4405A81454F297BF5" alt="" class="profile__pic">
+        </div>
+        <div class="profile__column">
+          <span class="profile__name">wjnoh</span>
+          <div class="profile__count">
+            게시물
+            <span class="profile__count-post">3</span>
+            좋아요
+            <span class="profile__count-like">1</span>
+          </div>
+          <div class="profile__introduce">
+            안녕하세요 :D
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="post">
+      <div class="post__toggle">
+        <span class="selected">작성한 게시물</span>
+        <span>좋아요한 게시물</span>
+      </div>
+
+      <div class="posts">
+
+        <div class="thumbnail-wrapper">
+          <div class="thumbnail">
+            <div class="thumbnail-centered">
+              <img class="thumbnail-img" src="http://www.itdaily.kr/news/photo/201503/61286_67165_3835.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="thumbnail-wrapper">
+          <div class="thumbnail">
+            <div class="thumbnail-centered">
+              <img class="thumbnail-img" src="https://scontent-atl3-1.cdninstagram.com/vp/fc550259ae8484d90feddd6ee019f2cd/5BC5968E/t51.2885-15/e35/17881542_723982161114288_5150746053783322624_n.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="thumbnail-wrapper">
+          <div class="thumbnail">
+            <div class="thumbnail-centered">
+              <img class="thumbnail-img" src="https://scontent-atl3-1.cdninstagram.com/vp/fc550259ae8484d90feddd6ee019f2cd/5BC5968E/t51.2885-15/e35/17881542_723982161114288_5150746053783322624_n.jpg">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="likes">
+
+      </div>
+    </section>
+  </main>
+
+  <script>
+    $(document).ready(function () {
+      var bodyOffset = $('body').offset();
+      $(window).scroll(function () {
+        if ($(document).scrollTop() > bodyOffset.top) {
+          $('.nav__cols').addClass('scroll');
+        } else {
+          $('.nav__cols').removeClass('scroll');
+        }
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $('.thumbnail-img').each(function (index) {
+        if ($(this).width() > $(this).height()) {
+          var percent = $(this).width() / $(this).height()
+          $(this).css("max-width", Math.ceil(percent * 100) + "%")
+        }
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>
