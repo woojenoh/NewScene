@@ -50,7 +50,7 @@
   overflow-y: auto;
 }
 
-.thumbnail-detail {
+.thumbnail-modal {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -59,8 +59,12 @@
   display: none;
 }
 
+.thumbnail-modal .feed__card {
+  border: none;
+}
+
 @media (max-width: 1000px) {
-  .thumbnail-detail {
+  .thumbnail-modal {
     width: 90%;
   }
 }

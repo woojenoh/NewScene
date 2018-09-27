@@ -96,7 +96,7 @@
       </div>
 
       <div class="thumbnail-dim">
-        <div class="thumbnail-detail">
+        <div class="thumbnail-modal">
           <div class="feed__card">
             <div class="card__header">
               <img src="http://issue.chosun.com/poll//data/image/solve/solve_30_20170728191124.jpg" alt="" class="card__header-img">
@@ -157,14 +157,16 @@
   <script>
     $(document).ready(function () {
       $(".thumbnail").click(function () {
-        $(".thumbnail-detail").css("display", "block");
+        $(".thumbnail-modal").css("display", "block");
         $(".thumbnail-dim").css("display", "block");
+        $("body").css("overflow", "hidden");
       })
-      $(".thumbnail-dim").click(function (e) {
-        $(".thumbnail-detail").css("display", "none");
+      $(".thumbnail-dim").click(function () {
+        $(".thumbnail-modal").css("display", "none");
         $(".thumbnail-dim").css("display", "none");
+        $("body").css("overflow", "auto");
       })
-      $(".thumbnail-detail").click(function (e) {
+      $(".thumbnail-modal").click(function (e) {
         e.stopPropagation();
       })
     });
