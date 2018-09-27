@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Movie</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=HbMpD5qPZ0x4VdtWJgqT&submodules=geocoder"></script>
+  <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/slick.css">
+  <script src="./js/slick.js"></script>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="nav__cols">
+      <div class="nav__col">
+        <a href="feed.html" class="nav__logo">
+          신신
+          <img src="" alt="">
+        </a>
+      </div>
+      <div class="nav__col">
+        <div class="nav__search">
+          <input type="text" placeholder="검색">
+        </div>
+      </div>
+      <div class="nav__col">
+        <a href="" class="nav__menu">
+          <ion-icon name="camera"></ion-icon>
+        </a>
+        <a href="" class="nav__menu">
+          <ion-icon name="notifications"></ion-icon>
+        </a>
+        <a href="mypage.html" class="nav__menu">
+          <ion-icon name="person"></ion-icon>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+    <section class="movie">
+
+      <div class="movie__title">
+        <span class="movie__name">더 킹</span>
+        <span class="movie__location">대전광역시 유성구 대학로 99</span>
+      </div>
+
+      <div class="movie__slider">
+        <div class="slick slider">
+          <div>
+            <img src="http://www.itdaily.kr/news/photo/201503/61286_67165_3835.jpg">
+          </div>
+          <div>
+            <img src="https://scontent-atl3-1.cdninstagram.com/vp/6404923f21eb84317d64dc5484eb52c3/5C206D05/t51.2885-15/e35/15258625_1338591059519093_25875399841939456_n.jpg">
+          </div>
+          <div>
+            <img src="https://image.ytn.co.kr/general/jpg/2016/0223/201602231643101236_d.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="post">
+      <div class="post__toggle">
+        <span class="selected">최신순</span>
+        <span>인기순</span>
+      </div>
+
+      <div class="posts">
+
+        <div class="thumbnail-wrapper">
+          <div class="thumbnail">
+            <div class="thumbnail-centered">
+              <img class="thumbnail-img" src="http://www.itdaily.kr/news/photo/201503/61286_67165_3835.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="thumbnail-wrapper">
+          <div class="thumbnail">
+            <div class="thumbnail-centered">
+              <img class="thumbnail-img" src="https://scontent-atl3-1.cdninstagram.com/vp/fc550259ae8484d90feddd6ee019f2cd/5BC5968E/t51.2885-15/e35/17881542_723982161114288_5150746053783322624_n.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="thumbnail-wrapper">
+          <div class="thumbnail">
+            <div class="thumbnail-centered">
+              <img class="thumbnail-img" src="https://scontent-atl3-1.cdninstagram.com/vp/fc550259ae8484d90feddd6ee019f2cd/5BC5968E/t51.2885-15/e35/17881542_723982161114288_5150746053783322624_n.jpg">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="thumbnail-dim">
+        <div class="thumbnail-modal">
+          <div class="feed__card">
+            <div class="card__header">
+              <img src="http://issue.chosun.com/poll//data/image/solve/solve_30_20170728191124.jpg" alt="" class="card__header-img">
+              <span class="card__header-name">lynn</span>
+            </div>
+            <img src="http://www.itdaily.kr/news/photo/201503/61286_67165_3835.jpg" alt="" class="card__img">
+            <div class="card__footer">
+              <div class="footer__rating">
+                <div class="rating__up selected">
+                  <ion-icon name="thumbs-up"></ion-icon>
+                  <span>5</span>
+                </div>
+                <div class="rating__down">
+                  <ion-icon name="thumbs-down"></ion-icon>
+                  <span>1</span>
+                </div>
+              </div>
+              <div class="footer__movie">
+                <span>더 킹(대전광역시 유성구 대학로 99)</span>
+              </div>
+              <div class="footer__message">
+                <span>지금은 공사중이에요 ㅜㅜ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    $(document).ready(function () {
+      var bodyOffset = $('body').offset();
+      $(window).scroll(function () {
+        if ($(document).scrollTop() > bodyOffset.top) {
+          $('.nav__cols').addClass('scroll');
+        } else {
+          $('.nav__cols').removeClass('scroll');
+        }
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $('.thumbnail-img').each(function (index) {
+        if ($(this).width() > $(this).height()) {
+          var percent = $(this).width() / $(this).height()
+          $(this).css("max-width", Math.ceil(percent * 100) + "%")
+        }
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $(".thumbnail").click(function () {
+        $(".thumbnail-modal").css("display", "block");
+        $(".thumbnail-dim").css("display", "block");
+        $("body").css("overflow", "hidden");
+      })
+      $(".thumbnail-dim").click(function () {
+        $(".thumbnail-modal").css("display", "none");
+        $(".thumbnail-dim").css("display", "none");
+        $("body").css("overflow", "auto");
+      })
+      $(".thumbnail-modal").click(function (e) {
+        e.stopPropagation();
+      })
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $('.slick').slick({
+        arrows: false,
+        dots: true,
+        speed: 300,
+        slidesToShow: 1,
+        centerMode: true,
+        variableWidth: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [
+          {
+            breakpoint: 640,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+        ]
+      });
+    });
+  </script>
+
+</body>
+
+</html>

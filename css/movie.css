@@ -1,0 +1,38 @@
+section.movie {
+  max-width: 930px;
+  padding-top: 50px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.movie__name {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.movie__location {
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.movie__slider {
+  height: 300px;
+  margin-top: 30px;
+}
+
+@media (max-width: 1000px) {
+  section.movie {
+    padding-top: 30px;
+  }
+  .movie__name {
+    text-align: center;
+    font-size: 25px;
+  }
+  .movie__location {
+    text-align: center;
+    font-size: 15px;
+  }
+}
