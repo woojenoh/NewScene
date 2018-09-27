@@ -2,7 +2,7 @@
   width: 32%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   margin-right: 2%;
-  margin-bottom: 30px;
+  margin-bottom: 2%;
 }
 
 .thumbnail-wrapper:nth-child(3n) {
@@ -73,6 +73,7 @@
   .thumbnail-wrapper {
     width: 49%;
     margin-right: 2%;
+    margin-bottom: 2%;
   }
   .thumbnail-wrapper:nth-child(3n) {
     margin-right: 2%;
