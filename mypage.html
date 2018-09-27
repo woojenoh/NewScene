@@ -95,9 +95,38 @@
 
       </div>
 
-      <div class="likes">
-
+      <div class="thumbnail-dim">
+        <div class="thumbnail-detail">
+          <div class="feed__card">
+            <div class="card__header">
+              <img src="http://issue.chosun.com/poll//data/image/solve/solve_30_20170728191124.jpg" alt="" class="card__header-img">
+              <span class="card__header-name">lynn</span>
+            </div>
+            <img src="http://www.itdaily.kr/news/photo/201503/61286_67165_3835.jpg" alt="" class="card__img">
+            <div class="card__footer">
+              <div class="footer__rating">
+                <div class="rating__up selected">
+                  <ion-icon name="thumbs-up"></ion-icon>
+                  <span>5</span>
+                </div>
+                <div class="rating__down">
+                  <ion-icon name="thumbs-down"></ion-icon>
+                  <span>1</span>
+                </div>
+              </div>
+              <div class="footer__movie">
+                <span>더 킹(대전광역시 유성구 대학로 99)</span>
+              </div>
+              <div class="footer__message">
+                <span>지금은 공사중이에요 ㅜㅜ</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div class="likes"></div>
+
     </section>
   </main>
 
@@ -123,7 +152,22 @@
         }
       });
     });
+  </script>
 
+  <script>
+    $(document).ready(function () {
+      $(".thumbnail").click(function () {
+        $(".thumbnail-detail").css("display", "block");
+        $(".thumbnail-dim").css("display", "block");
+      })
+      $(".thumbnail-dim").click(function (e) {
+        $(".thumbnail-detail").css("display", "none");
+        $(".thumbnail-dim").css("display", "none");
+      })
+      $(".thumbnail-detail").click(function (e) {
+        e.stopPropagation();
+      })
+    });
   </script>
 
 </body>

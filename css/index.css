@@ -4,6 +4,7 @@
 @import "./feed.css";
 @import "./profile.css";
 @import "./profile-post.css";
+@import "./thumbnail.css";
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300");
 
 * {
@@ -19,4 +20,5 @@ a {
 main.main {
   background-color: #f9f9f9;
   padding-top: 70px;
+  position: relative;
 }
