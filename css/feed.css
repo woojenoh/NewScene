@@ -4,23 +4,22 @@ section.feed {
   padding: 50px 0px;
 }
 
-.feed__sort {
+.feed__toggle {
   margin-bottom: 25px;
 }
 
-.feed__sort span {
-  font-size: 18px;
+.feed__toggle span {
   padding: 0 10px;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.5);
 }
 
-.feed__sort span:first-child {
+.feed__toggle span:first-child {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   padding-left: 0px;
 }
 
-.feed__sort span.selected {
+.feed__toggle span.selected {
   color: black;
 }
 
@@ -38,10 +37,11 @@ section.feed {
     margin: 0 auto;
     margin-bottom: 50px;
   }
-  .feed__sort {
+  .feed__toggle {
     width: 600px;
     margin: 0 auto;
     margin-bottom: 25px;
+    font-size: 15px;
   }
 }
 
@@ -54,7 +54,7 @@ section.feed {
     background-color: #f9f9f9;
     margin-bottom: 0;
   }
-  .feed__sort {
+  .feed__toggle {
     display: none;
   }
   .card__img {
