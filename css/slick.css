@@ -178,3 +178,9 @@
   opacity: 1;
   color: black;
 }
+
+@media (max-width: 1000px) {
+  .slick-slide img {
+    height: 250px;
+  }
+}

@@ -26,6 +26,7 @@ section.movie {
 @media (max-width: 1000px) {
   section.movie {
     padding-top: 30px;
+    padding-bottom: 0;
   }
   .movie__name {
     text-align: center;

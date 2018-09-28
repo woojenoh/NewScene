@@ -14,12 +14,18 @@
   font-size: 15px;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
 main.main {
+  min-height: 100%;
   background-color: #f9f9f9;
   padding-top: 70px;
   position: relative;
