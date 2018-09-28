@@ -105,6 +105,7 @@
             <div class="card__header">
               <img src="http://issue.chosun.com/poll//data/image/solve/solve_30_20170728191124.jpg" alt="" class="card__header-img">
               <span class="card__header-name">lynn</span>
+              <span class="card__close">&#215;</span>
             </div>
             <img src="http://www.itdaily.kr/news/photo/201503/61286_67165_3835.jpg" alt="" class="card__img">
             <div class="card__footer">
@@ -164,6 +165,11 @@
         $("body").css("overflow", "hidden");
       })
       $(".thumbnail-dim").click(function () {
+        $(".thumbnail-modal").css("display", "none");
+        $(".thumbnail-dim").css("display", "none");
+        $("body").css("overflow", "auto");
+      })
+      $('.thumbnail-dim .card__close').click(function () {
         $(".thumbnail-modal").css("display", "none");
         $(".thumbnail-dim").css("display", "none");
         $("body").css("overflow", "auto");

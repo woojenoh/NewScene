@@ -32,6 +32,23 @@ section.feed {
   position: relative;
 }
 
+.card__close {
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 100;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  display: none;
+}
+
+.thumbnail-dim .card__close {
+  display: block;
+}
+
 @media (max-width: 1000px) {
   .feed__card {
     margin: 0 auto;
