@@ -8,6 +8,7 @@
   padding: 0 10px;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
 }
 
 .post__toggle span.selected {
@@ -22,7 +23,6 @@
 @media (max-width: 1000px) {
   .post__toggle {
     text-align: center;
-    font-size: 15px;
   }
 }
 

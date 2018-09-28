@@ -41,7 +41,7 @@ section.map {
   padding-left: 15px;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  font-size: 19px;
+  font-size: 18px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -77,7 +77,7 @@ section.map {
 
 .map__movie {
   margin-bottom: 15px;
-  font-size: 19px;
+  font-size: 18px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -99,7 +99,6 @@ section.map {
 }
 
 .map__add {
-  font-size: 15px;
   height: 45px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;

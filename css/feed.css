@@ -12,6 +12,7 @@ section.feed {
   padding: 0 10px;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
 }
 
 .feed__toggle span:first-child {
@@ -58,7 +59,6 @@ section.feed {
     width: 600px;
     margin: 0 auto;
     margin-bottom: 25px;
-    font-size: 15px;
   }
 }
 
@@ -115,7 +115,7 @@ section.feed {
 }
 
 .footer__rating span {
-  font-size: 17px;
+  font-size: 16px;
   padding: 0px 5px;
 }
 
@@ -152,7 +152,10 @@ section.feed {
 
 .footer__movie {
   margin-top: 5px;
-  margin-bottom: 15px;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
+}
+
+.footer__message {
+  margin: 15px 0;
 }

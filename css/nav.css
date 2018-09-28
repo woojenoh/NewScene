@@ -38,7 +38,6 @@
   border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: rgba(0, 0, 0, 0.01);
-  font-size: 15px;
 }
 
 @media (max-width: 500px) {
