@@ -10,6 +10,7 @@ section.login {
   margin: 0 auto;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
   position: relative;
 }
 
@@ -96,20 +97,23 @@ section.login {
   cursor: pointer;
 }
 
-.login__toggle {
+.login__toggle,
+.signup__toggle {
   background-color: white;
   max-width: 350px;
   height: 60px;
   margin: 20px auto;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.login__toggle a {
+.login__toggle a,
+.signup__toggle a {
   margin-left: 5px;
   color: #3897f0;
 }
@@ -127,34 +131,13 @@ section.signup {
   margin: 0 auto;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
   position: relative;
-}
-
-.signup__toggle {
-  background-color: white;
-  max-width: 350px;
-  height: 60px;
-  margin: 20px auto;
-  text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.signup__toggle a {
-  margin-left: 5px;
-  color: #3897f0;
 }
 
 @media (max-width: 640px) {
-  .login__wrapper,
-  .signup__wrapper {
+  section.login,
+  section.signup {
     margin: 0 5%;
-  }
-  .login__toggle,
-  .signup__toggle {
-    margin: 20px 5%;
   }
 }
