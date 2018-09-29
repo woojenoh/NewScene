@@ -6,6 +6,7 @@
 @import "./profile-post.css";
 @import "./thumbnail.css";
 @import "./movie.css";
+@import "./login.css";
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300");
 
 * {
@@ -29,4 +30,8 @@ main.main {
   background-color: #f9f9f9;
   padding-top: 70px;
   position: relative;
+}
+
+main.main.main--login {
+  padding-top: 30px;
 }

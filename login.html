@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=HbMpD5qPZ0x4VdtWJgqT&submodules=geocoder"></script>
+  <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/slick.css">
+  <script src="./js/slick.js"></script>
+</head>
+
+<body>
+
+  <main class="main main--login">
+    <section class="login">
+      <div class="login__wrapper">
+        <img src="https://cdn.shopifycloud.com/hatchful-web/assets/313d73fa42f04a46213abc6267b4d074.png" alt="" class="login__logo">
+        <form class="login__form" action="">
+          <input class="login__input" type="text" placeholder="아이디">
+          <input class="login__input" type="password" placeholder="패스워드">
+          <input class="login__submit" type="submit" value="로그인">
+        </form>
+        <div class="login__divider">또는</div>
+        <a href="feed.html" class="login__naver">네이버로 로그인</a>
+      </div>
+      <div class="login__toggle">
+        계정이 없으신가요? <a href="#">회원가입</a>
+      </div>
+    </section>
+
+    <section class="signup">
+      <div class="signup__wrapper">
+        <img src="https://cdn.shopifycloud.com/hatchful-web/assets/313d73fa42f04a46213abc6267b4d074.png" alt="" class="login__logo">
+        <form class="login__form" action="">
+          <a href="" class="login__naver">네이버로 로그인</a>
+          <div class="login__divider">또는</div>
+          <input class="login__input" type="text" placeholder="아이디">
+          <input class="login__input" type="text" placeholder="성명">
+          <input class="login__input" type="password" placeholder="패스워드">
+          <input class="login__submit" type="submit" value="회원가입">
+        </form>
+      </div>
+      <div class="signup__toggle">
+        계정이 있으신가요? <a href="#">로그인</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    $(document).ready(function () {
+      $(".login__toggle a").click(function () {
+        $(".login").css("display", "none");
+        $(".signup").css("display", "block");
+      })
+      $(".signup__toggle a").click(function () {
+        $(".login").css("display", "block");
+        $(".signup").css("display", "none");
+      })
+    });
+  </script>
+
+</body>
+
+</html>

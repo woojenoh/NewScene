@@ -1,0 +1,160 @@
+section.login {
+  max-width: 930px;
+  margin: 0 auto;
+}
+
+.login__wrapper {
+  height: 420px;
+  background-color: white;
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.login__logo {
+  width: 190px;
+}
+
+.login__form {
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.login__input {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.01);
+  font-size: 14px;
+}
+
+.login__input:focus {
+  outline: none;
+}
+
+.login__submit {
+  display: block;
+  width: 100%;
+  background-color: #3897f0;
+  border: 1px solid #3897f0;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.login__submit:hover {
+  background-color: #2286e4;
+}
+
+.login__divider {
+  max-width: 250px;
+  margin: 20px auto;
+  color: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.login__divider::after {
+  content: "";
+  width: 40%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 8px;
+  right: 1px;
+}
+
+.login__divider::before {
+  content: "";
+  width: 40%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 8px;
+  left: 1px;
+}
+
+.login__naver {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 250px;
+  margin: 0 auto;
+  background-color: #00c540;
+  border: 1px solid #00c540;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.login__toggle {
+  background-color: white;
+  max-width: 350px;
+  height: 60px;
+  margin: 20px auto;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__toggle a {
+  margin-left: 5px;
+  color: #3897f0;
+}
+
+section.signup {
+  max-width: 930px;
+  margin: 0 auto;
+  display: none;
+}
+
+.signup__wrapper {
+  height: 460px;
+  background-color: white;
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.signup__toggle {
+  background-color: white;
+  max-width: 350px;
+  height: 60px;
+  margin: 20px auto;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup__toggle a {
+  margin-left: 5px;
+  color: #3897f0;
+}
+
+@media (max-width: 640px) {
+  .login__wrapper,
+  .signup__wrapper {
+    margin: 0 5%;
+  }
+  .login__toggle,
+  .signup__toggle {
+    margin: 20px 5%;
+  }
+}
