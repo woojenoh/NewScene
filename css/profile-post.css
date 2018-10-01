@@ -4,6 +4,10 @@ section.post {
   padding: 30px 0px;
 }
 
+.post__toggle {
+  display: flex;
+}
+
 .post__toggle.post__toggle--three {
   display: flex;
   justify-content: space-between;
