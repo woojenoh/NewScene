@@ -27,15 +27,12 @@
       </div>
       <div class="nav__col">
         <div class="nav__search">
-          <input type="text" placeholder="검색">
+          <input type="text" class="input" placeholder="검색">
         </div>
       </div>
       <div class="nav__col">
         <a href="" class="nav__menu">
           <ion-icon name="camera"></ion-icon>
-        </a>
-        <a href="" class="nav__menu">
-          <ion-icon name="notifications"></ion-icon>
         </a>
         <a href="mypage.html" class="nav__menu">
           <ion-icon name="person"></ion-icon>
@@ -99,8 +96,8 @@
 
       </div>
 
-      <div class="thumbnail-dim">
-        <div class="thumbnail-modal">
+      <div class="modal" id="post">
+        <div class="modal__content" id="post">
           <div class="feed__card">
             <div class="card__header">
               <img src="http://issue.chosun.com/poll//data/image/solve/solve_30_20170728191124.jpg" alt="" class="card__header-img">
@@ -156,21 +153,21 @@
   <script>
     $(document).ready(function () {
       $(".thumbnail").click(function () {
-        $(".thumbnail-modal").css("display", "block");
-        $(".thumbnail-dim").css("display", "block");
+        $(".modal__content#post").toggle();
+        $(".modal#post").toggle();
         $("body").css("overflow", "hidden");
       })
-      $(".thumbnail-dim").click(function () {
-        $(".thumbnail-modal").css("display", "none");
-        $(".thumbnail-dim").css("display", "none");
+      $(".modal").click(function () {
+        $(".modal__content#post").toggle();
+        $(".modal#post").toggle();
         $("body").css("overflow", "auto");
       })
-      $('.thumbnail-dim .card__close').click(function () {
-        $(".thumbnail-modal").css("display", "none");
-        $(".thumbnail-dim").css("display", "none");
+      $('.modal .card__close').click(function () {
+        $(".modal__content#post").toggle();
+        $(".modal#post").toggle();
         $("body").css("overflow", "auto");
       })
-      $(".thumbnail-modal").click(function (e) {
+      $(".modal__content#post").click(function (e) {
         e.stopPropagation();
       })
     });

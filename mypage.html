@@ -25,15 +25,12 @@
       </div>
       <div class="nav__col">
         <div class="nav__search">
-          <input type="text" placeholder="검색">
+          <input type="text" class="input" placeholder="검색">
         </div>
       </div>
       <div class="nav__col">
         <a href="" class="nav__menu">
           <ion-icon name="camera"></ion-icon>
-        </a>
-        <a href="" class="nav__menu">
-          <ion-icon name="notifications"></ion-icon>
         </a>
         <a href="mypage.html" class="nav__menu">
           <ion-icon name="person"></ion-icon>
@@ -60,6 +57,27 @@
           </div>
           <div class="profile__introduce">
             안녕하세요 :D
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="setting">
+        <div class="modal__content" id="setting">
+          <div class="setting">
+            <span class="setting__title">프로필 편집</span>
+            <form action="" class="setting__form">
+              <span class="input__label">이름</span>
+              <input type="text" class="input">
+              <span class="input__label">소개</span>
+              <input type="text" class="input">
+              <span class="input__label">프로필 사진 주소</span>
+              <input type="text" class="input">
+              <span class="input__label">현재 비밀번호</span>
+              <input type="password" class="input">
+              <span class="input__label">변경 비밀번호</span>
+              <input type="password" class="input">
+              <input type="submit" value="변경하기"" class=" submit">
+            </form>
           </div>
         </div>
       </div>
@@ -99,8 +117,8 @@
 
       </div>
 
-      <div class="thumbnail-dim">
-        <div class="thumbnail-modal">
+      <div class="modal" id="post">
+        <div class="modal__content" id="post">
           <div class="feed__card">
             <div class="card__header">
               <img src="http://issue.chosun.com/poll//data/image/solve/solve_30_20170728191124.jpg" alt="" class="card__header-img">
@@ -160,21 +178,44 @@
   <script>
     $(document).ready(function () {
       $(".thumbnail").click(function () {
-        $(".thumbnail-modal").css("display", "block");
-        $(".thumbnail-dim").css("display", "block");
+        $(".modal__content#post").toggle();
+        $(".modal#post").toggle();
         $("body").css("overflow", "hidden");
       })
-      $(".thumbnail-dim").click(function () {
-        $(".thumbnail-modal").css("display", "none");
-        $(".thumbnail-dim").css("display", "none");
+      $(".modal#post").click(function () {
+        $(".modal__content#post").toggle();
+        $(".modal#post").toggle();
         $("body").css("overflow", "auto");
       })
-      $('.thumbnail-dim .card__close').click(function () {
-        $(".thumbnail-modal").css("display", "none");
-        $(".thumbnail-dim").css("display", "none");
+      $('.modal .card__close').click(function () {
+        $(".modal__content#post").toggle();
+        $(".modal#post").toggle();
         $("body").css("overflow", "auto");
       })
-      $(".thumbnail-modal").click(function (e) {
+      $(".modal__content#post").click(function (e) {
+        e.stopPropagation();
+      })
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $(".profile__setting").click(function () {
+        $(".modal__content#setting").toggle();
+        $(".modal#setting").toggle();
+        $("body").css("overflow", "hidden");
+      })
+      $(".modal#setting").click(function () {
+        $(".modal__content#setting").toggle();
+        $(".modal#setting").toggle();
+        $("body").css("overflow", "auto");
+      })
+      $('.modal .card__close').click(function () {
+        $(".modal__content#setting").toggle();
+        $(".modal#setting").toggle();
+        $("body").css("overflow", "auto");
+      })
+      $(".modal__content#setting").click(function (e) {
         e.stopPropagation();
       })
     });

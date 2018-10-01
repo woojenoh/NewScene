@@ -46,7 +46,7 @@ section.feed {
   display: none;
 }
 
-.thumbnail-dim .card__close {
+.modal .card__close {
   display: block;
 }
 

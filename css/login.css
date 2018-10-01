@@ -23,37 +23,8 @@ section.login {
   margin: 0 auto;
 }
 
-.login__input {
-  display: block;
-  width: 100%;
-  border-radius: 5px;
+.login__form .input {
   margin-bottom: 10px;
-  padding: 5px 10px;
-  border-radius: 3px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: rgba(0, 0, 0, 0.01);
-  font-size: 14px;
-}
-
-.login__input:focus {
-  outline: none;
-}
-
-.login__submit {
-  display: block;
-  width: 100%;
-  background-color: #3897f0;
-  border: 1px solid #3897f0;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 14px;
-  height: 30px;
-  cursor: pointer;
-}
-
-.login__submit:hover {
-  background-color: #2286e4;
-  border: 1px solid #3897f0;
 }
 
 .login__divider {
@@ -81,26 +52,6 @@ section.login {
   position: absolute;
   top: 8px;
   left: 1px;
-}
-
-.login__naver {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 250px;
-  margin: 0 auto;
-  background-color: #00c640;
-  border: 1px solid #00c640;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 14px;
-  height: 30px;
-  cursor: pointer;
-}
-
-.login__naver:hover {
-  background-color: #00af37;
-  border: 1px solid #00af37;
 }
 
 .login__toggle,

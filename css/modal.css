@@ -1,0 +1,33 @@
+.modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  display: none;
+  overflow-y: auto;
+}
+
+.modal__content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+  z-index: 300;
+  display: none;
+}
+
+.modal__content .feed__card {
+  border: none;
+}
+
+@media (max-width: 640px) {
+  .modal__content {
+    width: 90%;
+  }
+  .modal__content > div {
+    width: 100%;
+  }
+}

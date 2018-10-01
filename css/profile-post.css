@@ -51,3 +51,7 @@ section.post {
   display: flex;
   flex-wrap: wrap;
 }
+
+.modal .feed__card {
+  background-color: white;
+}
