@@ -29,12 +29,32 @@
         </div>
       </div>
       <div class="nav__col">
-        <a href="" class="nav__menu">
+        <a href="#" class="nav__menu" id="camera">
           <ion-icon name="camera"></ion-icon>
         </a>
         <a href="mypage.html" class="nav__menu">
           <ion-icon name="person"></ion-icon>
         </a>
+      </div>
+    </div>
+
+    <div class="modal" id="upload">
+      <div class="modal__content" id="upload">
+        <div class="upload">
+          <img src="https://cdn7.bigcommerce.com/s-nmernf2qen/stencil/47bbf000-ea64-0134-d24f-525400dfdca6/images/no-image.svg"
+            alt="" class="upload__img">
+          <form action="" class="upload__form">
+            <span class="upload__title">사진 업로드</span>
+            <span class="upload__close">&#215;</span>
+            <span class="input__label">영화 제목</span>
+            <input type="text" class="input">
+            <span class="input__label">이미지 주소</span>
+            <input type="text" class="input">
+            <span class="input__label">문구</span>
+            <input type="text" class="input">
+            <input type="submit" value="등록" class="submit">
+          </form>
+        </div>
       </div>
     </div>
   </nav>
@@ -89,7 +109,7 @@
         <div>
           <span class="selected">게시물</span><span>저장</span>
         </div>
-        <span>내 영화</span>
+        <span>영화 뱃지</span>
       </div>
 
       <div class="posts">
@@ -162,6 +182,29 @@
           $('.nav__cols').removeClass('scroll');
         }
       });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $(".nav__menu#camera").click(function () {
+        $(".modal__content#upload").toggle();
+        $(".modal#upload").toggle();
+        $("body").css("overflow", "hidden");
+      })
+      $(".modal#upload").click(function () {
+        $(".modal__content#upload").toggle();
+        $(".modal#upload").toggle();
+        $("body").css("overflow", "auto");
+      })
+      $('.modal .upload__close').click(function () {
+        $(".modal__content#upload").toggle();
+        $(".modal#upload").toggle();
+        $("body").css("overflow", "auto");
+      })
+      $(".modal__content#upload").click(function (e) {
+        e.stopPropagation();
+      })
     });
   </script>
 
