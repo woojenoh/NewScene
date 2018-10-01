@@ -1,7 +1,12 @@
-.post {
+section.post {
   max-width: 930px;
   margin: 0 auto;
   padding: 30px 0px;
+}
+
+.post__toggle.post__toggle--three {
+  display: flex;
+  justify-content: space-between;
 }
 
 .post__toggle span {
@@ -20,9 +25,20 @@
   padding-left: 0px;
 }
 
+.post__toggle--three > span {
+  padding-right: 0px;
+}
+
 @media (max-width: 1000px) {
-  .post__toggle {
-    text-align: center;
+  .post__toggle,
+  .post__toggle--three {
+    justify-content: center !important;
+  }
+  .post__toggle--three span:nth-child(2) {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .post__toggle--three > span {
+    border-right: none !important;
   }
 }
 

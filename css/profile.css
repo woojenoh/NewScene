@@ -18,22 +18,30 @@
 }
 
 img.profile__pic {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: white;
-  margin-right: 50px;
+  margin-right: 40px;
 }
 
 .profile__name {
   font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.profile__setting {
+  font-size: 25px;
+  margin-left: 10px;
+  cursor: pointer;
+  margin-top: 2.5px;
 }
 
 .profile__count {
   margin-top: 20px;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
 }
 
 .profile__count span {
@@ -56,19 +64,23 @@ img.profile__pic {
     max-width: 150px;
   }
   img.profile__pic {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     margin-right: 30px;
   }
   .profile__name {
+    font-size: 25px;
+  }
+  .profile__setting {
     font-size: 20px;
   }
   .profile__count {
-    margin-top: 15px;
+    font-size: 15px;
   }
   .profile__introduce {
     font-size: 15px;
-    margin-top: 15px;
+  }
+  .profile__introduce {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

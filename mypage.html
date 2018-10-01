@@ -49,11 +49,13 @@
           <img src="http://cfile6.uf.tistory.com/image/996BA4405A81454F297BF5" alt="" class="profile__pic">
         </div>
         <div class="profile__column">
-          <span class="profile__name">wjnoh</span>
+          <span class="profile__name">wjnoh
+            <ion-icon name="settings" class="profile__setting"></ion-icon>
+          </span>
           <div class="profile__count">
             게시물
             <span class="profile__count-post">3</span>
-            좋아요
+            저장
             <span class="profile__count-like">1</span>
           </div>
           <div class="profile__introduce">
@@ -64,9 +66,11 @@
     </section>
 
     <section class="post">
-      <div class="post__toggle">
-        <span class="selected">작성한 게시물</span>
-        <span>좋아요한 게시물</span>
+      <div class="post__toggle post__toggle--three">
+        <div>
+          <span class="selected">게시물</span><span>저장</span>
+        </div>
+        <span>내 영화</span>
       </div>
 
       <div class="posts">
@@ -110,10 +114,6 @@
                   <ion-icon name="thumbs-up"></ion-icon>
                   <span>5</span>
                 </div>
-                <div class="rating__down">
-                  <ion-icon name="thumbs-down"></ion-icon>
-                  <span>1</span>
-                </div>
               </div>
               <div class="footer__movie">
                 <span>더 킹(대전광역시 유성구 대학로 99)</span>
@@ -127,6 +127,8 @@
       </div>
 
       <div class="likes"></div>
+
+      <div class="posters"></div>
 
     </section>
   </main>

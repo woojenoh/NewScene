@@ -122,7 +122,6 @@ section.feed {
 .rating__up {
   display: flex;
   align-items: center;
-  margin-right: 10px;
   color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
@@ -133,21 +132,6 @@ section.feed {
 
 .rating__up ion-icon {
   margin-bottom: 3px;
-}
-
-.rating__down {
-  display: flex;
-  align-items: center;
-  color: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-}
-
-.rating__down.selected {
-  color: black;
-}
-
-.rating__down ion-icon {
-  margin-top: 3px;
 }
 
 .footer__movie {

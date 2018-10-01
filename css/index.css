@@ -8,10 +8,11 @@
 @import "./movie.css";
 @import "./login.css";
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300");
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
 
 * {
   box-sizing: border-box;
-  font-family: "Noto Sans KR", sans-serif !important;
+  font-family: "Nanum Gothic", "Noto Sans KR", sans-serif !important;
   font-size: 15px;
 }
 
