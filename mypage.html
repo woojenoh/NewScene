@@ -65,6 +65,7 @@
         <div class="modal__content" id="setting">
           <div class="setting">
             <span class="setting__title">프로필 편집</span>
+            <span class="setting__close">&#215;</span>
             <form action="" class="setting__form">
               <span class="input__label">이름</span>
               <input type="text" class="input">
@@ -210,7 +211,7 @@
         $(".modal#setting").toggle();
         $("body").css("overflow", "auto");
       })
-      $('.modal .card__close').click(function () {
+      $('.modal .setting__close').click(function () {
         $(".modal__content#setting").toggle();
         $(".modal#setting").toggle();
         $("body").css("overflow", "auto");
