@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import Navigation from "./Navigation/index";
 
 class App extends Component {
   render() {
-    return <div className="App">안녕하세요.</div>;
+    return (
+      <div className="App">
+        <Navigation />
+      </div>
+    );
   }
 }
 

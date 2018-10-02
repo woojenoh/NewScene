@@ -1,0 +1,27 @@
+@import "./reset.css";
+@import "./input.css";
+
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300");
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic");
+
+* {
+  box-sizing: border-box;
+  font-family: "Nanum Gothic", "Noto Sans KR", sans-serif !important;
+  font-size: 15px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+main.main {
+  min-height: 100%;
+  background-color: #f9f9f9;
+  padding-top: 70px;
+  position: relative;
+}
+
+main.main--login {
+  padding-top: 5%;
+}
