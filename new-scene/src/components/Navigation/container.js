@@ -2,8 +2,19 @@ import React, { Component } from "react";
 import App from "./presenter";
 
 export default class container extends Component {
+  state = {
+    isUploadOpen: false
+  };
+
   render() {
-    return <App handleNavScroll={this.handleNavScroll} />;
+    return (
+      <App
+        handleNavScroll={this.handleNavScroll}
+        openUpload={this.openUpload}
+        closeUpload={this.closeUpload}
+        {...this.state}
+      />
+    );
   }
 
   handleNavScroll = nav => {
@@ -13,6 +24,18 @@ export default class container extends Component {
       } else {
         nav.className = "nav__cols";
       }
+    });
+  };
+
+  openUpload = () => {
+    this.setState({
+      isUploadOpen: true
+    });
+  };
+
+  closeUpload = () => {
+    this.setState({
+      isUploadOpen: false
     });
   };
 }

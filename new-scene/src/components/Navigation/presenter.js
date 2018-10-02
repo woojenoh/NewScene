@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import "./styles.css";
 import Ionicon from "react-ionicons";
+
+import "./styles.css";
+import UploadPhoto from "../UploadPhoto";
 
 class presenter extends Component {
   componentDidMount = () => {
@@ -8,6 +10,8 @@ class presenter extends Component {
   };
 
   render() {
+    const { openUpload, closeUpload, isUploadOpen } = this.props;
+
     return (
       <nav className="nav">
         <div
@@ -32,6 +36,7 @@ class presenter extends Component {
                 icon="md-camera"
                 fontSize="25px"
                 color="rgba(0, 0, 0, 0.5)"
+                onClick={openUpload}
               />
               <Ionicon
                 icon="md-person"
@@ -41,6 +46,7 @@ class presenter extends Component {
             </div>
           </div>
         </div>
+        <UploadPhoto isUploadOpen={isUploadOpen} closeUpload={closeUpload} />
       </nav>
     );
   }
