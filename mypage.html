@@ -105,14 +105,15 @@
     </section>
 
     <section class="post">
-      <div class="post__toggle post__toggle--three">
-        <div>
-          <span class="selected">게시물</span><span>저장</span>
+      <ul class="post__tabs">
+        <div class="post__tab-conatainer">
+          <li class="post__tab post__tab--selected" data-tab="tab-1">게시물</li>
+          <li class="post__tab" data-tab="tab-2">저장</li>
         </div>
-        <span>영화 뱃지</span>
-      </div>
+        <li class="post__tab" data-tab="tab-3">마이 무비</li>
+      </ul>
 
-      <div class="posts">
+      <div class="tab__content tab__content--selected" id="tab-1">
 
         <div class="thumbnail-wrapper">
           <div class="thumbnail">
@@ -165,9 +166,27 @@
         </div>
       </div>
 
-      <div class="likes"></div>
+      <div class="tab__content" id="tab-2"></div>
 
-      <div class="posters"></div>
+      <div class="tab__content" id="tab-3">
+        <div class="badge">
+          <img src="http://imgmovie.naver.com/mdi/mi/0787/78726_P17_143306.jpg" alt="" class="badge__img selected">
+        </div>
+        <div class="badge">
+          <img src="http://tenasia.hankyung.com/webwp_kr/wp-content/uploads/2016/12/2016122909184819872-540x774.jpg"
+            alt="" class="badge__img selected">
+        </div>
+        <div class="badge">
+          <img src="http://tenasia.hankyung.com/webwp_kr/wp-content/uploads/2015/01/2015011911591114992.jpg" alt=""
+            class="badge__img">
+        </div>
+        <div class="badge">
+          <img src="http://www.topstarnews.net/news/photo/201803/373286_17432_4527.jpg" alt="" class="badge__img">
+        </div>
+        <div class="badge">
+          <img src="http://img.cgv.co.kr/Movie/Thumbnail/Poster/000055/55876/55876_1000.jpg" alt="" class="badge__img">
+        </div>
+      </div>
 
     </section>
   </main>
@@ -261,6 +280,18 @@
       })
       $(".modal__content#setting").click(function (e) {
         e.stopPropagation();
+      })
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $(".post__tab").click(function () {
+        var tab_id = $(this).attr('data-tab');
+        $(".post__tab").removeClass("post__tab--selected");
+        $(".tab__content").removeClass("tab__content--selected")
+        $(this).addClass("post__tab--selected");
+        $("#" + tab_id).addClass('tab__content--selected');
       })
     });
   </script>
