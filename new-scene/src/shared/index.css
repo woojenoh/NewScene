@@ -12,12 +12,14 @@
 }
 
 html,
-body {
+body,
+#root,
+.App {
   height: 100%;
 }
 
 main.main {
-  min-height: 100%;
+  height: 100%;
   background-color: #f9f9f9;
   padding-top: 70px;
   position: relative;
@@ -25,4 +27,10 @@ main.main {
 
 main.main--login {
   padding-top: 5%;
+}
+
+section.feed {
+  max-width: 930px;
+  margin: 0 auto;
+  padding: 50px 0px;
 }
