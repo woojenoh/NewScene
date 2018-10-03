@@ -1,5 +1,4 @@
 .upload {
-  width: 600px;
   height: 300px;
   padding: 15px 20px;
   background-color: white;
@@ -9,7 +8,9 @@
 }
 
 .upload__img {
-  width: 270px;
+  width: inherit;
+  height: 100%;
+  margin-right: 20px;
 }
 
 .upload__title {

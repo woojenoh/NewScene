@@ -6,17 +6,6 @@ export default class container extends Component {
     isUploadOpen: false
   };
 
-  render() {
-    return (
-      <App
-        handleNavScroll={this.handleNavScroll}
-        openUpload={this.openUpload}
-        closeUpload={this.closeUpload}
-        {...this.state}
-      />
-    );
-  }
-
   handleNavScroll = nav => {
     window.addEventListener("scroll", () => {
       if (window.pageYOffset > 50) {
@@ -38,4 +27,15 @@ export default class container extends Component {
       isUploadOpen: false
     });
   };
+
+  render() {
+    return (
+      <App
+        handleNavScroll={this.handleNavScroll}
+        openUpload={this.openUpload}
+        closeUpload={this.closeUpload}
+        {...this.state}
+      />
+    );
+  }
 }
