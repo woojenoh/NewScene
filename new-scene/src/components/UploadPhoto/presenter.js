@@ -9,7 +9,9 @@ export default class presenter extends Component {
       isUploadOpen,
       photoURL,
       handlePhotoURL,
-      handleNoPhoto
+      handleNoPhoto,
+      handleChange,
+      handleSubmit
     } = this.props;
 
     return (
@@ -34,18 +36,36 @@ export default class presenter extends Component {
               className="upload__img"
               onError={handleNoPhoto}
             />
-            <form className="upload__form">
+            <form className="upload__form" onSubmit={handleSubmit}>
               <span className="upload__title">사진 업로드</span>
               <span className="upload__close" onClick={closeUpload}>
                 ×
               </span>
               <span className="input__label">영화 제목</span>
-              <input type="text" className="input" />
+              <input
+                name="movieId"
+                type="text"
+                className="input"
+                onChange={e => handleChange(e)}
+              />
               <span className="input__label">이미지 주소</span>
-              <input type="text" className="input" onChange={handlePhotoURL} />
+              <input
+                name="photo"
+                type="text"
+                className="input"
+                onChange={e => {
+                  handlePhotoURL(e);
+                  handleChange(e);
+                }}
+              />
               <span className="input__label">문구</span>
-              <input type="text" className="input" />
-              <input type="submit" defaultValue="등록" className="submit" />
+              <input
+                onChange={e => handleChange(e)}
+                name="message"
+                type="text"
+                className="input"
+              />
+              <input type="submit" value="업로드" className="submit" />
             </form>
           </div>
         </div>

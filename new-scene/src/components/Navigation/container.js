@@ -35,6 +35,7 @@ export default class container extends Component {
         openUpload={this.openUpload}
         closeUpload={this.closeUpload}
         {...this.state}
+        {...this.props}
       />
     );
   }

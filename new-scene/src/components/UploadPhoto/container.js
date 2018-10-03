@@ -4,7 +4,10 @@ import App from "./presenter";
 class container extends Component {
   state = {
     photoURL:
-      "https://cdn7.bigcommerce.com/s-nmernf2qen/stencil/47bbf000-ea64-0134-d24f-525400dfdca6/images/no-image.svg"
+      "https://cdn7.bigcommerce.com/s-nmernf2qen/stencil/47bbf000-ea64-0134-d24f-525400dfdca6/images/no-image.svg",
+    movieId: "",
+    photo: "",
+    message: ""
   };
 
   handlePhotoURL = e => {
@@ -19,6 +22,26 @@ class container extends Component {
       "https://cdn7.bigcommerce.com/s-nmernf2qen/stencil/47bbf000-ea64-0134-d24f-525400dfdca6/images/no-image.svg";
   };
 
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
+  handleSubmit = e => {
+    const { user, handleUpload, closeUpload } = this.props;
+    e.preventDefault();
+    handleUpload({
+      username: user.username,
+      profilePhoto: user.profilePhoto,
+      movieId: this.state.movieId,
+      photo: this.state.photo,
+      message: this.state.message,
+      like: "0"
+    });
+    closeUpload();
+  };
+
   render() {
     return (
       <App
@@ -26,6 +49,8 @@ class container extends Component {
         {...this.state}
         handlePhotoURL={this.handlePhotoURL}
         handleNoPhoto={this.handleNoPhoto}
+        handleChange={this.handleChange}
+        handleSubmit={this.handleSubmit}
       />
     );
   }

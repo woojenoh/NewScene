@@ -4,24 +4,29 @@ import FeedPhoto from "./FeedPhoto";
 
 class App extends Component {
   state = {
+    user: {
+      username: "WOOJE",
+      profilePhoto:
+        "http://cphoto.asiae.co.kr/listimglink/6/2018011516074750720_1516000066.jpg"
+    },
     posts: [
       {
-        id: "1",
+        id: "0",
         username: "JIEUN",
         profilePhoto:
           "http://www.kyeongin.com/mnt/file/201807/20180721000818478_1.jpg",
-        movieId: "1",
+        movieId: "0",
         photo:
           "https://scontent-atl3-1.cdninstagram.com/vp/fc550259ae8484d90feddd6ee019f2cd/5BC5968E/t51.2885-15/e35/17881542_723982161114288_5150746053783322624_n.jpg",
         message: "멋지네요!",
         like: "1"
       },
       {
-        id: "2",
+        id: "1",
         username: "HYUNJOO",
         profilePhoto:
           "http://www.sporbiz.co.kr/news/photo/201804/222816_180822_5132.jpg",
-        movieId: "2",
+        movieId: "1",
         photo: "http://www.itdaily.kr/news/photo/201503/61286_67165_3835.jpg",
         message: "지금은 공사 중이에요 ㅜㅜ",
         like: "5"
@@ -29,24 +34,38 @@ class App extends Component {
     ],
     movies: [
       {
-        id: "1",
+        id: "0",
         title: "도둑들",
         location: "대전 동구 대학로 62"
       },
       {
-        id: "2",
+        id: "1",
         title: "더 킹",
         location: "대전광역시 유성구 대학로 99"
       }
     ]
   };
 
+  id = 2;
+
+  handleUpload = data => {
+    const { posts } = this.state;
+    this.setState({
+      posts: posts.concat({ id: this.id++, ...data })
+    });
+  };
+
   render() {
-    const { posts, movies } = this.state;
+    const { user, posts, movies } = this.state;
 
     return (
       <div className="App">
-        <Navigation />
+        <Navigation
+          user={user}
+          posts={posts}
+          movies={movies}
+          handleUpload={this.handleUpload}
+        />
         <main className="main">
           <section className="feed">
             {posts.map(post => {

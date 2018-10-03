@@ -19,7 +19,7 @@ body,
 }
 
 main.main {
-  height: 100%;
+  min-height: 100%;
   background-color: #f9f9f9;
   padding-top: 70px;
   position: relative;

@@ -10,7 +10,15 @@ class presenter extends Component {
   };
 
   render() {
-    const { openUpload, closeUpload, isUploadOpen } = this.props;
+    const {
+      openUpload,
+      closeUpload,
+      isUploadOpen,
+      user,
+      posts,
+      movies,
+      handleUpload
+    } = this.props;
 
     return (
       <nav className="nav">
@@ -46,7 +54,14 @@ class presenter extends Component {
             </div>
           </div>
         </div>
-        <UploadPhoto isUploadOpen={isUploadOpen} closeUpload={closeUpload} />
+        <UploadPhoto
+          isUploadOpen={isUploadOpen}
+          closeUpload={closeUpload}
+          user={user}
+          posts={posts}
+          movies={movies}
+          handleUpload={handleUpload}
+        />
       </nav>
     );
   }
