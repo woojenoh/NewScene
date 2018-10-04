@@ -11,16 +11,12 @@ export default class presenter extends Component {
       <section className="feed">
         {posts
           .map(post => {
-            const movie = movies.filter(movie => {
-              return post.movieId === movie.id;
-            });
             return (
               <FeedPhoto
                 key={post.id}
-                {...post}
+                post={post}
                 user={getUser(post.userId)}
-                title={movie[0].title}
-                location={movie[0].location}
+                movies={movies}
               />
             );
           })

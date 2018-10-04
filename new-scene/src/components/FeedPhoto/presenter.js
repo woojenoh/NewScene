@@ -5,30 +5,36 @@ import "./styles.css";
 
 class presenter extends Component {
   render() {
-    const { photo, message, like, title, location, user } = this.props;
+    const { post, user, movies, closePhoto } = this.props;
+
+    const movie = movies.filter(movie => {
+      return post.movieId === movie.id;
+    });
 
     return (
       <div className="feed__card">
         <div className="card__header">
           <img src={user.profilePhoto} alt="" className="card__header-img" />
           <span className="card__header-name">{user.name}</span>
-          <span className="card__close">×</span>
+          <span className="card__close" onClick={closePhoto}>
+            ×
+          </span>
         </div>
-        <img src={photo} alt="" className="card__img" />
+        <img src={post.photo} alt="" className="card__img" />
         <div className="card__footer">
           <div className="footer__rating">
             <div className="rating__up">
               <Ionicon icon="md-thumbs-up" fontSize="25px" />
-              <span>{like}</span>
+              <span>{post.like}</span>
             </div>
           </div>
           <div className="footer__movie">
             <span>
-              {title}({location})
+              {movie[0].title}({movie[0].location})
             </span>
           </div>
           <div className="footer__message">
-            <span>{message}</span>
+            <span>{post.message}</span>
           </div>
         </div>
       </div>

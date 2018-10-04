@@ -60,6 +60,15 @@ class App extends Component {
         photo: "http://www.itdaily.kr/news/photo/201503/61286_67165_3835.jpg",
         message: "지금은 공사 중이에요 ㅜㅜ",
         like: "5"
+      },
+      {
+        id: "2",
+        userId: "2",
+        movieId: "2",
+        photo:
+          "http://uniboard.hannam.ac.kr/whtml/editorimg/2015/02/20275_20150210152823_14235497038261.jpg",
+        message: "푸릇푸릇하네요 :D",
+        like: "0"
       }
     ],
     movies: [
@@ -77,6 +86,14 @@ class App extends Component {
         location: "대전광역시 유성구 대학로 99",
         poster:
           "https://movie-phinf.pstatic.net/20170118_172/1484704779507T3ahF_JPEG/movie_image.jpg",
+        photos: ["", "", ""]
+      },
+      {
+        id: "2",
+        title: "쎄시봉",
+        location: "대전광역시 대덕구 한남로 70",
+        poster:
+          "https://movie-phinf.pstatic.net/20150128_263/1422410206018A2rmx_JPEG/movie_image.jpg",
         photos: ["", "", ""]
       }
     ]
@@ -150,6 +167,9 @@ class App extends Component {
             path="/mypage"
             render={() => (
               <MyPage
+                users={users}
+                posts={posts}
+                movies={movies}
                 user={this.getUser(currentUserId)}
                 handleProfileUpdate={this.handleProfileUpdate}
               />
