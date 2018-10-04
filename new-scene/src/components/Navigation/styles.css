@@ -37,6 +37,11 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
+.nav__logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .nav__search .input {
   width: 220px;
   height: 27.5px;
@@ -51,12 +56,12 @@
   text-align: left;
 }
 
-.nav__menu svg {
+.nav__menu a {
   margin-left: 25px;
   cursor: pointer;
 }
 
-.nav__menu svg:first-child {
+.nav__menu a:first-child {
   margin: 0;
 }
 

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Ionicon from "react-ionicons";
+import { Link } from "react-router-dom";
 
 import "./styles.css";
 import UploadPhoto from "../UploadPhoto";
@@ -29,7 +30,9 @@ class presenter extends Component {
           }}
         >
           <div className="nav__col">
-            <span className="nav__logo">NewScene</span>
+            <span className="nav__logo">
+              <Link to="/feed">NewScene</Link>
+            </span>
           </div>
 
           <div className="nav__col">
@@ -46,11 +49,13 @@ class presenter extends Component {
                 color="rgba(0, 0, 0, 0.5)"
                 onClick={openUpload}
               />
-              <Ionicon
-                icon="md-person"
-                fontSize="25px"
-                color="rgba(0, 0, 0, 0.5)"
-              />
+              <Link to="/mypage">
+                <Ionicon
+                  icon="md-person"
+                  fontSize="25px"
+                  color="rgba(0, 0, 0, 0.5)"
+                />
+              </Link>
             </div>
           </div>
         </div>

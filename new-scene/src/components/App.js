@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
+
 import Navigation from "./Navigation";
 import Feed from "./Feed";
 
@@ -73,7 +75,16 @@ class App extends Component {
           handleUpload={this.handleUpload}
         />
         <main className="main">
-          <Feed posts={posts} movies={movies} />
+          <Route exact path="/" />
+          <Route
+            path="/feed"
+            render={() => <Feed posts={posts} movies={movies} />}
+          />
+          <Route path="/mypage" />
+          <Switch>
+            <Route path="/movie/:movieId" />
+            <Route path="/movie" />
+          </Switch>
         </main>
       </div>
     );
