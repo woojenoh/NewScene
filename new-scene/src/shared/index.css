@@ -28,9 +28,3 @@ main.main {
 main.main--login {
   padding-top: 5%;
 }
-
-section.feed {
-  max-width: 930px;
-  margin: 0 auto;
-  padding: 50px 0px;
-}

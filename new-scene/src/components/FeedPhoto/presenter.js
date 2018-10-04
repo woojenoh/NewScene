@@ -18,11 +18,11 @@ class presenter extends Component {
     return (
       <div className="feed__card">
         <div className="card__header">
-          <img src={profilePhoto} alt="1" className="card__header-img" />
+          <img src={profilePhoto} alt="" className="card__header-img" />
           <span className="card__header-name">{username}</span>
           <span className="card__close">×</span>
         </div>
-        <img src={photo} alt="1" className="card__img" />
+        <img src={photo} alt="" className="card__img" />
         <div className="card__footer">
           <div className="footer__rating">
             <div className="rating__up">

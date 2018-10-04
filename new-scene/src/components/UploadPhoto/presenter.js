@@ -32,7 +32,7 @@ export default class presenter extends Component {
           <div className="upload">
             <img
               src={photoURL}
-              alt="uploaded img"
+              alt=""
               className="upload__img"
               onError={handleNoPhoto}
             />
@@ -47,6 +47,7 @@ export default class presenter extends Component {
                 type="text"
                 className="input"
                 onChange={e => handleChange(e)}
+                required
               />
               <span className="input__label">이미지 주소</span>
               <input
@@ -57,6 +58,7 @@ export default class presenter extends Component {
                   handlePhotoURL(e);
                   handleChange(e);
                 }}
+                required
               />
               <span className="input__label">문구</span>
               <input
@@ -64,6 +66,7 @@ export default class presenter extends Component {
                 name="message"
                 type="text"
                 className="input"
+                required
               />
               <input type="submit" value="업로드" className="submit" />
             </form>

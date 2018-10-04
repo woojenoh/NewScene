@@ -11,6 +11,11 @@
 
 .input:focus {
   outline: none;
+  box-shadow: 0 0 0 0.1pt rgba(0, 0, 0, 0.5);
+}
+
+.input:hover {
+  box-shadow: 0 0 0 0.1pt rgba(0, 0, 0, 0.5);
 }
 
 .submit {

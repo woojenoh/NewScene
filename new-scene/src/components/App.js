@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Navigation from "./Navigation";
-import FeedPhoto from "./FeedPhoto";
+import Feed from "./Feed";
 
 class App extends Component {
   state = {
@@ -36,12 +36,16 @@ class App extends Component {
       {
         id: "0",
         title: "도둑들",
-        location: "대전 동구 대학로 62"
+        location: "대전 동구 대학로 62",
+        poster:
+          "https://movie-phinf.pstatic.net/20120718_209/1342589585791cltsr_JPEG/movie_image.jpg"
       },
       {
         id: "1",
         title: "더 킹",
-        location: "대전광역시 유성구 대학로 99"
+        location: "대전광역시 유성구 대학로 99",
+        poster:
+          "https://movie-phinf.pstatic.net/20170118_172/1484704779507T3ahF_JPEG/movie_image.jpg"
       }
     ]
   };
@@ -67,21 +71,7 @@ class App extends Component {
           handleUpload={this.handleUpload}
         />
         <main className="main">
-          <section className="feed">
-            {posts.map(post => {
-              const movie = movies.filter(movie => {
-                return post.movieId === movie.id;
-              });
-              return (
-                <FeedPhoto
-                  key={post.id}
-                  {...post}
-                  title={movie[0].title}
-                  location={movie[0].location}
-                />
-              );
-            })}
-          </section>
+          <Feed posts={posts} movies={movies} />
         </main>
       </div>
     );
