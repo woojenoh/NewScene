@@ -9,19 +9,21 @@ export default class presenter extends Component {
 
     return (
       <section className="feed">
-        {posts.reverse().map(post => {
-          const movie = movies.filter(movie => {
-            return post.movieId === movie.id;
-          });
-          return (
-            <FeedPhoto
-              key={post.id}
-              {...post}
-              title={movie[0].title}
-              location={movie[0].location}
-            />
-          );
-        })}
+        {posts
+          .map(post => {
+            const movie = movies.filter(movie => {
+              return post.movieId === movie.id;
+            });
+            return (
+              <FeedPhoto
+                key={post.id}
+                {...post}
+                title={movie[0].title}
+                location={movie[0].location}
+              />
+            );
+          })
+          .reverse()}
       </section>
     );
   }

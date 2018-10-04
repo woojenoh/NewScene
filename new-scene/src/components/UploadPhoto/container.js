@@ -3,8 +3,7 @@ import App from "./presenter";
 
 class container extends Component {
   state = {
-    photoURL:
-      "https://cdn7.bigcommerce.com/s-nmernf2qen/stencil/47bbf000-ea64-0134-d24f-525400dfdca6/images/no-image.svg",
+    photoURL: "",
     movieId: "",
     photo: "",
     message: ""
@@ -38,6 +37,12 @@ class container extends Component {
       photo: this.state.photo,
       message: this.state.message,
       like: "0"
+    });
+    this.setState({
+      photoURL: "",
+      movieId: "",
+      photo: "",
+      message: ""
     });
     closeUpload();
   };

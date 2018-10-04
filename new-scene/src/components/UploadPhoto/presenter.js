@@ -8,6 +8,9 @@ export default class presenter extends Component {
       closeUpload,
       isUploadOpen,
       photoURL,
+      movieId,
+      photo,
+      message,
       handlePhotoURL,
       handleNoPhoto,
       handleChange,
@@ -47,6 +50,7 @@ export default class presenter extends Component {
                 type="text"
                 className="input"
                 onChange={e => handleChange(e)}
+                value={movieId}
                 required
               />
               <span className="input__label">이미지 주소</span>
@@ -58,14 +62,16 @@ export default class presenter extends Component {
                   handlePhotoURL(e);
                   handleChange(e);
                 }}
+                value={photo}
                 required
               />
               <span className="input__label">문구</span>
               <input
-                onChange={e => handleChange(e)}
                 name="message"
                 type="text"
                 className="input"
+                onChange={e => handleChange(e)}
+                value={message}
                 required
               />
               <input type="submit" value="업로드" className="submit" />

@@ -38,14 +38,16 @@ class App extends Component {
         title: "도둑들",
         location: "대전 동구 대학로 62",
         poster:
-          "https://movie-phinf.pstatic.net/20120718_209/1342589585791cltsr_JPEG/movie_image.jpg"
+          "https://movie-phinf.pstatic.net/20120718_209/1342589585791cltsr_JPEG/movie_image.jpg",
+        photos: ["", "", ""]
       },
       {
         id: "1",
         title: "더 킹",
         location: "대전광역시 유성구 대학로 99",
         poster:
-          "https://movie-phinf.pstatic.net/20170118_172/1484704779507T3ahF_JPEG/movie_image.jpg"
+          "https://movie-phinf.pstatic.net/20170118_172/1484704779507T3ahF_JPEG/movie_image.jpg",
+        photos: ["", "", ""]
       }
     ]
   };
