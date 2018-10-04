@@ -56,9 +56,12 @@
   text-align: left;
 }
 
+.nav__menu svg {
+  cursor: pointer;
+}
+
 .nav__menu a {
   margin-left: 25px;
-  cursor: pointer;
 }
 
 .nav__menu a:first-child {

@@ -3,13 +3,17 @@ import { Route, Switch } from "react-router-dom";
 
 import Navigation from "./Navigation";
 import Feed from "./Feed";
+import MyPage from "./MyPage";
 
 class App extends Component {
   state = {
     user: {
       username: "WOOJE",
       profilePhoto:
-        "http://cphoto.asiae.co.kr/listimglink/6/2018011516074750720_1516000066.jpg"
+        "http://cphoto.asiae.co.kr/listimglink/6/2018011516074750720_1516000066.jpg",
+      message: "안녕하세요!",
+      postCount: 0,
+      likeCount: 0
     },
     posts: [
       {
@@ -57,9 +61,13 @@ class App extends Component {
   id = 2;
 
   handleUpload = data => {
-    const { posts } = this.state;
+    const { user, posts } = this.state;
     this.setState({
-      posts: posts.concat({ id: this.id++, ...data })
+      posts: posts.concat({ id: this.id++, ...data }),
+      user: {
+        ...user,
+        postCount: this.state.user.postCount + 1
+      }
     });
   };
 
@@ -80,7 +88,7 @@ class App extends Component {
             path="/feed"
             render={() => <Feed posts={posts} movies={movies} />}
           />
-          <Route path="/mypage" />
+          <Route path="/mypage" render={() => <MyPage />} />
           <Switch>
             <Route path="/movie/:movieId" />
             <Route path="/movie" />
