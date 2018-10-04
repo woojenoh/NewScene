@@ -88,7 +88,7 @@ class App extends Component {
             path="/feed"
             render={() => <Feed posts={posts} movies={movies} />}
           />
-          <Route path="/mypage" render={() => <MyPage />} />
+          <Route path="/mypage" render={() => <MyPage user={user} />} />
           <Switch>
             <Route path="/movie/:movieId" />
             <Route path="/movie" />

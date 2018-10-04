@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Profile from "../Profile";
+
 import "./styles.css";
 
 class presenter extends Component {
@@ -7,7 +9,7 @@ class presenter extends Component {
 
     return (
       <section className="profile">
-        <div />
+        <Profile user={user} />
       </section>
     );
   }
