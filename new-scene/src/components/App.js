@@ -160,6 +160,7 @@ class App extends Component {
                 posts={posts}
                 movies={movies}
                 getUser={this.getUser}
+                currentUser={this.getUser(currentUserId)}
               />
             )}
           />

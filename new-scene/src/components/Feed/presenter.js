@@ -5,11 +5,14 @@ import "./styles.css";
 
 export default class presenter extends Component {
   render() {
-    const { posts, movies, getUser } = this.props;
+    const { posts, movies, getUser, currentUser } = this.props;
 
     return (
       <section className="feed">
         {posts
+          .filter(post => {
+            return post.userId !== currentUser.id;
+          })
           .map(post => {
             return (
               <FeedPhoto
