@@ -5,7 +5,7 @@ import "./styles.css";
 
 export default class presenter extends Component {
   render() {
-    const { posts, movies } = this.props;
+    const { posts, movies, getUser } = this.props;
 
     return (
       <section className="feed">
@@ -18,6 +18,7 @@ export default class presenter extends Component {
               <FeedPhoto
                 key={post.id}
                 {...post}
+                user={getUser(post.userId)}
                 title={movie[0].title}
                 location={movie[0].location}
               />

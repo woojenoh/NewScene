@@ -24,7 +24,6 @@ export default class container extends Component {
         name: this.state.name,
         message: this.state.message,
         profilePhoto: this.state.profilePhoto,
-        currentPassword: this.state.currentPassword,
         password: this.state.password
       });
     } else {

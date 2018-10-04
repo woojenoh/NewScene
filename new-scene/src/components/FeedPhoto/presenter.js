@@ -5,21 +5,13 @@ import "./styles.css";
 
 class presenter extends Component {
   render() {
-    const {
-      name,
-      profilePhoto,
-      photo,
-      message,
-      like,
-      title,
-      location
-    } = this.props;
+    const { photo, message, like, title, location, user } = this.props;
 
     return (
       <div className="feed__card">
         <div className="card__header">
-          <img src={profilePhoto} alt="" className="card__header-img" />
-          <span className="card__header-name">{name}</span>
+          <img src={user.profilePhoto} alt="" className="card__header-img" />
+          <span className="card__header-name">{user.name}</span>
           <span className="card__close">×</span>
         </div>
         <img src={photo} alt="" className="card__img" />

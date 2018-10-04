@@ -31,11 +31,10 @@ class container extends Component {
     const { user, handleUpload, closeUpload } = this.props;
     e.preventDefault();
     handleUpload({
-      name: user.name,
-      profilePhoto: user.profilePhoto,
       movieId: this.state.movieId,
       photo: this.state.photo,
       message: this.state.message,
+      userId: user.id,
       like: "0"
     });
     this.setState({
