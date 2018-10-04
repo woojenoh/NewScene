@@ -31,7 +31,7 @@ class container extends Component {
     const { user, handleUpload, closeUpload } = this.props;
     e.preventDefault();
     handleUpload({
-      username: user.username,
+      name: user.name,
       profilePhoto: user.profilePhoto,
       movieId: this.state.movieId,
       photo: this.state.photo,

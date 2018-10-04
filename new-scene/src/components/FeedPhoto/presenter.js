@@ -6,7 +6,7 @@ import "./styles.css";
 class presenter extends Component {
   render() {
     const {
-      username,
+      name,
       profilePhoto,
       photo,
       message,
@@ -19,7 +19,7 @@ class presenter extends Component {
       <div className="feed__card">
         <div className="card__header">
           <img src={profilePhoto} alt="" className="card__header-img" />
-          <span className="card__header-name">{username}</span>
+          <span className="card__header-name">{name}</span>
           <span className="card__close">×</span>
         </div>
         <img src={photo} alt="" className="card__img" />

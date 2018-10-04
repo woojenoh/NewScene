@@ -5,11 +5,11 @@ import "./styles.css";
 
 class presenter extends Component {
   render() {
-    const { user, posts, movies } = this.props;
+    const { user, posts, movies, handleProfileUpdate } = this.props;
 
     return (
       <section className="profile">
-        <Profile user={user} />
+        <Profile user={user} handleProfileUpdate={handleProfileUpdate} />
       </section>
     );
   }

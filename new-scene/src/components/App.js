@@ -8,7 +8,9 @@ import MyPage from "./MyPage";
 class App extends Component {
   state = {
     user: {
-      username: "WOOJE",
+      userId: "wjnoh",
+      password: "123456",
+      name: "WOOJE",
       profilePhoto:
         "http://cphoto.asiae.co.kr/listimglink/6/2018011516074750720_1516000066.jpg",
       message: "안녕하세요!",
@@ -18,7 +20,7 @@ class App extends Component {
     posts: [
       {
         id: "0",
-        username: "JIEUN",
+        name: "JIEUN",
         profilePhoto:
           "http://www.kyeongin.com/mnt/file/201807/20180721000818478_1.jpg",
         movieId: "0",
@@ -29,7 +31,7 @@ class App extends Component {
       },
       {
         id: "1",
-        username: "HYUNJOO",
+        name: "HYUNJOO",
         profilePhoto:
           "http://www.sporbiz.co.kr/news/photo/201804/222816_180822_5132.jpg",
         movieId: "1",
@@ -71,6 +73,19 @@ class App extends Component {
     });
   };
 
+  handleProfileUpdate = data => {
+    const { user } = this.state;
+    this.setState({
+      user: {
+        ...user,
+        password: data.password,
+        name: data.name,
+        profilePhoto: data.profilePhoto,
+        message: data.message
+      }
+    });
+  };
+
   render() {
     const { user, posts, movies } = this.state;
 
@@ -88,7 +103,15 @@ class App extends Component {
             path="/feed"
             render={() => <Feed posts={posts} movies={movies} />}
           />
-          <Route path="/mypage" render={() => <MyPage user={user} />} />
+          <Route
+            path="/mypage"
+            render={() => (
+              <MyPage
+                user={user}
+                handleProfileUpdate={this.handleProfileUpdate}
+              />
+            )}
+          />
           <Switch>
             <Route path="/movie/:movieId" />
             <Route path="/movie" />

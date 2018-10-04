@@ -1,0 +1,35 @@
+.setting__title {
+  display: block;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.setting {
+  width: 300px;
+  height: 420px;
+  padding: 15px 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.setting__form .input__label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.setting__form .input {
+  margin-bottom: 10px;
+}
+
+.setting__close {
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 100;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 20px;
+  margin-top: 15px;
+  cursor: pointer;
+}

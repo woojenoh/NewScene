@@ -1,11 +1,18 @@
 import React, { Component } from "react";
 import Ionicon from "react-ionicons";
+import ProfileUpdate from "../ProfileUpdate";
 
 import "./styles.css";
 
 export default class presenter extends Component {
   render() {
-    const { user } = this.props;
+    const {
+      user,
+      isUpdateOpen,
+      openUpdate,
+      closeUpdate,
+      handleProfileUpdate
+    } = this.props;
 
     return (
       <div className="profile__columns">
@@ -14,8 +21,12 @@ export default class presenter extends Component {
         </div>
         <div className="profile__column">
           <span className="profile__name">
-            {user.username}
-            <Ionicon icon="md-settings" className="profile__setting" />
+            {user.name}
+            <Ionicon
+              icon="md-settings"
+              className="profile__setting"
+              onClick={openUpdate}
+            />
           </span>
           <div className="profile__count">
             게시물
@@ -25,6 +36,13 @@ export default class presenter extends Component {
           </div>
           <div className="profile__introduce">{user.message}</div>
         </div>
+
+        <ProfileUpdate
+          user={user}
+          isUpdateOpen={isUpdateOpen}
+          closeUpdate={closeUpdate}
+          handleProfileUpdate={handleProfileUpdate}
+        />
       </div>
     );
   }
