@@ -6,6 +6,9 @@ import Feed from "./Feed";
 import MyPage from "./MyPage";
 import Auth from "./Auth";
 
+let userIndex = 3;
+let postIndex = 3;
+
 class App extends Component {
   state = {
     currentUserId: null,
@@ -52,7 +55,7 @@ class App extends Component {
         photo:
           "https://scontent-atl3-1.cdninstagram.com/vp/fc550259ae8484d90feddd6ee019f2cd/5BC5968E/t51.2885-15/e35/17881542_723982161114288_5150746053783322624_n.jpg",
         message: "멋지네요!",
-        like: "1"
+        like: 1
       },
       {
         id: "1",
@@ -60,7 +63,7 @@ class App extends Component {
         movieId: "1",
         photo: "http://www.itdaily.kr/news/photo/201503/61286_67165_3835.jpg",
         message: "지금은 공사 중이에요 ㅜㅜ",
-        like: "5"
+        like: 5
       },
       {
         id: "2",
@@ -69,7 +72,7 @@ class App extends Component {
         photo:
           "http://uniboard.hannam.ac.kr/whtml/editorimg/2015/02/20275_20150210152823_14235497038261.jpg",
         message: "푸릇푸릇하네요 :D",
-        like: "0"
+        like: 0
       }
     ],
     movies: [
@@ -100,9 +103,6 @@ class App extends Component {
     ]
   };
 
-  userIndex = 3;
-  postIndex = 3;
-
   getUser = userId => {
     const { users } = this.state;
     const targetUser = users.filter(user => {
@@ -114,7 +114,7 @@ class App extends Component {
   handleUpload = data => {
     const { currentUserId, users, posts } = this.state;
     this.setState({
-      posts: posts.concat({ id: this.postIndex++, ...data }),
+      posts: posts.concat({ id: postIndex++ + "", ...data }),
       users: users.map(
         user =>
           user.id === currentUserId
@@ -153,6 +153,30 @@ class App extends Component {
     }
   };
 
+  handleSignup = data => {
+    const { users } = this.state;
+    const targetUser = users.filter(user => {
+      return user.username === data.username;
+    });
+    if (targetUser[0] !== undefined) {
+      alert("이미 존재하는 아이디입니다.");
+    } else {
+      this.setState({
+        users: users.concat({
+          id: userIndex + "",
+          username: data.username,
+          name: data.name,
+          password: data.password,
+          profilePhoto: "http://mirkino.tv/article/pic/ava/0.jpg",
+          message: "자신을 소개해주세요.",
+          postCount: 0,
+          likePosts: []
+        }),
+        currentUserId: userIndex++ + ""
+      });
+    }
+  };
+
   render() {
     const { currentUserId, users, posts, movies } = this.state;
 
@@ -161,7 +185,12 @@ class App extends Component {
         <main className="main">
           <Route
             path="/"
-            render={() => <Auth handleLogin={this.handleLogin} />}
+            render={() => (
+              <Auth
+                handleLogin={this.handleLogin}
+                handleSignup={this.handleSignup}
+              />
+            )}
           />
         </main>
       );

@@ -15,6 +15,7 @@ export default class presenter extends Component {
             placeholder="아이디"
             value={username}
             onChange={handleChange}
+            required
           />
           <input
             name="password"
@@ -23,6 +24,7 @@ export default class presenter extends Component {
             placeholder="패스워드"
             value={password}
             onChange={handleChange}
+            required
           />
           <input className="submit" type="submit" value="로그인" />
         </form>

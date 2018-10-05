@@ -1,0 +1,8 @@
+.signup__form {
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.signup__form .input {
+  margin-bottom: 10px;
+}

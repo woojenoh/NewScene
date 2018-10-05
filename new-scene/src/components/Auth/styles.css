@@ -20,11 +20,23 @@ section.auth {
 .auth__toggle span {
   margin-left: 5px;
   color: #3897f0;
+  cursor: pointer;
 }
 
 .auth__login {
   max-width: 350px;
   height: 420px;
+  background-color: white;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  position: relative;
+}
+
+.auth__signup {
+  max-width: 350px;
+  height: 460px;
   background-color: white;
   margin: 0 auto;
   text-align: center;
