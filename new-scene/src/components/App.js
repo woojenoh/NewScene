@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import Navigation from "./Navigation";
 import Feed from "./Feed";
 import MyPage from "./MyPage";
+import Auth from "./Auth";
 
 class App extends Component {
   state = {
@@ -18,7 +19,7 @@ class App extends Component {
           "http://www.kyeongin.com/mnt/file/201807/20180721000818478_1.jpg",
         message: "안녕!",
         postCount: 1,
-        likeCount: 0
+        likePosts: []
       },
       {
         id: "1",
@@ -29,7 +30,7 @@ class App extends Component {
           "http://www.sporbiz.co.kr/news/photo/201804/222816_180822_5132.jpg",
         message: "안녕!",
         postCount: 1,
-        likeCount: 0
+        likePosts: []
       },
       {
         id: "2",
@@ -40,7 +41,7 @@ class App extends Component {
           "http://cphoto.asiae.co.kr/listimglink/6/2018011516074750720_1516000066.jpg",
         message: "안녕하세요!",
         postCount: 0,
-        likeCount: 0
+        likePosts: []
       }
     ],
     posts: [
@@ -100,7 +101,7 @@ class App extends Component {
   };
 
   userIndex = 3;
-  postIndex = 2;
+  postIndex = 3;
 
   getUser = userId => {
     const { users } = this.state;
@@ -142,47 +143,55 @@ class App extends Component {
   render() {
     const { currentUserId, users, posts, movies } = this.state;
 
-    return (
-      <div className="App">
-        <Navigation
-          user={this.getUser(currentUserId)}
-          posts={posts}
-          movies={movies}
-          handleUpload={this.handleUpload}
-        />
-        <main className="main">
-          <Route exact path="/" />
-          <Route
-            path="/feed"
-            render={() => (
-              <Feed
-                users={users}
-                posts={posts}
-                movies={movies}
-                getUser={this.getUser}
-                currentUser={this.getUser(currentUserId)}
-              />
-            )}
+    const PublicRoutes = () => {
+      return <Route exact path="/" />;
+    };
+
+    const PrivateRoutes = () => {
+      return (
+        <div className="App">
+          <Navigation
+            user={this.getUser(currentUserId)}
+            posts={posts}
+            movies={movies}
+            handleUpload={this.handleUpload}
           />
-          <Route
-            path="/mypage"
-            render={() => (
-              <MyPage
-                users={users}
-                posts={posts}
-                movies={movies}
-                user={this.getUser(currentUserId)}
-                handleProfileUpdate={this.handleProfileUpdate}
-              />
-            )}
-          />
-          <Switch>
-            <Route path="/movie/:movieId" />
-            <Route path="/movie" />
-          </Switch>
-        </main>
-      </div>
-    );
+          <main className="main">
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <Feed
+                  users={users}
+                  posts={posts}
+                  movies={movies}
+                  getUser={this.getUser}
+                  currentUser={this.getUser(currentUserId)}
+                />
+              )}
+            />
+            <Route
+              path="/mypage"
+              render={() => (
+                <MyPage
+                  users={users}
+                  posts={posts}
+                  movies={movies}
+                  user={this.getUser(currentUserId)}
+                  handleProfileUpdate={this.handleProfileUpdate}
+                />
+              )}
+            />
+            <Switch>
+              <Route path="/movie/:movieId" />
+              <Route path="/movie" />
+            </Switch>
+          </main>
+        </div>
+      );
+    };
+
+    return currentUserId === null ? PublicRoutes() : PrivateRoutes();
   }
 }
 

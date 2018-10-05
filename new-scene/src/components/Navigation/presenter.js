@@ -31,7 +31,7 @@ class presenter extends Component {
         >
           <div className="nav__col">
             <span className="nav__logo">
-              <Link to="/feed">NewScene</Link>
+              <Link to="/">NewScene</Link>
             </span>
           </div>
 

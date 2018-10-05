@@ -32,7 +32,10 @@ export default class presenter extends Component {
             게시물
             <span className="profile__count-post"> {user.postCount}</span>
             저장
-            <span className="profile__count-like"> {user.likeCount}</span>
+            <span className="profile__count-like">
+              {" "}
+              {user.likePosts.length}
+            </span>
           </div>
           <div className="profile__introduce">{user.message}</div>
         </div>
