@@ -8,7 +8,7 @@ import Auth from "./Auth";
 
 class App extends Component {
   state = {
-    currentUserId: "2",
+    currentUserId: null,
     users: [
       {
         id: "0",
@@ -126,7 +126,6 @@ class App extends Component {
 
   handleProfileUpdate = data => {
     const { currentUserId, users } = this.state;
-    console.log(this.currentUserId);
     this.setState({
       users: users.map(
         user =>
@@ -140,11 +139,32 @@ class App extends Component {
     });
   };
 
+  handleLogin = data => {
+    const { users } = this.state;
+    const targetUser = users.filter(user => {
+      return user.username === data.username && user.password === data.password;
+    });
+    if (targetUser[0] === undefined) {
+      alert("아이디나 비밀번호가 일치하지 않습니다.");
+    } else {
+      this.setState({
+        currentUserId: targetUser[0].id
+      });
+    }
+  };
+
   render() {
     const { currentUserId, users, posts, movies } = this.state;
 
     const PublicRoutes = () => {
-      return <Route exact path="/" />;
+      return (
+        <main className="main">
+          <Route
+            path="/"
+            render={() => <Auth handleLogin={this.handleLogin} />}
+          />
+        </main>
+      );
     };
 
     const PrivateRoutes = () => {
