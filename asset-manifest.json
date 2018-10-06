@@ -1,15 +1,15 @@
 {
-  "main.css": "/NewScene/static/css/main.e09b5a2b.chunk.css",
-  "main.js": "/NewScene/static/js/main.da95ece9.chunk.js",
-  "main.js.map": "/NewScene/static/js/main.da95ece9.chunk.js.map",
+  "main.css": "/NewScene/static/css/main.41bc0896.chunk.css",
+  "main.js": "/NewScene/static/js/main.08dc8f6c.chunk.js",
+  "main.js.map": "/NewScene/static/js/main.08dc8f6c.chunk.js.map",
   "static/js/1.f6db730d.chunk.js": "/NewScene/static/js/1.f6db730d.chunk.js",
   "static/js/1.f6db730d.chunk.js.map": "/NewScene/static/js/1.f6db730d.chunk.js.map",
   "runtime~main.js": "/NewScene/static/js/runtime~main.64a8cc17.js",
   "runtime~main.js.map": "/NewScene/static/js/runtime~main.64a8cc17.js.map",
-  "static/css/main.e09b5a2b.chunk.css.map": "/NewScene/static/css/main.e09b5a2b.chunk.css.map",
+  "static/css/main.41bc0896.chunk.css.map": "/NewScene/static/css/main.41bc0896.chunk.css.map",
   "static/media/no-photo.svg": "/NewScene/static/media/no-photo.a5e6fa7a.svg",
   "static/media/clip.png": "/NewScene/static/media/clip.f09a68fe.png",
   "index.html": "/NewScene/index.html",
-  "precache-manifest.1cdf352a32416365e9e6eadecd50a403.js": "/NewScene/precache-manifest.1cdf352a32416365e9e6eadecd50a403.js",
+  "precache-manifest.7a27f4bf8e0e56a494920f9c5e286067.js": "/NewScene/precache-manifest.7a27f4bf8e0e56a494920f9c5e286067.js",
   "service-worker.js": "/NewScene/service-worker.js"
 }
