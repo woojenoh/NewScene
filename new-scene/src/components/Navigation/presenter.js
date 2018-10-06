@@ -18,7 +18,8 @@ class presenter extends Component {
       user,
       posts,
       movies,
-      handleUpload
+      handleUpload,
+      handleLogout
     } = this.props;
 
     return (
@@ -54,6 +55,14 @@ class presenter extends Component {
                   icon="md-person"
                   fontSize="25px"
                   color="rgba(0, 0, 0, 0.5)"
+                />
+              </Link>
+              <Link to="/">
+                <Ionicon
+                  icon="md-log-out"
+                  fontSize="25px"
+                  color="rgba(0, 0, 0, 0.5)"
+                  onClick={() => handleLogout()}
                 />
               </Link>
             </div>

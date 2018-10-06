@@ -231,6 +231,12 @@ class App extends Component {
     });
   };
 
+  handleLogout = () => {
+    this.setState({
+      currentUserId: null
+    });
+  };
+
   render() {
     const { currentUserId, users, posts, movies } = this.state;
 
@@ -258,6 +264,7 @@ class App extends Component {
             posts={posts}
             movies={movies}
             handleUpload={this.handleUpload}
+            handleLogout={this.handleLogout}
           />
           <main className="main">
             <Route

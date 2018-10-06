@@ -23,11 +23,11 @@
 }
 
 .nav__col:first-child {
-  width: 100px;
+  width: 130px;
 }
 
 .nav__col:last-child {
-  width: 100px;
+  width: 130px;
   display: flex;
   justify-content: flex-end;
 }
