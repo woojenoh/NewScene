@@ -17,7 +17,9 @@ class presenter extends Component {
       isPhotoOpen,
       openPhoto,
       closePhoto,
-      handleScroll
+      handleScroll,
+      handleLike,
+      handleUnlike
     } = this.props;
 
     return (
@@ -58,6 +60,8 @@ class presenter extends Component {
               getMovie={getMovie}
               closePhoto={closePhoto}
               currentUser={currentUser}
+              handleLike={handleLike}
+              handleUnlike={handleUnlike}
             />
           </div>
         </div>

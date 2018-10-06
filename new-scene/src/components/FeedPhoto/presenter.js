@@ -18,8 +18,6 @@ class presenter extends Component {
     const movie = getMovie(post.movieId);
     const user = getUser(post.userId);
 
-    console.log(typeof handleLike);
-
     return (
       <div className="feed__card">
         <div className="card__header">

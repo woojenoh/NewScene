@@ -303,7 +303,20 @@ class App extends Component {
               )}
             />
             <Switch>
-              <Route path="/movie/:movieId" />
+              <Route
+                path="/movie/:movieId"
+                render={({ match }) => (
+                  <Movie
+                    match={match}
+                    currentUser={this.getUser(currentUserId)}
+                    posts={posts}
+                    getMovie={this.getMovie}
+                    getUser={this.getUser}
+                    handleLike={this.handleLike}
+                    handleUnlike={this.handleUnlike}
+                  />
+                )}
+              />
               <Route path="/movie" />
             </Switch>
           </main>
