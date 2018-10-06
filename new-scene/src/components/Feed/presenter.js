@@ -7,8 +7,8 @@ export default class presenter extends Component {
   render() {
     const {
       posts,
-      movies,
       getUser,
+      getMovie,
       currentUser,
       handleLike,
       handleUnlike
@@ -25,8 +25,8 @@ export default class presenter extends Component {
               <FeedPhoto
                 key={post.id}
                 post={post}
-                user={getUser(post.userId)}
-                movies={movies}
+                getUser={getUser}
+                getMovie={getMovie}
                 currentUser={currentUser}
                 handleLike={handleLike}
                 handleUnlike={handleUnlike}

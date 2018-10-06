@@ -10,9 +10,10 @@ class presenter extends Component {
 
   render() {
     const {
-      user,
+      currentUser,
       post,
-      movies,
+      getUser,
+      getMovie,
       isPhotoOpen,
       openPhoto,
       closePhoto,
@@ -53,10 +54,10 @@ class presenter extends Component {
           >
             <FeedPhoto
               post={post}
-              user={user}
-              currentUser={user}
-              movies={movies}
+              getUser={getUser}
+              getMovie={getMovie}
               closePhoto={closePhoto}
+              currentUser={currentUser}
             />
           </div>
         </div>

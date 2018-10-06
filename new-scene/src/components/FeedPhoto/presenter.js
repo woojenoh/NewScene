@@ -7,17 +7,16 @@ class presenter extends Component {
   render() {
     const {
       post,
-      user,
-      movies,
+      getUser,
+      getMovie,
       closePhoto,
       isUserLike,
       handleLike,
       handleUnlike
     } = this.props;
 
-    const movie = movies.filter(movie => {
-      return post.movieId === movie.id;
-    });
+    const movie = getMovie(post.movieId);
+    const user = getUser(post.userId);
 
     return (
       <div className="feed__card">
@@ -42,7 +41,7 @@ class presenter extends Component {
         <div className="card__footer">
           <div className="footer__movie">
             <span>
-              {movie[0].title}({movie[0].location})
+              {movie.title}({movie.location})
             </span>
           </div>
           <div className="footer__message">

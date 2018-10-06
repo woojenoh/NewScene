@@ -5,6 +5,7 @@ import Navigation from "./Navigation";
 import Feed from "./Feed";
 import MyPage from "./MyPage";
 import Auth from "./Auth";
+import Movie from "./Movie";
 
 let userIndex = 3;
 let postIndex = 3;
@@ -109,6 +110,14 @@ class App extends Component {
       return user.id === userId;
     });
     return targetUser[0];
+  };
+
+  getMovie = movieId => {
+    const { movies } = this.state;
+    const targetMovie = movies.filter(movie => {
+      return movie.id === movieId;
+    });
+    return targetMovie[0];
   };
 
   handleUpload = data => {
@@ -238,7 +247,7 @@ class App extends Component {
   };
 
   render() {
-    const { currentUserId, users, posts, movies } = this.state;
+    const { currentUserId, posts, movies } = this.state;
 
     const PublicRoutes = () => {
       return (
@@ -272,11 +281,10 @@ class App extends Component {
               path="/"
               render={() => (
                 <Feed
-                  users={users}
-                  posts={posts}
-                  movies={movies}
-                  getUser={this.getUser}
                   currentUser={this.getUser(currentUserId)}
+                  posts={posts}
+                  getUser={this.getUser}
+                  getMovie={this.getMovie}
                   handleLike={this.handleLike}
                   handleUnlike={this.handleUnlike}
                 />
@@ -286,10 +294,10 @@ class App extends Component {
               path="/mypage"
               render={() => (
                 <MyPage
-                  users={users}
+                  currentUser={this.getUser(currentUserId)}
                   posts={posts}
-                  movies={movies}
-                  user={this.getUser(currentUserId)}
+                  getUser={this.getUser}
+                  getMovie={this.getMovie}
                   handleProfileUpdate={this.handleProfileUpdate}
                 />
               )}

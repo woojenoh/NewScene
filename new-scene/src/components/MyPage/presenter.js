@@ -6,26 +6,36 @@ import "./styles.css";
 
 class presenter extends Component {
   render() {
-    const { user, posts, movies, handleProfileUpdate } = this.props;
+    const {
+      currentUser,
+      posts,
+      getUser,
+      getMovie,
+      handleProfileUpdate
+    } = this.props;
 
     return (
       <>
         <section className="profile">
-          <Profile user={user} handleProfileUpdate={handleProfileUpdate} />
+          <Profile
+            user={currentUser}
+            handleProfileUpdate={handleProfileUpdate}
+          />
         </section>
         <section className="profile-post">
           <div className="tab-content">
             {posts
               .filter(post => {
-                return post.userId === user.id;
+                return post.userId === currentUser.id;
               })
               .map(post => {
                 return (
                   <Thumbnail
                     key={post.id}
                     post={post}
-                    user={user}
-                    movies={movies}
+                    getUser={getUser}
+                    getMovie={getMovie}
+                    currentUser={currentUser}
                   />
                 );
               })}
