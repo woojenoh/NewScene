@@ -11,7 +11,7 @@ let postIndex = 3;
 
 class App extends Component {
   state = {
-    currentUserId: null,
+    currentUserId: "2",
     users: [
       {
         id: "0",
@@ -182,7 +182,7 @@ class App extends Component {
 
     const PublicRoutes = () => {
       return (
-        <main className="main">
+        <main className="main main--login">
           <Route
             path="/"
             render={() => (

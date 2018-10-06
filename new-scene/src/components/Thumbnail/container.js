@@ -25,6 +25,14 @@ export default class container extends Component {
     }
   };
 
+  handleScroll = () => {
+    if (this.state.isPhotoOpen === true) {
+      document.querySelector("body").style.overflow = "hidden";
+    } else {
+      document.querySelector("body").style.overflow = "auto";
+    }
+  };
+
   render() {
     return (
       <App
@@ -33,6 +41,7 @@ export default class container extends Component {
         openPhoto={this.openPhoto}
         closePhoto={this.closePhoto}
         handleImgSize={this.handleImgSize}
+        handleScroll={this.handleScroll}
       />
     );
   }

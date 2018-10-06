@@ -1,6 +1,7 @@
 section.auth {
-  max-width: 930px;
+  width: 930px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .auth__toggle {
@@ -74,4 +75,9 @@ section.auth {
   position: absolute;
   top: 8px;
   left: 1px;
+}
+
+@media (max-width: 640px) {
+  section.auth {
+  }
 }

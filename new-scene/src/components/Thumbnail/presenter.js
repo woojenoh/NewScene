@@ -15,11 +15,13 @@ class presenter extends Component {
       movies,
       isPhotoOpen,
       openPhoto,
-      closePhoto
+      closePhoto,
+      handleScroll
     } = this.props;
 
     return (
       <>
+        {handleScroll()}
         <div className="thumbnail-wrapper">
           <div className="thumbnail">
             <div className="thumbnail-centered">
