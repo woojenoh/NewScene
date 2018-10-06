@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import App from "./presenter";
+import nophoto from "../../images/no-photo.svg";
 
 class container extends Component {
   state = {
@@ -17,8 +18,7 @@ class container extends Component {
 
   handleNoPhoto = e => {
     e.target.onerror = null;
-    e.target.src =
-      "https://cdn7.bigcommerce.com/s-nmernf2qen/stencil/47bbf000-ea64-0134-d24f-525400dfdca6/images/no-image.svg";
+    e.target.src = nophoto;
   };
 
   handleChange = e => {

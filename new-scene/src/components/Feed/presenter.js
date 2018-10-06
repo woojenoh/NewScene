@@ -5,7 +5,14 @@ import "./styles.css";
 
 export default class presenter extends Component {
   render() {
-    const { posts, movies, getUser, currentUser } = this.props;
+    const {
+      posts,
+      movies,
+      getUser,
+      currentUser,
+      handleLike,
+      handleUnlike
+    } = this.props;
 
     return (
       <section className="feed">
@@ -20,6 +27,9 @@ export default class presenter extends Component {
                 post={post}
                 user={getUser(post.userId)}
                 movies={movies}
+                currentUser={currentUser}
+                handleLike={handleLike}
+                handleUnlike={handleUnlike}
               />
             );
           })

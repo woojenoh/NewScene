@@ -54,6 +54,7 @@ class presenter extends Component {
             <FeedPhoto
               post={post}
               user={user}
+              currentUser={user}
               movies={movies}
               closePhoto={closePhoto}
             />

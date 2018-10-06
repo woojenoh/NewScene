@@ -24,6 +24,27 @@
   display: block;
 }
 
+.card__clip {
+  position: absolute;
+  width: 25px;
+  right: 40px;
+  top: -21px;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.card__clip:hover {
+  opacity: 1;
+}
+
+.card__clip--liked {
+  opacity: 1;
+}
+
+.modal .card__clip {
+  display: none;
+}
+
 .card__header {
   height: 60px;
   padding: 15px;
@@ -46,47 +67,17 @@
 }
 
 .card__footer {
-  min-height: 110px;
-  padding: 10px 15px;
-}
-
-.footer__rating {
-  display: flex;
-  align-items: center;
-}
-
-.footer__rating span {
-  font-size: 16px;
-  padding: 0px 5px;
-}
-
-.rating__up {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.rating__up svg {
-  margin-bottom: 3px;
-  fill: rgba(0, 0, 0, 0.5);
-}
-
-.rating__up.selected svg {
-  fill: black;
-}
-
-.rating__up svg:hover {
-  fill: black;
+  min-height: 85px;
+  padding: 25px 15px;
 }
 
 .footer__movie {
-  margin-top: 5px;
   font-size: 15px;
   color: rgba(0, 0, 0, 0.5);
 }
 
 .footer__message {
-  margin: 15px 0;
+  margin-top: 15px;
 }
 
 @media (max-width: 1000px) {
@@ -106,14 +97,22 @@
     padding-top: 0;
   }
   .feed__card {
-    border: none;
-    background-color: #f9f9f9;
-    margin-bottom: 0;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
   }
   .feed__toggle {
     display: none;
   }
   .card__img {
     border: none;
+  }
+  .card__clip {
+    width: 20px;
+    top: -17px;
+    right: 35px;
+  }
+  .card__clip:hover {
+    opacity: 0.3;
   }
 }

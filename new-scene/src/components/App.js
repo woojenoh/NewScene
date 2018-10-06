@@ -55,7 +55,7 @@ class App extends Component {
         photo:
           "https://scontent-atl3-1.cdninstagram.com/vp/fc550259ae8484d90feddd6ee019f2cd/5BC5968E/t51.2885-15/e35/17881542_723982161114288_5150746053783322624_n.jpg",
         message: "멋지네요!",
-        like: 1
+        like: 0
       },
       {
         id: "1",
@@ -63,7 +63,7 @@ class App extends Component {
         movieId: "1",
         photo: "http://www.itdaily.kr/news/photo/201503/61286_67165_3835.jpg",
         message: "지금은 공사 중이에요 ㅜㅜ",
-        like: 5
+        like: 0
       },
       {
         id: "2",
@@ -177,6 +177,60 @@ class App extends Component {
     }
   };
 
+  handleLike = postId => {
+    const { currentUserId, users, posts } = this.state;
+    this.setState({
+      users: users.map(
+        user =>
+          user.id === currentUserId
+            ? {
+                ...user,
+                likePosts: this.state.users[currentUserId].likePosts.concat(
+                  postId + ""
+                )
+              }
+            : user
+      ),
+      posts: posts.map(
+        post =>
+          post.id === postId
+            ? {
+                ...post,
+                like: this.state.posts[postId].like + 1
+              }
+            : post
+      )
+    });
+  };
+
+  handleUnlike = postId => {
+    const { currentUserId, users, posts } = this.state;
+    this.setState({
+      users: users.map(
+        user =>
+          user.id === currentUserId
+            ? {
+                ...user,
+                likePosts: this.state.users[currentUserId].likePosts.filter(
+                  id => {
+                    return id !== postId;
+                  }
+                )
+              }
+            : user
+      ),
+      posts: posts.map(
+        post =>
+          post.id === postId
+            ? {
+                ...post,
+                like: this.state.posts[postId].like - 1
+              }
+            : post
+      )
+    });
+  };
+
   render() {
     const { currentUserId, users, posts, movies } = this.state;
 
@@ -216,6 +270,8 @@ class App extends Component {
                   movies={movies}
                   getUser={this.getUser}
                   currentUser={this.getUser(currentUserId)}
+                  handleLike={this.handleLike}
+                  handleUnlike={this.handleUnlike}
                 />
               )}
             />
