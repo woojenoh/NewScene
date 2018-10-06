@@ -18,21 +18,27 @@ class presenter extends Component {
     const movie = getMovie(post.movieId);
     const user = getUser(post.userId);
 
+    console.log(typeof handleLike);
+
     return (
       <div className="feed__card">
         <div className="card__header">
           <img src={user.profilePhoto} alt="" className="card__header-img" />
           <span className="card__header-name">{user.name}</span>
-          <img
-            src={clip}
-            alt=""
-            className={
-              isUserLike() ? "card__clip card__clip--liked" : "card__clip"
-            }
-            onClick={() =>
-              isUserLike() ? handleUnlike(post.id) : handleLike(post.id)
-            }
-          />
+          {typeof handleLike === "function" ? (
+            <img
+              src={clip}
+              alt=""
+              className={
+                isUserLike() ? "card__clip card__clip--liked" : "card__clip"
+              }
+              onClick={() =>
+                isUserLike() ? handleUnlike(post.id) : handleLike(post.id)
+              }
+            />
+          ) : (
+            ""
+          )}
           <span className="card__close" onClick={closePhoto}>
             ×
           </span>

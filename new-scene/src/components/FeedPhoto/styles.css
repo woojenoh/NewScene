@@ -27,10 +27,11 @@
 .card__clip {
   position: absolute;
   width: 25px;
-  right: 40px;
+  right: 50px;
   top: -21px;
   cursor: pointer;
   opacity: 0.3;
+  transition: all 0.1s ease-in-out;
 }
 
 .card__clip:hover {
@@ -38,11 +39,10 @@
 }
 
 .card__clip--liked {
+  transform: rotate(10deg);
+  top: -19px;
   opacity: 1;
-}
-
-.modal .card__clip {
-  display: none;
+  transition: all 0.1s ease-in-out;
 }
 
 .card__header {
@@ -110,7 +110,7 @@
   .card__clip {
     width: 20px;
     top: -17px;
-    right: 35px;
+    right: 50px;
   }
   .card__clip:hover {
     opacity: 0.3;
