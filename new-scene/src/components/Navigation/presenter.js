@@ -60,6 +60,12 @@ class presenter extends Component {
       dropdownIndicator: base => ({
         ...base,
         display: "none"
+      }),
+      placeholder: base => ({
+        ...base,
+        left: 0,
+        right: 0,
+        textAlign: "center"
       })
     };
 

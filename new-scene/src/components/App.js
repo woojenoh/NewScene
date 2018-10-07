@@ -8,7 +8,7 @@ import Auth from "./Auth";
 import Movie from "./Movie";
 
 let userIndex = 3;
-let postIndex = 3;
+let postIndex = 6;
 
 class App extends Component {
   state = {
@@ -23,7 +23,7 @@ class App extends Component {
           "http://www.kyeongin.com/mnt/file/201807/20180721000818478_1.jpg",
         message: "안녕!",
         postCount: 1,
-        likePosts: []
+        likePosts: ["2"]
       },
       {
         id: "1",
@@ -34,7 +34,7 @@ class App extends Component {
           "http://www.sporbiz.co.kr/news/photo/201804/222816_180822_5132.jpg",
         message: "안녕!",
         postCount: 1,
-        likePosts: []
+        likePosts: ["0", "4"]
       },
       {
         id: "2",
@@ -56,7 +56,7 @@ class App extends Component {
         photo:
           "https://scontent-atl3-1.cdninstagram.com/vp/fc550259ae8484d90feddd6ee019f2cd/5BC5968E/t51.2885-15/e35/17881542_723982161114288_5150746053783322624_n.jpg",
         message: "멋지네요!",
-        like: 0
+        like: 1
       },
       {
         id: "1",
@@ -73,6 +73,32 @@ class App extends Component {
         photo:
           "http://uniboard.hannam.ac.kr/whtml/editorimg/2015/02/20275_20150210152823_14235497038261.jpg",
         message: "푸릇푸릇하네요 :D",
+        like: 1
+      },
+      {
+        id: "3",
+        userId: "1",
+        movieId: "2",
+        photo:
+          "http://ph.cctoday.co.kr/news/photo/201712/1104332_425551_1106.jpg",
+        message: "드론!",
+        like: 0
+      },
+      {
+        id: "4",
+        userId: "0",
+        movieId: "1",
+        photo: "https://pbs.twimg.com/media/CgUxrYTUIAEJGyS.jpg",
+        message: "정우성 존잘...",
+        like: 1
+      },
+      {
+        id: "5",
+        userId: "2",
+        movieId: "0",
+        photo:
+          "http://mblogthumb4.phinf.naver.net/20120930_107/love_ly_lsy_1349014465789eJWrE_PNG/ggg.PNG?type=w2",
+        message: "야경도 멋지다!",
         like: 0
       }
     ],

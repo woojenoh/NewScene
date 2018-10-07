@@ -13,7 +13,10 @@ export default class presenter extends Component {
       getMovie,
       getUser,
       handleLike,
-      handleUnlike
+      handleUnlike,
+      sortPhoto,
+      openSort,
+      closeSort
     } = this.props;
 
     const targetMovie = getMovie(match.params.movieId);
@@ -59,23 +62,55 @@ export default class presenter extends Component {
         </section>
 
         <section className="movie-post">
-          {posts
-            .filter(targetPost => {
-              return targetPost.movieId === targetMovie.id;
-            })
-            .map(post => {
-              return (
-                <Thumbnail
-                  key={post.id}
-                  post={post}
-                  getMovie={getMovie}
-                  getUser={getUser}
-                  currentUser={currentUser}
-                  handleLike={handleLike}
-                  handleUnlike={handleUnlike}
-                />
-              );
-            })}
+          <div class="feed__toggle">
+            <span class={sortPhoto ? "" : "selected"} onClick={closeSort}>
+              최신순
+            </span>
+            <span class={sortPhoto ? "selected" : ""} onClick={openSort}>
+              인기순
+            </span>
+          </div>
+
+          <div className="movie-post__content">
+            {sortPhoto
+              ? posts
+                  .filter(targetPost => {
+                    return targetPost.movieId === targetMovie.id;
+                  })
+                  .sort((a, b) => {
+                    return b.like - a.like;
+                  })
+                  .map(post => {
+                    return (
+                      <Thumbnail
+                        key={post.id}
+                        post={post}
+                        getMovie={getMovie}
+                        getUser={getUser}
+                        currentUser={currentUser}
+                        handleLike={handleLike}
+                        handleUnlike={handleUnlike}
+                      />
+                    );
+                  })
+              : posts
+                  .filter(targetPost => {
+                    return targetPost.movieId === targetMovie.id;
+                  })
+                  .map(post => {
+                    return (
+                      <Thumbnail
+                        key={post.id}
+                        post={post}
+                        getMovie={getMovie}
+                        getUser={getUser}
+                        currentUser={currentUser}
+                        handleLike={handleLike}
+                        handleUnlike={handleUnlike}
+                      />
+                    );
+                  })}
+          </div>
         </section>
       </>
     );

@@ -41,7 +41,7 @@ class presenter extends Component {
             ×
           </span>
         </div>
-        <img src={post.photo} alt="" className="card__img" />
+        <img src={post.photo} alt="" like={post.like} className="card__img" />
         <div className="card__footer">
           <div className="footer__movie">
             <span>
