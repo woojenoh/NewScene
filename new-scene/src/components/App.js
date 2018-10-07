@@ -22,7 +22,7 @@ class App extends Component {
         profilePhoto:
           "http://www.kyeongin.com/mnt/file/201807/20180721000818478_1.jpg",
         message: "안녕!",
-        postCount: 1,
+        postCount: 2,
         likePosts: ["2"]
       },
       {
@@ -33,7 +33,7 @@ class App extends Component {
         profilePhoto:
           "http://www.sporbiz.co.kr/news/photo/201804/222816_180822_5132.jpg",
         message: "안녕!",
-        postCount: 1,
+        postCount: 2,
         likePosts: ["0", "4"]
       },
       {
@@ -44,7 +44,7 @@ class App extends Component {
         profilePhoto:
           "http://cphoto.asiae.co.kr/listimglink/6/2018011516074750720_1516000066.jpg",
         message: "안녕하세요!",
-        postCount: 0,
+        postCount: 2,
         likePosts: []
       }
     ],
