@@ -1,0 +1,11 @@
+.s-alert-success {
+  background: #adb5bd;
+  color: white;
+  opacity: 1;
+}
+
+.s-alert-error {
+  background: #ff8787;
+  color: white;
+  opacity: 1;
+}

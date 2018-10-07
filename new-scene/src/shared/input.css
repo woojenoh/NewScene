@@ -23,8 +23,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #3897f0;
-  border: 1px solid #3897f0;
+  background-color: #4dabf7;
+  border: 1px solid #4dabf7;
   border-radius: 4px;
   color: #fff;
   font-size: 14px;
@@ -33,8 +33,8 @@
 }
 
 .submit:hover {
-  background-color: #2286e4;
-  border: 1px solid #3897f0;
+  background-color: #339af0;
+  border: 1px solid #339af0;
 }
 
 .submit.submit--naver {

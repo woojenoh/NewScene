@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import App from "./presenter";
+import Alert from "react-s-alert";
+
 import nophoto from "../../images/no-photo.svg";
 
 class container extends Component {
@@ -40,10 +42,20 @@ class container extends Component {
     const { user, handleUpload, closeUpload } = this.props;
     e.preventDefault();
     if (this.state.selectedMovie === "") {
-      alert("영화를 선택하세요.");
+      Alert.error("영화를 선택하세요.", {
+        position: "bottom",
+        effect: "stackslide",
+        beep: false,
+        timeout: 5000
+      });
     } else {
       if (this.state.photoError === true) {
-        alert("사진 주소를 다시 확인해주세요.");
+        Alert.error("사진 주소를 다시 확인해주세요.", {
+          position: "bottom",
+          effect: "stackslide",
+          beep: false,
+          timeout: 5000
+        });
       } else {
         console.log(nophoto);
         handleUpload({
@@ -60,6 +72,12 @@ class container extends Component {
           message: ""
         });
         closeUpload();
+        Alert.success("사진 업로드가 완료됐습니다.", {
+          position: "bottom",
+          effect: "stackslide",
+          beep: false,
+          timeout: 5000
+        });
       }
     }
   };

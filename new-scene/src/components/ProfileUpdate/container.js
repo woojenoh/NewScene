@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import App from "./presenter";
+import Alert from "react-s-alert";
 
 export default class container extends Component {
   state = {
@@ -26,8 +27,19 @@ export default class container extends Component {
         profilePhoto: this.state.profilePhoto,
         password: this.state.password
       });
+      Alert.success("회원정보가 수정되었습니다.", {
+        position: "bottom",
+        effect: "stackslide",
+        beep: false,
+        timeout: 5000
+      });
     } else {
-      alert("현재 비밀번호가 일치하지 않습니다.");
+      Alert.error("현재 비밀번호가 일치하지 않습니다.", {
+        position: "bottom",
+        effect: "stackslide",
+        beep: false,
+        timeout: 5000
+      });
     }
     this.setState({
       currentPassword: "",

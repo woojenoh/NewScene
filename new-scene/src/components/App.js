@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
+import Alert from "react-s-alert";
 
 import Navigation from "./Navigation";
 import Feed from "./Feed";
 import MyPage from "./MyPage";
 import Auth from "./Auth";
 import Movie from "./Movie";
+
+import "react-s-alert/dist/s-alert-default.css";
+import "react-s-alert/dist/s-alert-css-effects/stackslide.css";
 
 let userIndex = 3;
 let postIndex = 6;
@@ -190,7 +194,12 @@ class App extends Component {
       return user.username === data.username && user.password === data.password;
     });
     if (targetUser[0] === undefined) {
-      alert("아이디나 비밀번호가 일치하지 않습니다.");
+      Alert.error("아이디나 비밀번호가 일치하지 않습니다.", {
+        position: "bottom",
+        effect: "stackslide",
+        beep: false,
+        timeout: 5000
+      });
     } else {
       this.setState({
         currentUserId: targetUser[0].id
@@ -204,7 +213,12 @@ class App extends Component {
       return user.username === data.username;
     });
     if (targetUser[0] !== undefined) {
-      alert("이미 존재하는 아이디입니다.");
+      Alert.error("이미 존재하는 아이디입니다.", {
+        position: "bottom",
+        effect: "stackslide",
+        beep: false,
+        timeout: 5000
+      });
     } else {
       this.setState({
         users: users.concat({
@@ -297,6 +311,7 @@ class App extends Component {
               />
             )}
           />
+          <Alert stack={{ limit: 3 }} />
         </main>
       );
     };
@@ -355,6 +370,7 @@ class App extends Component {
               />
               <Route path="/movie" />
             </Switch>
+            <Alert stack={{ limit: 3 }} />
           </main>
         </div>
       );
