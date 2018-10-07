@@ -12,7 +12,7 @@ let postIndex = 3;
 
 class App extends Component {
   state = {
-    currentUserId: "0",
+    currentUserId: "2",
     users: [
       {
         id: "0",
@@ -83,7 +83,10 @@ class App extends Component {
         location: "대전 동구 대학로 62",
         poster:
           "https://movie-phinf.pstatic.net/20120718_209/1342589585791cltsr_JPEG/movie_image.jpg",
-        photos: ["", "", ""]
+        photos: [
+          "https://post-phinf.pstatic.net/MjAxNzEwMTlfMTAw/MDAxNTA4Mzc5MjE3Nzg5.pcsnULBapjJcpJZCJTcKbmUJhXX9H48NVYGhO9mvPo4g.cTuqMzfUteA5IEHrUq5h880fUI4v4A3vcYoYB0OhiyIg.PNG/%EA%B7%B8%EB%A6%BC17.png?type=w1200",
+          "http://www.daejonilbo.com/admin/news/news_photo/oImg/2013/05/17/2013051801001162500000004.jpg?r_key=6647546855"
+        ]
       },
       {
         id: "1",

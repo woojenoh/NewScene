@@ -7,6 +7,10 @@
   position: relative;
 }
 
+.modal .feed__card {
+  margin-bottom: 0;
+}
+
 .card__close {
   font-size: 25px;
   color: rgba(0, 0, 0, 0.5);
@@ -39,6 +43,10 @@
   top: -19px;
   opacity: 1;
   transition: all 0.1s ease-in-out;
+}
+
+.modal .card__clip {
+  right: 80px;
 }
 
 .card__header {
@@ -81,11 +89,6 @@
     margin: 0 auto;
     margin-bottom: 50px;
   }
-  .feed__toggle {
-    width: 600px;
-    margin: 0 auto;
-    margin-bottom: 25px;
-  }
 }
 
 @media (min-width: 640px) {
@@ -103,13 +106,13 @@
     border-right: none;
     border-radius: 0;
   }
-  .feed__toggle {
-    display: none;
-  }
   .card__img {
     border: none;
   }
   .card__clip {
     right: 50px;
+  }
+  .modal .card__clip {
+    right: 60px;
   }
 }

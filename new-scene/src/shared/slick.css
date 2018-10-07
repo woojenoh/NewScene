@@ -1,0 +1,49 @@
+.slick-slide img {
+  margin: auto;
+  border: none;
+  padding: 0px 10px;
+}
+
+.slick-slider {
+  margin: 30px auto 50px;
+}
+
+.slick-dots {
+  margin-left: 0;
+  bottom: -35px !important;
+}
+
+.slick-slide img {
+  height: 300px;
+  width: auto !important;
+}
+
+.slick-slide {
+  opacity: 0.3;
+}
+
+.slick-active {
+  opacity: 0.5;
+}
+
+.slick-current {
+  opacity: 1;
+}
+
+.slick-active {
+  opacity: 1;
+}
+
+.slick-slide,
+.slick-slide * {
+  outline: none !important;
+}
+
+@media (max-width: 1000px) {
+  .slick-slide,
+  .slick-list,
+  .slick-slide img {
+    height: 200px;
+    width: auto;
+  }
+}

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Thumbnail from "../Thumbnail";
+import Slider from "react-slick";
 
 import "./styles.css";
 
@@ -17,12 +18,43 @@ export default class presenter extends Component {
 
     const targetMovie = getMovie(match.params.movieId);
 
+    const slickSettings = {
+      arrows: false,
+      dots: true,
+      infinite: true,
+      centerMode: true,
+      variableWidth: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      responsive: [
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    };
+
     return (
       <>
         <section className="movie">
           <div className="movie__title">
-            <span className="movie__name">더 킹</span>
-            <span className="movie__location">대전광역시 유성구 대학로 99</span>
+            <span className="movie__name">{targetMovie.title}</span>
+            <span className="movie__location">{targetMovie.location}</span>
+          </div>
+          <div className="movie__slider">
+            <Slider {...slickSettings}>
+              <img src={targetMovie.poster} alt="" />
+              {targetMovie.photos.map(photo => {
+                return (
+                  <div>
+                    <img src={photo} alt="" />
+                  </div>
+                );
+              })}
+            </Slider>
           </div>
         </section>
 
