@@ -7,18 +7,23 @@ class container extends Component {
     photoURL: "",
     selectedMovie: "",
     photo: "",
-    message: ""
+    message: "",
+    photoError: true
   };
 
   handlePhotoURL = e => {
     this.setState({
-      photoURL: e.target.value
+      photoURL: e.target.value,
+      photoError: false
     });
   };
 
   handleNoPhoto = e => {
     e.target.onerror = null;
     e.target.src = nophoto;
+    this.setState({
+      photoError: true
+    });
   };
 
   handleChange = e => {
@@ -37,20 +42,25 @@ class container extends Component {
     if (this.state.selectedMovie === "") {
       alert("영화를 선택하세요.");
     } else {
-      handleUpload({
-        movieId: this.state.selectedMovie.value,
-        photo: this.state.photo,
-        message: this.state.message,
-        userId: user.id,
-        like: 0
-      });
-      this.setState({
-        photoURL: "",
-        selectedMovie: "",
-        photo: "",
-        message: ""
-      });
-      closeUpload();
+      if (this.state.photoError === true) {
+        alert("사진 주소를 다시 확인해주세요.");
+      } else {
+        console.log(nophoto);
+        handleUpload({
+          movieId: this.state.selectedMovie.value,
+          photo: this.state.photo,
+          message: this.state.message,
+          userId: user.id,
+          like: 0
+        });
+        this.setState({
+          photoURL: "",
+          selectedMovie: "",
+          photo: "",
+          message: ""
+        });
+        closeUpload();
+      }
     }
   };
 
