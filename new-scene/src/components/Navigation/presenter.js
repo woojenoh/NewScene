@@ -19,13 +19,22 @@ class presenter extends Component {
       posts,
       movies,
       handleUpload,
-      handleLogout
+      handleLogout,
+      isSearchOpen,
+      openSearch,
+      closeSearch
     } = this.props;
 
     return (
       <nav className="nav">
         <div
-          className="nav__cols"
+          className={
+            isSearchOpen
+              ? "nav__cols nav__cols--scroll"
+              : window.pageYOffset > 50
+                ? "nav__cols nav__cols--scroll"
+                : "nav__cols"
+          }
           ref={ref => {
             this.nav = ref;
           }}
@@ -44,6 +53,13 @@ class presenter extends Component {
 
           <div className="nav__col">
             <div className="nav__menu">
+              <Ionicon
+                icon="md-search"
+                fontSize="25px"
+                color="rgba(0, 0, 0, 0.5)"
+                className="search-icon"
+                onClick={isSearchOpen ? closeSearch : openSearch}
+              />
               <Ionicon
                 icon="md-camera"
                 fontSize="25px"
@@ -68,6 +84,19 @@ class presenter extends Component {
             </div>
           </div>
         </div>
+
+        <div
+          className={
+            isSearchOpen
+              ? "nav__search-container"
+              : "nav__search-container nav__search-container--none"
+          }
+        >
+          <div className="nav__search">
+            <input type="text" className="input" placeholder="검색" />
+          </div>
+        </div>
+
         <UploadPhoto
           isUploadOpen={isUploadOpen}
           closeUpload={closeUpload}
