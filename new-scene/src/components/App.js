@@ -12,7 +12,7 @@ let postIndex = 3;
 
 class App extends Component {
   state = {
-    currentUserId: "2",
+    currentUserId: "0",
     users: [
       {
         id: "0",

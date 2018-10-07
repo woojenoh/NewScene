@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import "./styles.css";
-import clip from "../../images/clip.png";
+import clip from "../../images/clip.svg";
 
 class presenter extends Component {
   render() {
@@ -30,9 +30,9 @@ class presenter extends Component {
               className={
                 isUserLike() ? "card__clip card__clip--liked" : "card__clip"
               }
-              onClick={() =>
-                isUserLike() ? handleUnlike(post.id) : handleLike(post.id)
-              }
+              onClick={() => {
+                isUserLike() ? handleUnlike(post.id) : handleLike(post.id);
+              }}
             />
           ) : (
             ""

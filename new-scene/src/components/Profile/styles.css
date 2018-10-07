@@ -67,7 +67,7 @@ img.profile__pic {
   img.profile__pic {
     width: 120px;
     height: 120px;
-    margin-right: 30px;
+    margin-right: 20px;
   }
   .profile__name {
     font-size: 25px;
@@ -80,7 +80,7 @@ img.profile__pic {
   }
   .profile__introduce {
     font-size: 15px;
-    max-width: 120px;
+    max-width: 130px;
   }
   .profile__introduce {
     white-space: nowrap;
