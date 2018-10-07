@@ -11,10 +11,6 @@ class presenter extends Component {
     this.props.handleNavScroll(this.nav);
   };
 
-  state = {
-    selectedOption: null
-  };
-
   render() {
     const {
       openUpload,
@@ -54,7 +50,8 @@ class presenter extends Component {
         color: "rgba(0, 0, 0, 0.7)",
         "&:hover": { boxShadow: "0 0 0 0.1pt rgba(0, 0, 0, 0.5);" },
         border: "1px solid rgba(0, 0, 0, 0.1)",
-        boxShadow: "none"
+        boxShadow: "none",
+        backgroundColor: "rgba(0, 0, 0, 0.01)"
       }),
       indicatorSeparator: base => ({
         ...base,

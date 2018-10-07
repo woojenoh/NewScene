@@ -55,7 +55,8 @@ class container extends Component {
     if (this.state.selectedMovie.value !== undefined) {
       history.push("/movie/" + this.state.selectedMovie.value);
       this.setState({
-        selectedMovie: ""
+        selectedMovie: "",
+        isSearchOpen: false
       });
     }
   };

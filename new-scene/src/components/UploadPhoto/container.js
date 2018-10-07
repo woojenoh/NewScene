@@ -5,7 +5,7 @@ import nophoto from "../../images/no-photo.svg";
 class container extends Component {
   state = {
     photoURL: "",
-    movieId: "",
+    selectedMovie: "",
     photo: "",
     message: ""
   };
@@ -27,23 +27,31 @@ class container extends Component {
     });
   };
 
+  handleSelectChange = selectedMovie => {
+    this.setState({ selectedMovie });
+  };
+
   handleSubmit = e => {
     const { user, handleUpload, closeUpload } = this.props;
     e.preventDefault();
-    handleUpload({
-      movieId: this.state.movieId,
-      photo: this.state.photo,
-      message: this.state.message,
-      userId: user.id,
-      like: "0"
-    });
-    this.setState({
-      photoURL: "",
-      movieId: "",
-      photo: "",
-      message: ""
-    });
-    closeUpload();
+    if (this.state.selectedMovie === "") {
+      alert("영화를 선택하세요.");
+    } else {
+      handleUpload({
+        movieId: this.state.selectedMovie.value,
+        photo: this.state.photo,
+        message: this.state.message,
+        userId: user.id,
+        like: 0
+      });
+      this.setState({
+        photoURL: "",
+        selectedMovie: "",
+        photo: "",
+        message: ""
+      });
+      closeUpload();
+    }
   };
 
   render() {
@@ -55,6 +63,7 @@ class container extends Component {
         handleNoPhoto={this.handleNoPhoto}
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
+        handleSelectChange={this.handleSelectChange}
       />
     );
   }
