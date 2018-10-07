@@ -94,7 +94,11 @@ class App extends Component {
         location: "대전광역시 유성구 대학로 99",
         poster:
           "https://movie-phinf.pstatic.net/20170118_172/1484704779507T3ahF_JPEG/movie_image.jpg",
-        photos: ["", "", ""]
+        photos: [
+          "https://t1.daumcdn.net/cfile/tistory/2613984958900F1930",
+          "https://image.ytn.co.kr/general/jpg/2016/0223/201602231643101236_d.jpg",
+          "https://scontent-bru2-1.cdninstagram.com/vp/f90a95746ed039b853a7392ae82e5fc0/5C1E820D/t51.2885-15/e35/c108.0.434.434/16124372_615377875317081_8521675063311728640_n.jpg"
+        ]
       },
       {
         id: "2",
@@ -102,7 +106,10 @@ class App extends Component {
         location: "대전광역시 대덕구 한남로 70",
         poster:
           "https://movie-phinf.pstatic.net/20150128_263/1422410206018A2rmx_JPEG/movie_image.jpg",
-        photos: ["", "", ""]
+        photos: [
+          "http://uniboard.hannam.ac.kr/whtml/editorimg/2015/02/20275_20150210152836_14235497163941.jpg",
+          "http://uniboard.hannam.ac.kr/whtml/editorimg/2015/02/20275_20150210152823_14235497038261.jpg"
+        ]
       }
     ]
   };

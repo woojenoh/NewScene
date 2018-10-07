@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Ionicon from "react-ionicons";
 import { Link } from "react-router-dom";
+import Select from "react-select";
 
 import "./styles.css";
 import UploadPhoto from "../UploadPhoto";
@@ -8,6 +9,10 @@ import UploadPhoto from "../UploadPhoto";
 class presenter extends Component {
   componentDidMount = () => {
     this.props.handleNavScroll(this.nav);
+  };
+
+  state = {
+    selectedOption: null
   };
 
   render() {
@@ -22,8 +27,44 @@ class presenter extends Component {
       handleLogout,
       isSearchOpen,
       openSearch,
-      closeSearch
+      closeSearch,
+      selectedMovie,
+      handleChange,
+      handleHistory
     } = this.props;
+
+    const options = movies.map(movie => {
+      return { value: movie.id, label: movie.title };
+    });
+
+    const customStyles = {
+      option: (base, state) => ({
+        ...base,
+        padding: "10px 15px",
+        fontSize: "15px",
+        color: "rgba(0, 0, 0, 0.7)",
+        "&:hover": { backgroundColor: "rgba(0, 0, 0, 0.1);" },
+        backgroundColor: state.isSelected ? "rgba(0, 0, 0, 0.1);" : "white"
+      }),
+      control: (base, state) => ({
+        ...base,
+        height: "32px",
+        minHeight: "32px",
+        fontSize: "15px",
+        color: "rgba(0, 0, 0, 0.7)",
+        "&:hover": { boxShadow: "0 0 0 0.1pt rgba(0, 0, 0, 0.5);" },
+        border: "1px solid rgba(0, 0, 0, 0.1)",
+        boxShadow: "none"
+      }),
+      indicatorSeparator: base => ({
+        ...base,
+        display: "none"
+      }),
+      dropdownIndicator: base => ({
+        ...base,
+        display: "none"
+      })
+    };
 
     return (
       <nav className="nav">
@@ -47,7 +88,15 @@ class presenter extends Component {
 
           <div className="nav__col">
             <div className="nav__search">
-              <input type="text" className="input" placeholder="검색" />
+              <Select
+                placeholder="검색"
+                styles={customStyles}
+                value={selectedMovie}
+                onChange={handleChange}
+                options={options}
+                noOptionsMessage={() => "일치하는 영화가 없습니다."}
+                isOptionSelected={handleHistory}
+              />
             </div>
           </div>
 
@@ -55,29 +104,17 @@ class presenter extends Component {
             <div className="nav__menu">
               <Ionicon
                 icon="md-search"
-                fontSize="25px"
-                color="rgba(0, 0, 0, 0.5)"
                 className="search-icon"
                 onClick={isSearchOpen ? closeSearch : openSearch}
               />
-              <Ionicon
-                icon="md-camera"
-                fontSize="25px"
-                color="rgba(0, 0, 0, 0.5)"
-                onClick={openUpload}
-              />
+              <Ionicon icon="md-camera" onClick={openUpload} />
               <Link to="/mypage">
-                <Ionicon
-                  icon="md-person"
-                  fontSize="25px"
-                  color="rgba(0, 0, 0, 0.5)"
-                />
+                <Ionicon icon="md-person" color="rgba(0, 0, 0, 0.5)" />
               </Link>
               <Link to="/">
                 <Ionicon
                   icon="md-log-out"
                   fontSize="25px"
-                  color="rgba(0, 0, 0, 0.5)"
                   onClick={() => handleLogout()}
                 />
               </Link>
@@ -93,7 +130,15 @@ class presenter extends Component {
           }
         >
           <div className="nav__search">
-            <input type="text" className="input" placeholder="검색" />
+            <Select
+              placeholder="검색"
+              styles={customStyles}
+              value={selectedMovie}
+              onChange={handleChange}
+              options={options}
+              noOptionsMessage={() => "일치하는 영화가 없습니다."}
+              isOptionSelected={handleHistory}
+            />
           </div>
         </div>
 

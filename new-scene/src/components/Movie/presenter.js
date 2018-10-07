@@ -47,9 +47,9 @@ export default class presenter extends Component {
           <div className="movie__slider">
             <Slider {...slickSettings}>
               <img src={targetMovie.poster} alt="" />
-              {targetMovie.photos.map(photo => {
+              {targetMovie.photos.map((photo, index) => {
                 return (
-                  <div>
+                  <div key={index}>
                     <img src={photo} alt="" />
                   </div>
                 );

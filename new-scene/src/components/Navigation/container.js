@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import App from "./presenter";
+import { withRouter } from "react-router";
 
-export default class container extends Component {
+class container extends Component {
   state = {
     isUploadOpen: false,
-    isSearchOpen: false
+    isSearchOpen: false,
+    selectedMovie: ""
   };
 
   handleNavScroll = nav => {
@@ -44,6 +46,20 @@ export default class container extends Component {
     });
   };
 
+  handleChange = selectedMovie => {
+    this.setState({ selectedMovie });
+  };
+
+  handleHistory = () => {
+    const { history } = this.props;
+    if (this.state.selectedMovie.value !== undefined) {
+      history.push("/movie/" + this.state.selectedMovie.value);
+      this.setState({
+        selectedMovie: ""
+      });
+    }
+  };
+
   render() {
     return (
       <App
@@ -52,9 +68,13 @@ export default class container extends Component {
         closeUpload={this.closeUpload}
         openSearch={this.openSearch}
         closeSearch={this.closeSearch}
+        handleChange={this.handleChange}
+        handleHistory={this.handleHistory}
         {...this.state}
         {...this.props}
       />
     );
   }
 }
+
+export default withRouter(container);
