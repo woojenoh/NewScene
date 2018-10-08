@@ -30,8 +30,8 @@
 
 .card__clip {
   position: absolute;
-  width: 25px;
-  top: -21px;
+  width: 30px;
+  top: -39px;
   right: 50px;
   cursor: pointer;
   opacity: 0.3;
@@ -39,8 +39,8 @@
 }
 
 .card__clip--liked {
-  transform: rotate(10deg);
-  top: -19px;
+  transform: rotate(20deg);
+  top: -35px;
   opacity: 1;
   transition: all 0.1s ease-in-out;
 }

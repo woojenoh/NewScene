@@ -18,7 +18,8 @@ export default class container extends Component {
   };
 
   handleSubmit = e => {
-    // state는 초기화되나 input이 비워지지 않는 버그가 있음.
+    // state는 초기화되나 password input이 비워지지 않는 버그가 있음.
+    // ref로 초기화하기는 했으나 원인을 알 수가 없다.
     const { user, handleProfileUpdate, closeUpdate } = this.props;
     e.preventDefault();
     if (user.password === this.state.currentPassword) {

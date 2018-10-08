@@ -36,7 +36,16 @@ export default class presenter extends Component {
             <span className="setting__close" onClick={closeUpdate}>
               ×
             </span>
-            <form className="setting__form" onSubmit={handleSubmit}>
+            <form
+              className="setting__form"
+              onSubmit={e =>
+                handleSubmit(
+                  e,
+                  (this.passwordInput.value = ""),
+                  (this.newPasswordInput.value = "")
+                )
+              }
+            >
               <span className="input__label">이름</span>
               <input
                 name="name"
@@ -74,6 +83,7 @@ export default class presenter extends Component {
                 className="input"
                 value={currentPassword}
                 onChange={e => handleChange(e)}
+                ref={ref => (this.passwordInput = ref)}
                 required
               />
               <span className="input__label">변경 비밀번호</span>
@@ -83,6 +93,7 @@ export default class presenter extends Component {
                 className="input"
                 value={password}
                 onChange={e => handleChange(e)}
+                ref={ref => (this.newPasswordInput = ref)}
                 required
               />
               <input type="submit" value="변경하기" className="submit" />

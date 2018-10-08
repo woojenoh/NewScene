@@ -109,7 +109,8 @@ export default class presenter extends Component {
                         handleUnlike={handleUnlike}
                       />
                     );
-                  })}
+                  })
+                  .reverse()}
           </div>
         </section>
       </>

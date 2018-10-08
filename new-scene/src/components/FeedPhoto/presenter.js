@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import "./styles.css";
-import clip from "../../images/clip.svg";
+import clip from "../../images/clip.png";
 
 class presenter extends Component {
   render() {

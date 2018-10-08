@@ -19,6 +19,10 @@ section.feed {
   padding-left: 0px;
 }
 
+.feed__toggle span:last-child {
+  padding-right: 0px;
+}
+
 .feed__toggle span.selected {
   color: black;
 }
