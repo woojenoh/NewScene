@@ -50,7 +50,7 @@ class container extends Component {
       });
     } else {
       if (this.state.photoError === true) {
-        Alert.error("사진 주소를 다시 확인해주세요.", {
+        Alert.error("사진 주소를 다시 확인하세요.", {
           position: "bottom",
           effect: "stackslide",
           beep: false,

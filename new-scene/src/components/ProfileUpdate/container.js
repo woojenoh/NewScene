@@ -18,6 +18,7 @@ export default class container extends Component {
   };
 
   handleSubmit = e => {
+    // state는 초기화되나 input이 비워지지 않는 버그가 있음.
     const { user, handleProfileUpdate, closeUpdate } = this.props;
     e.preventDefault();
     if (user.password === this.state.currentPassword) {
@@ -33,6 +34,11 @@ export default class container extends Component {
         beep: false,
         timeout: 5000
       });
+      this.setState({
+        currentPassword: "",
+        password: ""
+      });
+      closeUpdate();
     } else {
       Alert.error("현재 비밀번호가 일치하지 않습니다.", {
         position: "bottom",
@@ -41,11 +47,6 @@ export default class container extends Component {
         timeout: 5000
       });
     }
-    this.setState({
-      currentPassword: "",
-      password: ""
-    });
-    closeUpdate();
   };
 
   render() {

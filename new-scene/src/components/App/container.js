@@ -1,20 +1,11 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import App from "./presenter";
 import Alert from "react-s-alert";
-
-import Navigation from "./Navigation";
-import Feed from "./Feed";
-import MyPage from "./MyPage";
-import Auth from "./Auth";
-import Movie from "./Movie";
-
-import "react-s-alert/dist/s-alert-default.css";
-import "react-s-alert/dist/s-alert-css-effects/stackslide.css";
 
 let userIndex = 3;
 let postIndex = 6;
 
-class App extends Component {
+export default class container extends Component {
   state = {
     currentUserId: "2",
     users: [
@@ -297,87 +288,20 @@ class App extends Component {
   };
 
   render() {
-    const { currentUserId, posts, movies } = this.state;
-
-    const PublicRoutes = () => {
-      return (
-        <main className="main main--login">
-          <Route
-            path="/"
-            render={() => (
-              <Auth
-                handleLogin={this.handleLogin}
-                handleSignup={this.handleSignup}
-              />
-            )}
-          />
-          <Alert stack={{ limit: 3 }} />
-        </main>
-      );
-    };
-
-    const PrivateRoutes = () => {
-      return (
-        <div className="App">
-          <Navigation
-            user={this.getUser(currentUserId)}
-            posts={posts}
-            movies={movies}
-            handleUpload={this.handleUpload}
-            handleLogout={this.handleLogout}
-          />
-          <main className="main">
-            <Route
-              exact
-              path="/"
-              render={() => (
-                <Feed
-                  currentUser={this.getUser(currentUserId)}
-                  posts={posts}
-                  getUser={this.getUser}
-                  getMovie={this.getMovie}
-                  handleLike={this.handleLike}
-                  handleUnlike={this.handleUnlike}
-                />
-              )}
-            />
-            <Route
-              path="/mypage"
-              render={() => (
-                <MyPage
-                  currentUser={this.getUser(currentUserId)}
-                  posts={posts}
-                  getUser={this.getUser}
-                  getMovie={this.getMovie}
-                  handleProfileUpdate={this.handleProfileUpdate}
-                />
-              )}
-            />
-            <Switch>
-              <Route
-                path="/movie/:movieId"
-                render={({ match }) => (
-                  <Movie
-                    match={match}
-                    currentUser={this.getUser(currentUserId)}
-                    posts={posts}
-                    getMovie={this.getMovie}
-                    getUser={this.getUser}
-                    handleLike={this.handleLike}
-                    handleUnlike={this.handleUnlike}
-                  />
-                )}
-              />
-              <Route path="/movie" />
-            </Switch>
-            <Alert stack={{ limit: 3 }} />
-          </main>
-        </div>
-      );
-    };
-
-    return currentUserId === null ? PublicRoutes() : PrivateRoutes();
+    return (
+      <App
+        {...this.state}
+        {...this.props}
+        getUser={this.getUser}
+        getMovie={this.getMovie}
+        handleUpload={this.handleUpload}
+        handleProfileUpdate={this.handleProfileUpdate}
+        handleLogin={this.handleLogin}
+        handleSignup={this.handleSignup}
+        handleLike={this.handleLike}
+        handleUnlike={this.handleUnlike}
+        handleLogout={this.handleLogout}
+      />
+    );
   }
 }
-
-export default App;

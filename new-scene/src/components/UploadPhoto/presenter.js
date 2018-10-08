@@ -100,7 +100,7 @@ export default class presenter extends Component {
                 noOptionsMessage={() => "일치하는 영화가 없습니다."}
                 // isOptionSelected={handleHistory}
               />
-              <span className="input__label">이미지 주소</span>
+              <span className="input__label">사진 주소</span>
               <input
                 name="photo"
                 type="text"
