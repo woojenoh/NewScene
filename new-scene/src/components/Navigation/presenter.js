@@ -116,7 +116,7 @@ class presenter extends Component {
               />
               <Ionicon icon="md-camera" onClick={openUpload} />
               <Link to="/mypage">
-                <Ionicon icon="md-person" color="rgba(0, 0, 0, 0.5)" />
+                <Ionicon icon="md-person" color="rgba(rgba(0, 0, 0, 0.5);)" />
               </Link>
               <Link to="/">
                 <Ionicon

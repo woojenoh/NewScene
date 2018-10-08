@@ -11,7 +11,10 @@ export default class presenter extends Component {
       isUpdateOpen,
       openUpdate,
       closeUpdate,
-      handleProfileUpdate
+      handleProfileUpdate,
+      posts,
+      currentUser,
+      movies
     } = this.props;
 
     return (
@@ -35,6 +38,22 @@ export default class presenter extends Component {
             <span className="profile__count-like">
               {" "}
               {user.likePosts.length}
+            </span>
+            <span className="profile__count-poster">
+              포스터{" "}
+              {
+                posts
+                  .filter(post => {
+                    return post.userId === currentUser.id;
+                  })
+                  .map(post => {
+                    return post.movieId;
+                  })
+                  .filter(
+                    (value, index, array) => array.indexOf(value) === index
+                  ).length
+              }
+              /{movies.length}
             </span>
           </div>
           <div className="profile__introduce">{user.message}</div>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Profile from "../Profile";
 import Thumbnail from "../Thumbnail";
 import { withRouter } from "react-router";
+import Ionicon from "react-ionicons";
 
 import "./styles.css";
 
@@ -29,24 +30,30 @@ class presenter extends Component {
           <Profile
             user={currentUser}
             handleProfileUpdate={handleProfileUpdate}
+            posts={posts}
+            currentUser={currentUser}
+            movies={movies}
           />
         </section>
         <section className="profile-post">
           <div className="tab-toggle">
-            <div className="tab-toggle__container">
-              <span
+            <ul className="tab-toggle__container">
+              <li
                 className={!isClip ? (!isPoster ? "selected" : "") : ""}
                 onClick={openPost}
               >
-                게시물
-              </span>
-              <span className={isClip ? "selected" : ""} onClick={openClip}>
-                클립
-              </span>
-            </div>
-            <span className={isPoster ? "selected" : ""} onClick={openPoster}>
-              마이 무비
-            </span>
+                <Ionicon icon="md-camera" />
+                <span>게시물</span>
+              </li>
+              <li className={isClip ? "selected" : ""} onClick={openClip}>
+                <Ionicon icon="md-bookmark" />
+                <span>클립</span>
+              </li>
+            </ul>
+            <li className={isPoster ? "selected" : ""} onClick={openPoster}>
+              <Ionicon icon="md-image" />
+              <span>포스터</span>
+            </li>
           </div>
 
           <div

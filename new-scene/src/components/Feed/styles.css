@@ -24,7 +24,7 @@ section.feed {
 }
 
 .feed__toggle span.selected {
-  color: black;
+  color: #212529;
 }
 
 @media (max-width: 1000px) {

@@ -20,21 +20,44 @@ section.profile-post {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.tab-toggle span {
+.tab-toggle svg {
+  fill: rgba(0, 0, 0, 0.5);
+}
+
+.tab-toggle svg:first-child {
+  margin-bottom: 1px;
+}
+
+.tab-toggle li {
   cursor: pointer;
   padding: 0 10px;
+  display: flex;
+  align-items: center;
 }
 
-.tab-toggle span.selected {
-  color: black;
+.tab-toggle li.selected {
+  color: #212529;
 }
 
-.tab-toggle__container span:first-child {
+.tab-toggle li.selected svg {
+  fill: #212529;
+}
+
+.tab-toggle li span {
+  margin-left: 5px;
+}
+
+.tab-toggle__container {
+  display: flex;
+  align-items: center;
+}
+
+.tab-toggle__container li:first-child {
   padding-left: 0;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.tab-toggle > span {
+.tab-toggle > li {
   padding-right: 0;
 }
 
@@ -76,10 +99,10 @@ section.profile-post {
   .tab-toggle {
     justify-content: center;
   }
-  .tab-toggle__container span {
+  .tab-toggle__container li {
     border-right: 1px solid rgba(0, 0, 0, 0.1);
   }
-  .tab-toggle > .tab-toggle span {
+  .tab-toggle > .tab-toggle li {
     border-right: none;
   }
 }
