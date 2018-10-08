@@ -73,9 +73,12 @@ export default class presenter extends Component {
                 <MyPage
                   currentUser={getUser(currentUserId)}
                   posts={posts}
+                  movies={movies}
                   getUser={getUser}
                   getMovie={getMovie}
                   handleProfileUpdate={handleProfileUpdate}
+                  handleLike={handleLike}
+                  handleUnlike={handleUnlike}
                 />
               )}
             />

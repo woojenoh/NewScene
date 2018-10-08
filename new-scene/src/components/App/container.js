@@ -40,7 +40,7 @@ export default class container extends Component {
           "http://cphoto.asiae.co.kr/listimglink/6/2018011516074750720_1516000066.jpg",
         message: "안녕하세요!",
         postCount: 2,
-        likePosts: []
+        likePosts: ["0"]
       }
     ],
     posts: [
@@ -51,7 +51,7 @@ export default class container extends Component {
         photo:
           "https://scontent-atl3-1.cdninstagram.com/vp/fc550259ae8484d90feddd6ee019f2cd/5BC5968E/t51.2885-15/e35/17881542_723982161114288_5150746053783322624_n.jpg",
         message: "멋지네요!",
-        like: 1
+        like: 2
       },
       {
         id: "1",

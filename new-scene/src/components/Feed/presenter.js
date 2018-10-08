@@ -19,11 +19,11 @@ export default class presenter extends Component {
 
     return (
       <section className="feed">
-        <div class="feed__toggle">
-          <span class={sortPhoto ? "" : "selected"} onClick={closeSort}>
+        <div className="feed__toggle">
+          <span className={sortPhoto ? "" : "selected"} onClick={closeSort}>
             최신순
           </span>
-          <span class={sortPhoto ? "selected" : ""} onClick={openSort}>
+          <span className={sortPhoto ? "selected" : ""} onClick={openSort}>
             인기순
           </span>
         </div>

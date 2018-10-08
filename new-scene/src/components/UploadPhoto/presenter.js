@@ -121,7 +121,7 @@ export default class presenter extends Component {
                 onChange={e => handleChange(e)}
                 value={message}
                 placeholder="280자 이내"
-                maxlength="280"
+                maxLength="280"
                 required
               />
               <input type="submit" value="업로드" className="submit" />
