@@ -3,13 +3,15 @@ import NaverMap from "react-naver-map";
 import { withRouter } from "react-router";
 
 import "./styles.css";
+import marker from "../../images/marker.png";
+import markerCheck from "../../images/marker-check.png";
 
 class presenter extends Component {
   render() {
-    const { movies, history } = this.props;
+    const { movies, history, posts, currentUser } = this.props;
 
     return (
-      <>
+      <section className="map">
         <NaverMap
           clientId="HbMpD5qPZ0x4VdtWJgqT"
           style={{
@@ -24,6 +26,15 @@ class presenter extends Component {
           // submodules={["geocoder"]}
         >
           {movies.map(movie => {
+            const isSelected =
+              posts
+                .filter(post => {
+                  return post.movieId === movie.id;
+                })
+                .filter(post => {
+                  return post.userId === currentUser.id;
+                })[0] !== undefined;
+
             return (
               <NaverMap.Marker
                 key={movie.id}
@@ -33,15 +44,17 @@ class presenter extends Component {
                 onClick={() => {
                   history.push("/movie/" + movie.id);
                 }}
-                // icon={{
-                //   url: movie.poster,
-                //   scaledSize: { width: 65, height: 94 }
-                // }}
+                icon={{
+                  url: isSelected ? markerCheck : marker,
+                  scaledSize: { width: 40, height: 40 }
+                }}
               />
             );
           })}
         </NaverMap>
-      </>
+
+        <div className="map__sidebar">사이드바</div>
+      </section>
     );
   }
 }

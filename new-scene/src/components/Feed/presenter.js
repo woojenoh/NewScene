@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import FeedPhoto from "../FeedPhoto";
-import Map from "../Map";
-import MapSidebar from "../MapSidebar";
+import Map from "../FeedMap";
 
 import "./styles.css";
 
@@ -22,10 +21,7 @@ export default class presenter extends Component {
 
     return (
       <>
-        <section className="map">
-          <Map movies={movies} />
-          <MapSidebar />
-        </section>
+        <Map movies={movies} currentUser={currentUser} posts={posts} />
 
         <section className="feed">
           <div className="feed__toggle">

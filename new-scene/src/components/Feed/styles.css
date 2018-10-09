@@ -28,22 +28,11 @@ section.feed {
   color: #212529;
 }
 
-section.map {
-  max-width: 930px;
-  padding-top: 50px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-
 @media (max-width: 1000px) {
   .feed__toggle {
     text-align: center;
   }
   .map__sidebar {
-    display: none;
-  }
-  section.map {
     display: none;
   }
 }
