@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import FeedPhoto from "../FeedPhoto";
+import Map from "../Map";
 
 import "./styles.css";
 
@@ -18,56 +19,62 @@ export default class presenter extends Component {
     } = this.props;
 
     return (
-      <section className="feed">
-        <div className="feed__toggle">
-          <span className={sortPhoto ? "" : "selected"} onClick={closeSort}>
-            최신순
-          </span>
-          <span className={sortPhoto ? "selected" : ""} onClick={openSort}>
-            인기순
-          </span>
-        </div>
+      <>
+        <section className="map">
+          <Map />
+        </section>
 
-        {sortPhoto
-          ? posts
-              .filter(post => {
-                return post.userId !== currentUser.id;
-              })
-              .sort((a, b) => {
-                return b.like - a.like;
-              })
-              .map(post => {
-                return (
-                  <FeedPhoto
-                    key={post.id}
-                    post={post}
-                    getUser={getUser}
-                    getMovie={getMovie}
-                    currentUser={currentUser}
-                    handleLike={handleLike}
-                    handleUnlike={handleUnlike}
-                  />
-                );
-              })
-          : posts
-              .filter(post => {
-                return post.userId !== currentUser.id;
-              })
-              .map(post => {
-                return (
-                  <FeedPhoto
-                    key={post.id}
-                    post={post}
-                    getUser={getUser}
-                    getMovie={getMovie}
-                    currentUser={currentUser}
-                    handleLike={handleLike}
-                    handleUnlike={handleUnlike}
-                  />
-                );
-              })
-              .reverse()}
-      </section>
+        <section className="feed">
+          <div className="feed__toggle">
+            <span className={sortPhoto ? "" : "selected"} onClick={closeSort}>
+              최신순
+            </span>
+            <span className={sortPhoto ? "selected" : ""} onClick={openSort}>
+              인기순
+            </span>
+          </div>
+
+          {sortPhoto
+            ? posts
+                .filter(post => {
+                  return post.userId !== currentUser.id;
+                })
+                .sort((a, b) => {
+                  return b.like - a.like;
+                })
+                .map(post => {
+                  return (
+                    <FeedPhoto
+                      key={post.id}
+                      post={post}
+                      getUser={getUser}
+                      getMovie={getMovie}
+                      currentUser={currentUser}
+                      handleLike={handleLike}
+                      handleUnlike={handleUnlike}
+                    />
+                  );
+                })
+            : posts
+                .filter(post => {
+                  return post.userId !== currentUser.id;
+                })
+                .map(post => {
+                  return (
+                    <FeedPhoto
+                      key={post.id}
+                      post={post}
+                      getUser={getUser}
+                      getMovie={getMovie}
+                      currentUser={currentUser}
+                      handleLike={handleLike}
+                      handleUnlike={handleUnlike}
+                    />
+                  );
+                })
+                .reverse()}
+        </section>
+      </>
     );
   }
 }
