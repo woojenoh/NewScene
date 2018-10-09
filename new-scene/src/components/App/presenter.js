@@ -64,6 +64,7 @@ export default class presenter extends Component {
                   getMovie={getMovie}
                   handleLike={handleLike}
                   handleUnlike={handleUnlike}
+                  movies={movies}
                 />
               )}
             />

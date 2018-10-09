@@ -43,14 +43,7 @@ section.map {
   .map__sidebar {
     display: none;
   }
-}
-
-@media (max-width: 640px) {
   section.map {
-    padding-top: 0px;
-  }
-  #map {
-    height: 200px;
-    border: none;
+    display: none;
   }
 }

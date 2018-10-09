@@ -16,13 +16,14 @@ export default class presenter extends Component {
       handleUnlike,
       sortPhoto,
       openSort,
-      closeSort
+      closeSort,
+      movies
     } = this.props;
 
     return (
       <>
         <section className="map">
-          <Map />
+          <Map movies={movies} />
           <MapSidebar />
         </section>
 

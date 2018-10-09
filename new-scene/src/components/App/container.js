@@ -102,6 +102,7 @@ export default class container extends Component {
         id: "0",
         title: "도둑들",
         location: "대전 동구 대학로 62",
+        geo: [36.3353628, 127.45879059999993],
         poster:
           "https://movie-phinf.pstatic.net/20120718_209/1342589585791cltsr_JPEG/movie_image.jpg",
         photos: [
@@ -113,6 +114,7 @@ export default class container extends Component {
         id: "1",
         title: "더 킹",
         location: "대전광역시 유성구 대학로 99",
+        geo: [36.3679381, 127.3442986],
         poster:
           "https://movie-phinf.pstatic.net/20170118_172/1484704779507T3ahF_JPEG/movie_image.jpg",
         photos: [
@@ -125,6 +127,7 @@ export default class container extends Component {
         id: "2",
         title: "쎄시봉",
         location: "대전광역시 대덕구 한남로 70",
+        geo: [36.3544294, 127.42272969999999],
         poster:
           "https://movie-phinf.pstatic.net/20150128_263/1422410206018A2rmx_JPEG/movie_image.jpg",
         photos: [

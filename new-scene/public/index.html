@@ -38,47 +38,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-
-  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=HbMpD5qPZ0x4VdtWJgqT&callback=initMap"></script>
-  <script type="text/javascript">
-    var map = null;
-
-    function initMap() {
-      map = new naver.maps.Map('map', {
-        center: new naver.maps.LatLng(36.3699872, 127.34595480000007),
-        zoom: 7
-      });
-
-      var marker1 = new naver.maps.Marker({
-        position: new naver.maps.LatLng(36.3679381, 127.3442986),
-        map: map
-      });
-      naver.maps.Event.addListener(marker1, "click", function (e) {
-        if (infowindow1.getMap()) {
-          infowindow1.close();
-        } else {
-          infowindow1.open(map, marker1);
-        }
-      });
-      var infowindow1 = new naver.maps.InfoWindow({
-        content: '<div style="padding:10px;"><div style="text-align:center; padding-bottom: 10px; font-size:14px;">도둑들</div><img style="width: 80px;" src="https://movie-phinf.pstatic.net/20120718_209/1342589585791cltsr_JPEG/movie_image.jpg" alt=""></div>',
-        padding: "100px",
-        width: 140,
-        borderColor: "rgba(0,0,0,0.1)",
-        anchorSize: new naver.maps.Size(30, 30),
-        anchorColor: "white",
-      });
-
-      var marker2 = new naver.maps.Marker({
-        position: new naver.maps.LatLng(36.3353628, 127.45879059999993),
-        map: map
-      });
-
-      var marker3 = new naver.maps.Marker({
-        position: new naver.maps.LatLng(36.3544294, 127.42272969999999),
-        map: map
-      });
-    }
   </script>
 </body>
 
