@@ -32,7 +32,4 @@ section.feed {
   .feed__toggle {
     text-align: center;
   }
-  .map__sidebar {
-    display: none;
-  }
 }

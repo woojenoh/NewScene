@@ -53,7 +53,39 @@ class presenter extends Component {
           })}
         </NaverMap>
 
-        <div className="map__sidebar">사이드바</div>
+        <div className="map__sidebar">
+          <div className="sidebar__title">
+            <img
+              className="sidebar__title-img"
+              src="https://upload.wikimedia.org/wikipedia/ko/thumb/b/be/Seal_of_Daejeon.svg/1024px-Seal_of_Daejeon.svg.png"
+              alt=""
+            />
+            <div className="sidebar__title-container">
+              <span>대전광역시</span>
+              <span>DAEJEON</span>
+            </div>
+          </div>
+
+          <div className="sidebar__movies">
+            {movies.map(movie => {
+              return (
+                <div className="sidebar__movie">
+                  <img
+                    className="sidebar__movie-img"
+                    src={movie.squarePhoto}
+                    alt=""
+                  />
+                  <div className="sidebar__movie-container">
+                    <span>{movie.title}</span>
+                    <span>{movie.location}</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="sidebar__add">새로운 영화 추가</div>
+        </div>
       </section>
     );
   }

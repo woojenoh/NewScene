@@ -12,6 +12,80 @@ section.map {
   margin-left: 30px;
 }
 
+.sidebar__title {
+  height: 65px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sidebar__title-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+}
+
+.sidebar__title-container span:first-child {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.sidebar__title-container span:last-child {
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+
+.sidebar__movies {
+  height: 350px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow-y: scroll;
+}
+
+.sidebar__movie {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar__movie-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+}
+
+.sidebar__movie-container span:first-child {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.sidebar__movie-container span:last-child {
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+
+.sidebar__add {
+  height: 45px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: white;
+}
+
 @media (max-width: 1000px) {
   section.map {
     display: none;

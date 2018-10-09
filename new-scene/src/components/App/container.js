@@ -108,12 +108,14 @@ export default class container extends Component {
         photos: [
           "https://post-phinf.pstatic.net/MjAxNzEwMTlfMTAw/MDAxNTA4Mzc5MjE3Nzg5.pcsnULBapjJcpJZCJTcKbmUJhXX9H48NVYGhO9mvPo4g.cTuqMzfUteA5IEHrUq5h880fUI4v4A3vcYoYB0OhiyIg.PNG/%EA%B7%B8%EB%A6%BC17.png?type=w1200",
           "http://www.daejonilbo.com/admin/news/news_photo/oImg/2013/05/17/2013051801001162500000004.jpg?r_key=6647546855"
-        ]
+        ],
+        squarePhoto:
+          "http://cdnimg.melon.co.kr/cm/album/images/021/38/684/2138684_500.jpg/melon/quality/80/optimize"
       },
       {
         id: "1",
         title: "더 킹",
-        location: "대전광역시 유성구 대학로 99",
+        location: "대전 유성구 대학로 99",
         geo: [36.3679381, 127.3442986],
         poster:
           "https://movie-phinf.pstatic.net/20170118_172/1484704779507T3ahF_JPEG/movie_image.jpg",
@@ -121,19 +123,23 @@ export default class container extends Component {
           "https://t1.daumcdn.net/cfile/tistory/2613984958900F1930",
           "https://image.ytn.co.kr/general/jpg/2016/0223/201602231643101236_d.jpg",
           "https://scontent-bru2-1.cdninstagram.com/vp/f90a95746ed039b853a7392ae82e5fc0/5C1E820D/t51.2885-15/e35/c108.0.434.434/16124372_615377875317081_8521675063311728640_n.jpg"
-        ]
+        ],
+        squarePhoto:
+          "http://mblogthumb2.phinf.naver.net/MjAxNzAxMjdfMTQ4/MDAxNDg1NTI3OTk2OTIw.HCCQfmlqU274f7Qxbp_Lgs_6VvreuFuExlwhLeM2xCAg.rFsddZTSgd63va3UP_DgN3j3TaedLMp86uzs4DlXAkUg.JPEG.yourh0use_/%EC%A0%9C%EB%AA%A9_%EC%97%86%EC%9D%8C-1.jpg?type=w800"
       },
       {
         id: "2",
         title: "쎄시봉",
-        location: "대전광역시 대덕구 한남로 70",
+        location: "대전 대덕구 한남로 70",
         geo: [36.3544294, 127.42272969999999],
         poster:
           "https://movie-phinf.pstatic.net/20150128_263/1422410206018A2rmx_JPEG/movie_image.jpg",
         photos: [
           "http://uniboard.hannam.ac.kr/whtml/editorimg/2015/02/20275_20150210152836_14235497163941.jpg",
           "http://uniboard.hannam.ac.kr/whtml/editorimg/2015/02/20275_20150210152823_14235497038261.jpg"
-        ]
+        ],
+        squarePhoto:
+          "http://nthumb.cyworld.com/thumb?width=300&height=300&url=http%3A%2F%2Fc2down.cyworld.co.kr%2Fdownload%3Ffid%3D64224afceecbb252ec124b4eeecba970%26name%3D1.jpg"
       }
     ]
   };
