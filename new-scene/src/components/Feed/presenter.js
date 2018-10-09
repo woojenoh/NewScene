@@ -22,6 +22,7 @@ export default class presenter extends Component {
       <>
         <section className="map">
           <Map />
+          <div className="map__sidebar">사이드바</div>
         </section>
 
         <section className="feed">
