@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import FeedPhoto from "../FeedPhoto";
 import Map from "../Map";
+import MapSidebar from "../MapSidebar";
 
 import "./styles.css";
 
@@ -22,7 +23,7 @@ export default class presenter extends Component {
       <>
         <section className="map">
           <Map />
-          <div className="map__sidebar">사이드바</div>
+          <MapSidebar />
         </section>
 
         <section className="feed">
