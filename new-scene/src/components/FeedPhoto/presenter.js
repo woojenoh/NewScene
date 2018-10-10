@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import "./styles.css";
-import clip from "../../images/clip.png";
 
 class presenter extends Component {
   render() {
@@ -25,7 +24,7 @@ class presenter extends Component {
           <span className="card__header-name">{user.name}</span>
           {typeof handleLike === "function" ? (
             <img
-              src={clip}
+              src={"/images/clip.png"}
               alt=""
               className={
                 isUserLike() ? "card__clip card__clip--liked" : "card__clip"

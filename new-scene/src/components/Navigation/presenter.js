@@ -29,13 +29,9 @@ class presenter extends Component {
       handleHistory
     } = this.props;
 
-    const options = movies
-      .sort((a, b) => {
-        return a.title < b.title ? -1 : a.title > b.title ? 1 : 0;
-      })
-      .map(movie => {
-        return { value: movie.id, label: movie.title };
-      });
+    const options = movies.map(movie => {
+      return { value: movie.id, label: movie.title };
+    });
 
     const customStyles = {
       option: (base, state) => ({

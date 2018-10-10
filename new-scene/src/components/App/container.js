@@ -47,7 +47,7 @@ export default class container extends Component {
       {
         id: "0",
         userId: "0",
-        movieId: "0",
+        movieId: "1",
         photo:
           "https://scontent-atl3-1.cdninstagram.com/vp/fc550259ae8484d90feddd6ee019f2cd/5BC5968E/t51.2885-15/e35/17881542_723982161114288_5150746053783322624_n.jpg",
         message: "멋지네요!",
@@ -56,7 +56,7 @@ export default class container extends Component {
       {
         id: "1",
         userId: "1",
-        movieId: "1",
+        movieId: "0",
         photo: "http://www.itdaily.kr/news/photo/201503/61286_67165_3835.jpg",
         message: "지금은 공사 중이에요 ㅜㅜ",
         like: 0
@@ -82,7 +82,7 @@ export default class container extends Component {
       {
         id: "4",
         userId: "0",
-        movieId: "1",
+        movieId: "0",
         photo: "https://pbs.twimg.com/media/CgUxrYTUIAEJGyS.jpg",
         message: "정우성 존잘...",
         like: 1
@@ -90,7 +90,7 @@ export default class container extends Component {
       {
         id: "5",
         userId: "2",
-        movieId: "0",
+        movieId: "1",
         photo:
           "http://mblogthumb4.phinf.naver.net/20120930_107/love_ly_lsy_1349014465789eJWrE_PNG/ggg.PNG?type=w2",
         message: "야경도 멋지다!",
@@ -100,20 +100,6 @@ export default class container extends Component {
     movies: [
       {
         id: "0",
-        title: "도둑들",
-        location: "대전 동구 대학로 62",
-        geo: [36.3353628, 127.45879059999993],
-        poster:
-          "https://movie-phinf.pstatic.net/20120718_209/1342589585791cltsr_JPEG/movie_image.jpg",
-        photos: [
-          "https://post-phinf.pstatic.net/MjAxNzEwMTlfMTAw/MDAxNTA4Mzc5MjE3Nzg5.pcsnULBapjJcpJZCJTcKbmUJhXX9H48NVYGhO9mvPo4g.cTuqMzfUteA5IEHrUq5h880fUI4v4A3vcYoYB0OhiyIg.PNG/%EA%B7%B8%EB%A6%BC17.png?type=w1200",
-          "http://www.daejonilbo.com/admin/news/news_photo/oImg/2013/05/17/2013051801001162500000004.jpg?r_key=6647546855"
-        ],
-        squarePhoto:
-          "http://cdnimg.melon.co.kr/cm/album/images/021/38/684/2138684_500.jpg/melon/quality/80/optimize"
-      },
-      {
-        id: "1",
         title: "더 킹",
         location: "대전 유성구 대학로 99",
         geo: [36.3679381, 127.3442986],
@@ -126,6 +112,20 @@ export default class container extends Component {
         ],
         squarePhoto:
           "http://mblogthumb2.phinf.naver.net/MjAxNzAxMjdfMTQ4/MDAxNDg1NTI3OTk2OTIw.HCCQfmlqU274f7Qxbp_Lgs_6VvreuFuExlwhLeM2xCAg.rFsddZTSgd63va3UP_DgN3j3TaedLMp86uzs4DlXAkUg.JPEG.yourh0use_/%EC%A0%9C%EB%AA%A9_%EC%97%86%EC%9D%8C-1.jpg?type=w800"
+      },
+      {
+        id: "1",
+        title: "도둑들",
+        location: "대전 동구 대학로 62",
+        geo: [36.3353628, 127.45879059999993],
+        poster:
+          "https://movie-phinf.pstatic.net/20120718_209/1342589585791cltsr_JPEG/movie_image.jpg",
+        photos: [
+          "https://post-phinf.pstatic.net/MjAxNzEwMTlfMTAw/MDAxNTA4Mzc5MjE3Nzg5.pcsnULBapjJcpJZCJTcKbmUJhXX9H48NVYGhO9mvPo4g.cTuqMzfUteA5IEHrUq5h880fUI4v4A3vcYoYB0OhiyIg.PNG/%EA%B7%B8%EB%A6%BC17.png?type=w1200",
+          "http://www.daejonilbo.com/admin/news/news_photo/oImg/2013/05/17/2013051801001162500000004.jpg?r_key=6647546855"
+        ],
+        squarePhoto:
+          "http://cdnimg.melon.co.kr/cm/album/images/021/38/684/2138684_500.jpg/melon/quality/80/optimize"
       },
       {
         id: "2",

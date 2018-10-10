@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import App from "./presenter";
 import Alert from "react-s-alert";
 
-import nophoto from "../../images/no-photo.svg";
-
 class container extends Component {
   state = {
     photoURL: "",
@@ -22,7 +20,7 @@ class container extends Component {
 
   handleNoPhoto = e => {
     e.target.onerror = null;
-    e.target.src = nophoto;
+    e.target.src = "/images/no-photo.svg";
     this.setState({
       photoError: true
     });
@@ -57,7 +55,6 @@ class container extends Component {
           timeout: 5000
         });
       } else {
-        console.log(nophoto);
         handleUpload({
           movieId: this.state.selectedMovie.value,
           photo: this.state.photo,

@@ -3,8 +3,6 @@ import NaverMap from "react-naver-map";
 import { withRouter } from "react-router";
 
 import "./styles.css";
-import marker from "../../images/marker.png";
-import markerCheck from "../../images/marker-check.png";
 
 class presenter extends Component {
   render() {
@@ -21,7 +19,7 @@ class presenter extends Component {
             borderRadius: "5px",
             margin: "0 auto"
           }}
-          initialPosition={{ lat: 36.3699872, lng: 127.34595480000007 }}
+          initialPosition={{ lat: 36.3504119, lng: 127.38454750000005 }}
           initialZoom={7}
           // submodules={["geocoder"]}
         >
@@ -41,12 +39,12 @@ class presenter extends Component {
                 id={movie.id}
                 lat={movie.geo[0]}
                 lng={movie.geo[1]}
-                onClick={() => {
-                  history.push("/movie/" + movie.id);
-                }}
+                onClick={() => history.push("/movie/" + movie.id)}
                 icon={{
-                  url: isSelected ? markerCheck : marker,
-                  scaledSize: { width: 40, height: 40 }
+                  url: isSelected
+                    ? "/images/marker/marker-check.png"
+                    : "/images/marker/marker" + movie.id + ".png",
+                  scaledSize: { width: 45, height: 45 }
                 }}
               />
             );
@@ -69,14 +67,20 @@ class presenter extends Component {
           <div className="sidebar__movies">
             {movies.map(movie => {
               return (
-                <div className="sidebar__movie">
+                <div
+                  key={movie.id}
+                  className="sidebar__movie"
+                  onClick={() => history.push("/movie/" + movie.id)}
+                >
                   <img
                     className="sidebar__movie-img"
                     src={movie.squarePhoto}
                     alt=""
                   />
                   <div className="sidebar__movie-container">
-                    <span>{movie.title}</span>
+                    <span>
+                      {movie.id}. {movie.title}
+                    </span>
                     <span>{movie.location}</span>
                   </div>
                 </div>
