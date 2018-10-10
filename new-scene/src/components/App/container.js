@@ -111,7 +111,8 @@ export default class container extends Component {
           "https://scontent-bru2-1.cdninstagram.com/vp/f90a95746ed039b853a7392ae82e5fc0/5C1E820D/t51.2885-15/e35/c108.0.434.434/16124372_615377875317081_8521675063311728640_n.jpg"
         ],
         squarePhoto:
-          "http://mblogthumb2.phinf.naver.net/MjAxNzAxMjdfMTQ4/MDAxNDg1NTI3OTk2OTIw.HCCQfmlqU274f7Qxbp_Lgs_6VvreuFuExlwhLeM2xCAg.rFsddZTSgd63va3UP_DgN3j3TaedLMp86uzs4DlXAkUg.JPEG.yourh0use_/%EC%A0%9C%EB%AA%A9_%EC%97%86%EC%9D%8C-1.jpg?type=w800"
+          "http://mblogthumb2.phinf.naver.net/MjAxNzAxMjdfMTQ4/MDAxNDg1NTI3OTk2OTIw.HCCQfmlqU274f7Qxbp_Lgs_6VvreuFuExlwhLeM2xCAg.rFsddZTSgd63va3UP_DgN3j3TaedLMp86uzs4DlXAkUg.JPEG.yourh0use_/%EC%A0%9C%EB%AA%A9_%EC%97%86%EC%9D%8C-1.jpg?type=w800",
+        link: "http://naver.me/GRSjg2hZ"
       },
       {
         id: "1",
@@ -125,7 +126,8 @@ export default class container extends Component {
           "http://www.daejonilbo.com/admin/news/news_photo/oImg/2013/05/17/2013051801001162500000004.jpg?r_key=6647546855"
         ],
         squarePhoto:
-          "http://cdnimg.melon.co.kr/cm/album/images/021/38/684/2138684_500.jpg/melon/quality/80/optimize"
+          "http://cdnimg.melon.co.kr/cm/album/images/021/38/684/2138684_500.jpg/melon/quality/80/optimize",
+        link: "http://naver.me/GOjz2sQ6"
       },
       {
         id: "2",
@@ -139,7 +141,8 @@ export default class container extends Component {
           "http://uniboard.hannam.ac.kr/whtml/editorimg/2015/02/20275_20150210152823_14235497038261.jpg"
         ],
         squarePhoto:
-          "http://nthumb.cyworld.com/thumb?width=300&height=300&url=http%3A%2F%2Fc2down.cyworld.co.kr%2Fdownload%3Ffid%3D64224afceecbb252ec124b4eeecba970%26name%3D1.jpg"
+          "http://nthumb.cyworld.com/thumb?width=300&height=300&url=http%3A%2F%2Fc2down.cyworld.co.kr%2Fdownload%3Ffid%3D64224afceecbb252ec124b4eeecba970%26name%3D1.jpg",
+        link: "http://naver.me/Fxj9cQr6"
       }
     ]
   };

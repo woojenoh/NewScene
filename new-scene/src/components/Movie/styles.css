@@ -29,8 +29,23 @@ section.movie-post {
 }
 
 .movie__location {
-  display: block;
+  display: flex;
+  align-content: center;
   color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+}
+
+.movie__location span,
+.movie__location a {
+  display: flex;
+  align-items: center;
+}
+
+.movie__location img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .movie__slider {
@@ -48,7 +63,8 @@ section.movie-post {
     font-size: 25px;
   }
   .movie__location {
-    text-align: center;
+    display: flex;
+    justify-content: center;
   }
   .movie__slider {
     height: 250px;

@@ -45,7 +45,16 @@ export default class presenter extends Component {
         <section className="movie">
           <div className="movie__title">
             <span className="movie__name">{targetMovie.title}</span>
-            <span className="movie__location">{targetMovie.location}</span>
+            <div className="movie__location">
+              <span>{targetMovie.location}</span>
+              <a
+                href={targetMovie.link}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img src="/images/naver-map.png" alt="" />
+              </a>
+            </div>
           </div>
           <div className="movie__slider">
             <Slider {...slickSettings}>
