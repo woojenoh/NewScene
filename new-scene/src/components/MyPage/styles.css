@@ -95,6 +95,10 @@ section.profile-post {
   opacity: 1;
 }
 
+.noPhoto-message {
+  font-size: 16px;
+}
+
 @media (max-width: 1000px) {
   .tab-toggle {
     justify-content: center;
@@ -104,6 +108,11 @@ section.profile-post {
   }
   .tab-toggle > .tab-toggle li {
     border-right: none;
+  }
+  .noPhoto-message {
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
   }
 }
 

@@ -65,6 +65,12 @@ class presenter extends Component {
                 : "tab-content"
             }
           >
+            {posts.filter(post => {
+              return post.userId === currentUser.id;
+            })[0] === undefined && (
+              <span className="noPhoto-message">등록된 사진이 없습니다.</span>
+            )}
+
             {posts
               .filter(post => {
                 return post.userId === currentUser.id;
@@ -84,6 +90,12 @@ class presenter extends Component {
           </div>
 
           <div className={isClip ? "tab-content selected" : "tab-content"}>
+            {posts.filter(post => {
+              return currentUser.likePosts.includes(post.id);
+            })[0] === undefined && (
+              <span className="noPhoto-message">등록된 클립이 없습니다.</span>
+            )}
+
             {posts
               .filter(post => {
                 return currentUser.likePosts.includes(post.id);
