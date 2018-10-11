@@ -52,7 +52,7 @@ export default class presenter extends Component {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <img src="/images/naver-map.png" alt="" />
+                <img src={require("../../images/naver-map.png")} alt="" />
               </a>
             </div>
           </div>

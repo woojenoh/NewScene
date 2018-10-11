@@ -33,6 +33,10 @@ class presenter extends Component {
                   return post.userId === currentUser.id;
                 })[0] !== undefined;
 
+            const markerUrl = require("../../images/marker/marker" +
+              movie.id +
+              ".png");
+
             return (
               <NaverMap.Marker
                 key={movie.id}
@@ -42,8 +46,8 @@ class presenter extends Component {
                 onClick={() => history.push("/movie/" + movie.id)}
                 icon={{
                   url: isSelected
-                    ? "/images/marker/marker-check.png"
-                    : "/images/marker/marker" + movie.id + ".png",
+                    ? require("../../images/marker/marker-check.png")
+                    : markerUrl,
                   scaledSize: { width: 45, height: 45 }
                 }}
               />

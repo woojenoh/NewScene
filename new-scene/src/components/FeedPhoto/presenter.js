@@ -24,7 +24,7 @@ class presenter extends Component {
           <span className="card__header-name">{user.name}</span>
           {typeof handleLike === "function" ? (
             <img
-              src={"/images/clip.png"}
+              src={require("../../images/clip.png")}
               alt=""
               className={
                 isUserLike() ? "card__clip card__clip--liked" : "card__clip"

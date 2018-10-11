@@ -20,7 +20,7 @@ class container extends Component {
 
   handleNoPhoto = e => {
     e.target.onerror = null;
-    e.target.src = "/images/no-photo.svg";
+    e.target.src = require("../../images/no-photo.svg");
     this.setState({
       photoError: true
     });
