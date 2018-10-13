@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import App from "./presenter";
 import Alert from "react-s-alert";
 
-let userIndex = 3;
-let postIndex = 6;
+let userIndex = 4;
+let postIndex = 11;
 
 export default class container extends Component {
   state = {
