@@ -254,10 +254,11 @@ export default class container extends Component {
         title: "옥자",
         location: "대전 동구 대동 165",
         geo: [36.3294157, 127.4429586],
-        poster: "https://movie.naver.com/movie/bi/mi/basic.nhn?code=143435#",
+        poster:
+          "https://movie-phinf.pstatic.net/20170904_126/1504516484057JACUa_JPEG/movie_image.jpg",
         photos: [
-          "https://www.google.co.kr/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjPmfvl-ILeAhUB7LwKHWj2DCoQjRx6BAgBEAU&url=http%3A%2F%2Fextmovie.maxmovie.com%2Fxe%2F21198011&psig=AOvVaw2CvNcopqZDbCG_sEXRxLHR&ust=1539503819679496",
-          "https://www.google.co.kr/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj6kpTw-ILeAhVK6bwKHU5xDEkQjRx6BAgBEAU&url=http%3A%2F%2Fextmovie.maxmovie.com%2Fxe%2F21198011&psig=AOvVaw2CvNcopqZDbCG_sEXRxLHR&ust=1539503819679496"
+          "http://pds25.egloos.com/pds/201810/13/70/c0116970_5bc1ce2d01c27.png",
+          "http://pds25.egloos.com/pds/201810/13/70/c0116970_5bc1ce301d156.png"
         ],
         squarePhoto:
           "https://post-phinf.pstatic.net/MjAxNzA4MTBfMTE5/MDAxNTAyMzUwMDMxOTI3.N3TfVChHbJYonsuLhisbMyO8q0EdVndBUBAWGDk_tWIg.lGSEYoh_wFqEX0q-yuPS_NPGltn596dTQ2kjGcdP4LIg.JPEG/IEyVs-2izXDhMtLn5gwpk8Ye5St8.jpg?type=fb500_500",
