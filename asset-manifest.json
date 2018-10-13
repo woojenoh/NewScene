@@ -1,13 +1,13 @@
 {
   "main.css": "/NewScene/static/css/main.c74dd8d4.chunk.css",
-  "main.js": "/NewScene/static/js/main.afb061f1.chunk.js",
-  "main.js.map": "/NewScene/static/js/main.afb061f1.chunk.js.map",
+  "main.js": "/NewScene/static/js/main.e4b5bdec.chunk.js",
+  "main.js.map": "/NewScene/static/js/main.e4b5bdec.chunk.js.map",
   "static/css/1.c841d19c.chunk.css": "/NewScene/static/css/1.c841d19c.chunk.css",
   "static/js/1.c3a5526c.chunk.js": "/NewScene/static/js/1.c3a5526c.chunk.js",
   "static/js/1.c3a5526c.chunk.js.map": "/NewScene/static/js/1.c3a5526c.chunk.js.map",
   "runtime~main.js": "/NewScene/static/js/runtime~main.64a8cc17.js",
   "runtime~main.js.map": "/NewScene/static/js/runtime~main.64a8cc17.js.map",
-  "static/media/styles.css": "/NewScene/static/media/slick.f97e3bbf.svg",
+  "static/media/styles.css": "/NewScene/static/media/slick.b7c9e1e4.woff",
   "static/media/marker-check.png": "/NewScene/static/media/marker-check.ebaec87c.png",
   "static/media/main-logo-white.png": "/NewScene/static/media/main-logo-white.1a692c21.png",
   "static/media/logo-text-white.png": "/NewScene/static/media/logo-text-white.34bd1ab0.png",
@@ -30,6 +30,6 @@
   "static/css/main.c74dd8d4.chunk.css.map": "/NewScene/static/css/main.c74dd8d4.chunk.css.map",
   "static/css/1.c841d19c.chunk.css.map": "/NewScene/static/css/1.c841d19c.chunk.css.map",
   "index.html": "/NewScene/index.html",
-  "precache-manifest.84e28233d11859a8c15fb103ecbb797d.js": "/NewScene/precache-manifest.84e28233d11859a8c15fb103ecbb797d.js",
+  "precache-manifest.01af8bcec7e0cc2823dc2bad2c270285.js": "/NewScene/precache-manifest.01af8bcec7e0cc2823dc2bad2c270285.js",
   "service-worker.js": "/NewScene/service-worker.js"
 }
