@@ -7,29 +7,29 @@ let postIndex = 6;
 
 export default class container extends Component {
   state = {
-    currentUserId: "2",
+    currentUserId: null,
     users: [
       {
         id: "0",
-        username: "jieun",
+        username: "juseong",
         password: "123456",
-        name: "JIEUN",
+        name: "JuSeoung",
         profilePhoto:
-          "http://www.kyeongin.com/mnt/file/201807/20180721000818478_1.jpg",
+          "http://thumbnail.egloos.net/600x0/http://pds25.egloos.com/pds/201810/13/70/c0116970_5bc1bf2e19546.png",
         message: "안녕!",
-        postCount: 2,
-        likePosts: ["2"]
+        postCount: 3,
+        likePosts: ["2", "7", "8", "10"]
       },
       {
         id: "1",
-        username: "hyunjoo",
+        username: "syj1198",
         password: "123456",
-        name: "HYUNJOO",
+        name: "YeonJu",
         profilePhoto:
-          "http://www.sporbiz.co.kr/news/photo/201804/222816_180822_5132.jpg",
-        message: "안녕!",
-        postCount: 2,
-        likePosts: ["0", "4"]
+          "http://thumbnail.egloos.net/600x0/http://pds21.egloos.com/pds/201810/13/70/c0116970_5bc1bf6e44aef.jpg",
+        message: "호롤로!",
+        postCount: 4,
+        likePosts: ["0", "4", "9", "10"]
       },
       {
         id: "2",
@@ -39,8 +39,19 @@ export default class container extends Component {
         profilePhoto:
           "http://cphoto.asiae.co.kr/listimglink/6/2018011516074750720_1516000066.jpg",
         message: "안녕하세요!",
-        postCount: 2,
-        likePosts: ["0"]
+        postCount: 4,
+        likePosts: ["0", "7", "8"]
+      },
+      {
+        id: "3",
+        username: "minju",
+        password: "123456",
+        name: "MinJuBack",
+        profilePhoto:
+          "http://pds21.egloos.com/pds/201810/13/70/c0116970_5bc1bfb6be771.gif",
+        message: "안녕안녕!",
+        postCount: 0,
+        likePosts: ["7", "10"]
       }
     ],
     posts: [
@@ -95,13 +106,76 @@ export default class container extends Component {
           "http://mblogthumb4.phinf.naver.net/20120930_107/love_ly_lsy_1349014465789eJWrE_PNG/ggg.PNG?type=w2",
         message: "야경도 멋지다!",
         like: 0
+      },
+      {
+        id: "6",
+        userId: "0",
+        movieId: "0",
+        photo:
+          "http://pds25.egloos.com/pds/201810/13/70/c0116970_5bc1be2fc54e4.gif",
+        message: "가을이라 쌀쌀쌀하네요, 그래도 멋있어요!",
+        like: 0
+      },
+      {
+        id: "7",
+        userId: "1",
+        movieId: "2",
+        photo:
+          "http://pds25.egloos.com/pds/201810/13/70/c0116970_5bc1be4b1091a.gif",
+        message:
+          "대전대학교 30주년 기념관 꼭대기층에서 찍었어요. 화면이랑 맞추려다보니까 영화장면을 확대했어요.",
+        like: 3
+      },
+      {
+        id: "8",
+        userId: "1",
+        movieId: "2",
+        photo:
+          "http://pds21.egloos.com/pds/201810/13/70/c0116970_5bc1be4e3112f.gif",
+        message:
+          "대전대학교 30주년기념관. 여기서 진짜 영화며 드라마 많이 촬영했더라고요!",
+        like: 2
+      },
+      {
+        id: "9",
+        userId: "2",
+        movieId: "3",
+        photo:
+          "http://pds21.egloos.com/pds/201810/13/70/c0116970_5bc1be9234082.gif",
+        message: "구충남도청이에요...조금 무섭네요...",
+        like: 1
+      },
+      {
+        id: "10",
+        userId: "2",
+        movieId: "5",
+        photo:
+          "http://thumbnail.egloos.net/600x0/http://pds25.egloos.com/pds/201810/13/70/c0116970_5bc1c643536e1.jpg",
+        message: "2018.10.9. 한글날, 한남대에서 루루루루룰ㄹ",
+        like: 3
       }
     ],
     movies: [
       {
         id: "0",
+        title: "노브레싱",
+        location: "대전 동구 용운동 41",
+        geo: [36.336245, 127.46275560000004],
+        poster:
+          "https://movie-phinf.pstatic.net/20131016_222/1381901252802i9oCI_JPEG/movie_image.jpg",
+        photos: [
+          "http://thumbnail.egloos.net/600x0/http://pds25.egloos.com/pds/201810/13/70/c0116970_5bc1c1a9ed78a.png",
+          "http://thumbnail.egloos.net/600x0/http://pds21.egloos.com/pds/201810/13/70/c0116970_5bc1c1adb78a1.png",
+          "http://pds25.egloos.com/pds/201810/13/70/c0116970_5bc1c1b2265e1.png"
+        ],
+        squarePhoto:
+          "http://cdnimg.melon.co.kr/cm/album/images/022/11/838/2211838_500.jpg/melon/quality/80/optimize",
+        link: "http://naver.me/GZqs2DVv"
+      },
+      {
+        id: "1",
         title: "더 킹",
-        location: "대전 유성구 대학로 99",
+        location: "대전 유성구 궁동 220",
         geo: [36.3679381, 127.3442986],
         poster:
           "https://movie-phinf.pstatic.net/20170118_172/1484704779507T3ahF_JPEG/movie_image.jpg",
@@ -115,34 +189,94 @@ export default class container extends Component {
         link: "http://naver.me/GRSjg2hZ"
       },
       {
-        id: "1",
+        id: "2",
         title: "도둑들",
-        location: "대전 동구 대학로 62",
-        geo: [36.3353628, 127.45879059999993],
+        location: "대전 동구 용운동 96-3",
+        geo: [36.3351678, 127.46050400000001],
         poster:
           "https://movie-phinf.pstatic.net/20120718_209/1342589585791cltsr_JPEG/movie_image.jpg",
         photos: [
-          "https://post-phinf.pstatic.net/MjAxNzEwMTlfMTAw/MDAxNTA4Mzc5MjE3Nzg5.pcsnULBapjJcpJZCJTcKbmUJhXX9H48NVYGhO9mvPo4g.cTuqMzfUteA5IEHrUq5h880fUI4v4A3vcYoYB0OhiyIg.PNG/%EA%B7%B8%EB%A6%BC17.png?type=w1200",
-          "http://www.daejonilbo.com/admin/news/news_photo/oImg/2013/05/17/2013051801001162500000004.jpg?r_key=6647546855"
+          "http://thumbnail.egloos.net/600x0/http://pds21.egloos.com/pds/201810/13/70/c0116970_5bc1c1cddf287.png",
+          "http://pds21.egloos.com/pds/201810/13/70/c0116970_5bc1c1d3a78e7.png"
         ],
         squarePhoto:
           "http://cdnimg.melon.co.kr/cm/album/images/021/38/684/2138684_500.jpg/melon/quality/80/optimize",
-        link: "http://naver.me/GOjz2sQ6"
+        link: "http://naver.me/GsePgRJq"
       },
       {
-        id: "2",
+        id: "3",
+        title: "변호인",
+        location: "대전 중구 선화동 287-2",
+        geo: [36.3268502, 127.41991699999994],
+        poster:
+          "https://movie-phinf.pstatic.net/20131203_145/1386034788519v2Vwy_JPEG/movie_image.jpg",
+        photos: [
+          "http://pds25.egloos.com/pds/201810/13/70/c0116970_5bc1c209623bc.png",
+          "http://pds21.egloos.com/pds/201810/13/70/c0116970_5bc1c20d39056.png",
+          "http://pds21.egloos.com/pds/201810/13/70/c0116970_5bc1c211073df.png"
+        ],
+        squarePhoto:
+          "https://pds.joins.com/news/component/newsis/201403/14/NISI20140314_0009464208_web.jpg",
+        link: "http://naver.me/xE2ujK5R"
+      },
+      {
+        id: "4",
+        title: "살인자의 기억법",
+        location: "대전 대덕구 오정동 133-2번지",
+        geo: [36.3544262, 127.42272739999999],
+        poster:
+          "https://movie-phinf.pstatic.net/20171030_272/1509348877448FqDsF_JPEG/movie_image.jpg",
+        photos: [
+          "http://thumbnail.egloos.net/600x0/http://pds25.egloos.com/pds/201810/13/70/c0116970_5bc1c229171bd.png",
+          "http://thumbnail.egloos.net/600x0/http://pds21.egloos.com/pds/201810/13/70/c0116970_5bc1c22c2dd4d.png"
+        ],
+        squarePhoto:
+          "https://image.bugsm.co.kr/album/images/500/201182/20118227.jpg",
+        link: "http://naver.me/xVsA7FGL"
+      },
+      {
+        id: "5",
         title: "쎄시봉",
-        location: "대전 대덕구 한남로 70",
-        geo: [36.3544294, 127.42272969999999],
+        location: "대전 대덕구 오정동 133",
+        geo: [36.3544548, 127.42304459999993],
         poster:
           "https://movie-phinf.pstatic.net/20150128_263/1422410206018A2rmx_JPEG/movie_image.jpg",
         photos: [
-          "http://uniboard.hannam.ac.kr/whtml/editorimg/2015/02/20275_20150210152836_14235497163941.jpg",
-          "http://uniboard.hannam.ac.kr/whtml/editorimg/2015/02/20275_20150210152823_14235497038261.jpg"
+          "http://thumbnail.egloos.net/600x0/http://pds21.egloos.com/pds/201810/13/70/c0116970_5bc1c2375e85c.png",
+          "http://pds25.egloos.com/pds/201810/13/70/c0116970_5bc1c23b65a41.png"
         ],
         squarePhoto:
-          "http://nthumb.cyworld.com/thumb?width=300&height=300&url=http%3A%2F%2Fc2down.cyworld.co.kr%2Fdownload%3Ffid%3D64224afceecbb252ec124b4eeecba970%26name%3D1.jpg",
-        link: "http://naver.me/Fxj9cQr6"
+          "http://cdnimg.melon.co.kr/cm/album/images/023/03/104/2303104_500.jpg?62da2f5c312ed9410127412ed5a4e0eb/melon/quality/80/optimize",
+        link: "http://naver.me/xVsA7FGL"
+      },
+      {
+        id: "6",
+        title: "옥자",
+        location: "대전 동구 대동 165",
+        geo: [36.3294157, 127.4429586],
+        poster: "https://movie.naver.com/movie/bi/mi/basic.nhn?code=143435#",
+        photos: [
+          "https://www.google.co.kr/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjPmfvl-ILeAhUB7LwKHWj2DCoQjRx6BAgBEAU&url=http%3A%2F%2Fextmovie.maxmovie.com%2Fxe%2F21198011&psig=AOvVaw2CvNcopqZDbCG_sEXRxLHR&ust=1539503819679496",
+          "https://www.google.co.kr/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj6kpTw-ILeAhVK6bwKHU5xDEkQjRx6BAgBEAU&url=http%3A%2F%2Fextmovie.maxmovie.com%2Fxe%2F21198011&psig=AOvVaw2CvNcopqZDbCG_sEXRxLHR&ust=1539503819679496"
+        ],
+        squarePhoto:
+          "https://post-phinf.pstatic.net/MjAxNzA4MTBfMTE5/MDAxNTAyMzUwMDMxOTI3.N3TfVChHbJYonsuLhisbMyO8q0EdVndBUBAWGDk_tWIg.lGSEYoh_wFqEX0q-yuPS_NPGltn596dTQ2kjGcdP4LIg.JPEG/IEyVs-2izXDhMtLn5gwpk8Ye5St8.jpg?type=fb500_500",
+        link: "http://naver.me/xBGsFNHX"
+      },
+      {
+        id: "7",
+        title: "코리아",
+        location: "대전 대덕구 오정동 종합운동장",
+        geo: [36.3544548, 127.42114459999993],
+        poster:
+          "https://movie-phinf.pstatic.net/20120515_187/1337071991340NIfrE_JPEG/movie_image.jpg",
+        photos: [
+          "http://pds25.egloos.com/pds/201810/13/70/c0116970_5bc1c24c70cd3.png",
+          "http://pds21.egloos.com/pds/201810/13/70/c0116970_5bc1c250e8b37.png",
+          "http://pds21.egloos.com/pds/201810/13/70/c0116970_5bc1c2520471d.png"
+        ],
+        squarePhoto: "https://t1.daumcdn.net/cfile/tistory/20364D455037730E2E",
+        link: "http://naver.me/xsA8bMNl"
       }
     ]
   };
