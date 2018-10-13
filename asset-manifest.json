@@ -1,7 +1,7 @@
 {
   "main.css": "/NewScene/static/css/main.c74dd8d4.chunk.css",
-  "main.js": "/NewScene/static/js/main.5412e9f2.chunk.js",
-  "main.js.map": "/NewScene/static/js/main.5412e9f2.chunk.js.map",
+  "main.js": "/NewScene/static/js/main.800f3b27.chunk.js",
+  "main.js.map": "/NewScene/static/js/main.800f3b27.chunk.js.map",
   "static/css/1.c841d19c.chunk.css": "/NewScene/static/css/1.c841d19c.chunk.css",
   "static/js/1.c3a5526c.chunk.js": "/NewScene/static/js/1.c3a5526c.chunk.js",
   "static/js/1.c3a5526c.chunk.js.map": "/NewScene/static/js/1.c3a5526c.chunk.js.map",
@@ -30,6 +30,6 @@
   "static/css/main.c74dd8d4.chunk.css.map": "/NewScene/static/css/main.c74dd8d4.chunk.css.map",
   "static/css/1.c841d19c.chunk.css.map": "/NewScene/static/css/1.c841d19c.chunk.css.map",
   "index.html": "/NewScene/index.html",
-  "precache-manifest.cb9908e8171b874da793530e120f057e.js": "/NewScene/precache-manifest.cb9908e8171b874da793530e120f057e.js",
+  "precache-manifest.51945484545ec3a1070d42933d0f1d44.js": "/NewScene/precache-manifest.51945484545ec3a1070d42933d0f1d44.js",
   "service-worker.js": "/NewScene/service-worker.js"
 }
