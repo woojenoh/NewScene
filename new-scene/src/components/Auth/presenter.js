@@ -11,18 +11,15 @@ export default class presenter extends Component {
       OpenSignupForm,
       CloseSignupForm,
       handleLogin,
-      handleSignup
+      handleSignup,
+      handleGuestLogin
     } = this.props;
 
     return (
       <>
         <section className="auth">
           <div className={isSignupForm ? "auth__signup" : "auth__login"}>
-            <img
-              src="https://cdn.shopifycloud.com/hatchful-web/assets/313d73fa42f04a46213abc6267b4d074.png"
-              alt=""
-              className="auth__logo"
-            />
+            <span className="auth__logo">NewScene</span>
 
             {isSignupForm ? (
               <span className="submit submit--naver">네이버로 로그인</span>
@@ -44,6 +41,14 @@ export default class presenter extends Component {
               ""
             ) : (
               <span className="submit submit--naver">네이버로 로그인</span>
+            )}
+
+            {isSignupForm ? (
+              ""
+            ) : (
+              <span className="submit submit--guest" onClick={handleGuestLogin}>
+                게스트로 로그인
+              </span>
             )}
           </div>
 

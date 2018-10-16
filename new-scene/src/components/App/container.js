@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import App from "./presenter";
 import Alert from "react-s-alert";
 
-let userIndex = 4;
+let userIndex = 5;
 let postIndex = 11;
 
 export default class container extends Component {
@@ -15,7 +15,7 @@ export default class container extends Component {
         password: "123456",
         name: "JuSeoung",
         profilePhoto:
-          "http://thumbnail.egloos.net/600x0/http://pds25.egloos.com/pds/201810/13/70/c0116970_5bc1bf2e19546.png",
+          "http://img.sbs.co.kr/newsnet/etv/upload/2014/11/27/30000438802_700.jpg",
         message: "안녕!",
         postCount: 3,
         likePosts: ["2", "7", "8", "10"]
@@ -52,6 +52,16 @@ export default class container extends Component {
         message: "안녕안녕!",
         postCount: 0,
         likePosts: ["7", "10"]
+      },
+      {
+        id: "4",
+        username: "GUEST",
+        password: "123456",
+        name: "GUEST",
+        profilePhoto: require("../../images/default-profile.png"),
+        message: "GUEST",
+        postCount: 0,
+        likePosts: []
       }
     ],
     posts: [
@@ -113,7 +123,7 @@ export default class container extends Component {
         movieId: "0",
         photo:
           "http://pds25.egloos.com/pds/201810/13/70/c0116970_5bc1be2fc54e4.gif",
-        message: "가을이라 쌀쌀쌀하네요, 그래도 멋있어요!",
+        message: "가을이라 쌀쌀하네요, 그래도 멋있어요!",
         like: 0
       },
       {
@@ -122,8 +132,7 @@ export default class container extends Component {
         movieId: "2",
         photo:
           "http://pds25.egloos.com/pds/201810/13/70/c0116970_5bc1be4b1091a.gif",
-        message:
-          "대전대학교 30주년 기념관 꼭대기층에서 찍었어요. 화면이랑 맞추려다보니까 영화장면을 확대했어요.",
+        message: "대전대학교 30주년 기념관 꼭대기층에서 찍었어요.",
         like: 3
       },
       {
@@ -142,7 +151,7 @@ export default class container extends Component {
         movieId: "3",
         photo:
           "http://pds21.egloos.com/pds/201810/13/70/c0116970_5bc1be9234082.gif",
-        message: "구충남도청이에요...조금 무섭네요...",
+        message: "구 충남도청이에요... 조금 무섭네요...",
         like: 1
       },
       {
@@ -151,7 +160,7 @@ export default class container extends Component {
         movieId: "5",
         photo:
           "http://thumbnail.egloos.net/600x0/http://pds25.egloos.com/pds/201810/13/70/c0116970_5bc1c643536e1.jpg",
-        message: "2018.10.9. 한글날, 한남대에서 루루루루룰ㄹ",
+        message: "2018.10.9. 한글날, 한남대에서!",
         like: 3
       }
     ],
@@ -364,7 +373,7 @@ export default class container extends Component {
           username: data.username,
           name: data.name,
           password: data.password,
-          profilePhoto: "http://mirkino.tv/article/pic/ava/0.jpg",
+          profilePhoto: require("../../images/default-profile.png"),
           message: "자신을 소개해주세요.",
           postCount: 0,
           likePosts: []
@@ -434,6 +443,12 @@ export default class container extends Component {
     });
   };
 
+  handleGuestLogin = () => {
+    this.setState({
+      currentUserId: "4"
+    });
+  };
+
   render() {
     return (
       <App
@@ -448,6 +463,7 @@ export default class container extends Component {
         handleLike={this.handleLike}
         handleUnlike={this.handleUnlike}
         handleLogout={this.handleLogout}
+        handleGuestLogin={this.handleGuestLogin}
       />
     );
   }

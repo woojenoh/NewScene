@@ -48,3 +48,15 @@
   background-color: #00af37;
   border: 1px solid #00af37;
 }
+
+.submit.submit--guest {
+  max-width: 250px;
+  margin: 0 auto;
+  background-color: #adb5bd;
+  border: 1px solid #adb5bd;
+}
+
+.submit.submit--guest:hover {
+  background-color: #868e96;
+  border: 1px solid #868e96;
+}

@@ -24,30 +24,35 @@ section.auth {
   cursor: pointer;
 }
 
+.auth__logo {
+  display: block;
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px;
+}
+
 .auth__login {
   max-width: 350px;
-  height: 420px;
+  height: 400px;
   background-color: white;
   margin: 0 auto;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   position: relative;
+  padding: 40px 0;
 }
 
 .auth__signup {
   max-width: 350px;
-  height: 460px;
+  height: 400px;
   background-color: white;
   margin: 0 auto;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   position: relative;
-}
-
-.auth__logo {
-  width: 190px;
+  padding: 40px 0;
 }
 
 .auth__divider {
@@ -75,4 +80,8 @@ section.auth {
   position: absolute;
   top: 8px;
   left: 1px;
+}
+
+.auth__login .submit.submit--guest {
+  margin-top: 10px;
 }

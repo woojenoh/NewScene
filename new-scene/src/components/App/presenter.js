@@ -25,7 +25,8 @@ export default class presenter extends Component {
       handleSignup,
       handleLike,
       handleUnlike,
-      handleLogout
+      handleLogout,
+      handleGuestLogin
     } = this.props;
 
     const PublicRoutes = () => {
@@ -34,7 +35,11 @@ export default class presenter extends Component {
           <Route
             path="/"
             render={() => (
-              <Auth handleLogin={handleLogin} handleSignup={handleSignup} />
+              <Auth
+                handleLogin={handleLogin}
+                handleSignup={handleSignup}
+                handleGuestLogin={handleGuestLogin}
+              />
             )}
           />
           <Alert stack={{ limit: 3 }} />
